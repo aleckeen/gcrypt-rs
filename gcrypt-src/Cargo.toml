@@ -1,0 +1,6 @@
+cargo-features = ["edition2021"]
+
+[package]
+name = "gcrypt-src"
+version = "19.0.0+1.9.3"
+edition = "2021"

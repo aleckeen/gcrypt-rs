@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "gcrypt",
+  "gcrypt-src",
+  "gcrypt-sys",
+]
