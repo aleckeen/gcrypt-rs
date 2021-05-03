@@ -4,3 +4,8 @@ cargo-features = ["edition2021"]
 name = "gcrypt-sys"
 version = "0.1.0"
 edition = "2021"
+
+[build-dependencies]
+bindgen = "0.58"
+gcrypt-src = { version = "19", path = "../gcrypt-src" }
+gpgrt-src = { version = "142", path = "../../gpgrt-rs/gpgrt-src" }

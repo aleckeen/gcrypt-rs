@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 gpgrt-src = { version = "142", path = "../../gpgrt-rs/gpgrt-src" }
+ffi-tools = { version = "0.1", path = "../../ffi-tools-rs" }
