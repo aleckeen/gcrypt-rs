@@ -11,14 +11,14 @@ pub fn rerun_if_src_changed() {
     println!("cargo:rerun-if-changed={}", source_dir().display());
 }
 
-pub struct Build {
-    gpgrt: Artifacts,
+pub struct Build<'gpgrt> {
+    gpgrt: &'gpgrt Artifacts,
     project: Project,
     install_dir: PathBuf,
 }
 
-impl Build {
-    pub fn new(gpgrt: Artifacts) -> Self {
+impl<'gpgrt> Build<'gpgrt> {
+    pub fn new(gpgrt: &'gpgrt Artifacts) -> Self {
         let out_dir: PathBuf = env::var("OUT_DIR").unwrap().parse().unwrap();
         let build_dir = out_dir.join("gcrypt-build");
         let src_dir = build_dir.join("src");

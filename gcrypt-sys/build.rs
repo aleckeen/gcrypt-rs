@@ -16,7 +16,7 @@ fn main() {
         build.install()
     };
 
-    let build = Build::new(gpgrt);
+    let build = Build::new(&gpgrt);
     build.build();
     build.check();
     let artifacts = build.install();
@@ -34,6 +34,7 @@ fn main() {
         .allowlist_type("gcry.*")
         .allowlist_function("GCRY.*")
         .allowlist_function("gcry.*")
+        .clang_arg(&format!("-I{}", gpgrt.include_dir.display()))
         .generate()
         .unwrap()
         .write_to_file(manifest_dir.join("src/ffi.rs"))
