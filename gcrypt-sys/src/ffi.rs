@@ -97,27 +97,27 @@ impl gpg_err_source_t {
 impl gpg_err_source_t {
     pub const GPG_ERR_SOURCE_DIM: gpg_err_source_t = gpg_err_source_t(128);
 }
-impl ::core::ops::BitOr<gpg_err_source_t> for gpg_err_source_t {
+impl ::std::ops::BitOr<gpg_err_source_t> for gpg_err_source_t {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gpg_err_source_t(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gpg_err_source_t {
+impl ::std::ops::BitOrAssign for gpg_err_source_t {
     #[inline]
     fn bitor_assign(&mut self, rhs: gpg_err_source_t) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gpg_err_source_t> for gpg_err_source_t {
+impl ::std::ops::BitAnd<gpg_err_source_t> for gpg_err_source_t {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gpg_err_source_t(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gpg_err_source_t {
+impl ::std::ops::BitAndAssign for gpg_err_source_t {
     #[inline]
     fn bitand_assign(&mut self, rhs: gpg_err_source_t) {
         self.0 &= rhs.0;
@@ -1866,27 +1866,27 @@ impl gpg_err_code_t {
 impl gpg_err_code_t {
     pub const GPG_ERR_CODE_DIM: gpg_err_code_t = gpg_err_code_t(65536);
 }
-impl ::core::ops::BitOr<gpg_err_code_t> for gpg_err_code_t {
+impl ::std::ops::BitOr<gpg_err_code_t> for gpg_err_code_t {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gpg_err_code_t(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gpg_err_code_t {
+impl ::std::ops::BitOrAssign for gpg_err_code_t {
     #[inline]
     fn bitor_assign(&mut self, rhs: gpg_err_code_t) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gpg_err_code_t> for gpg_err_code_t {
+impl ::std::ops::BitAnd<gpg_err_code_t> for gpg_err_code_t {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gpg_err_code_t(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gpg_err_code_t {
+impl ::std::ops::BitAndAssign for gpg_err_code_t {
     #[inline]
     fn bitand_assign(&mut self, rhs: gpg_err_code_t) {
         self.0 &= rhs.0;
@@ -1930,17 +1930,17 @@ pub struct gcry_thread_cbs {
 #[test]
 fn bindgen_test_layout_gcry_thread_cbs() {
     assert_eq!(
-        ::core::mem::size_of::<gcry_thread_cbs>(),
+        ::std::mem::size_of::<gcry_thread_cbs>(),
         4usize,
         concat!("Size of: ", stringify!(gcry_thread_cbs))
     );
     assert_eq!(
-        ::core::mem::align_of::<gcry_thread_cbs>(),
+        ::std::mem::align_of::<gcry_thread_cbs>(),
         4usize,
         concat!("Alignment of ", stringify!(gcry_thread_cbs))
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_thread_cbs>())).option as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_thread_cbs>())).option as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1975,22 +1975,22 @@ pub struct gcry_buffer_t {
     pub size: usize,
     pub off: usize,
     pub len: usize,
-    pub data: *mut ::core::ffi::c_void,
+    pub data: *mut ::std::os::raw::c_void,
 }
 #[test]
 fn bindgen_test_layout_gcry_buffer_t() {
     assert_eq!(
-        ::core::mem::size_of::<gcry_buffer_t>(),
+        ::std::mem::size_of::<gcry_buffer_t>(),
         32usize,
         concat!("Size of: ", stringify!(gcry_buffer_t))
     );
     assert_eq!(
-        ::core::mem::align_of::<gcry_buffer_t>(),
+        ::std::mem::align_of::<gcry_buffer_t>(),
         8usize,
         concat!("Alignment of ", stringify!(gcry_buffer_t))
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_buffer_t>())).size as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).size as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -2000,7 +2000,7 @@ fn bindgen_test_layout_gcry_buffer_t() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_buffer_t>())).off as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).off as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -2010,7 +2010,7 @@ fn bindgen_test_layout_gcry_buffer_t() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_buffer_t>())).len as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).len as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -2020,7 +2020,7 @@ fn bindgen_test_layout_gcry_buffer_t() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_buffer_t>())).data as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).data as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -2245,27 +2245,27 @@ impl gcry_ctl_cmds {
 impl gcry_ctl_cmds {
     pub const GCRYCTL_SET_ALLOW_WEAK_KEY: gcry_ctl_cmds = gcry_ctl_cmds(79);
 }
-impl ::core::ops::BitOr<gcry_ctl_cmds> for gcry_ctl_cmds {
+impl ::std::ops::BitOr<gcry_ctl_cmds> for gcry_ctl_cmds {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_ctl_cmds(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_ctl_cmds {
+impl ::std::ops::BitOrAssign for gcry_ctl_cmds {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_ctl_cmds) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_ctl_cmds> for gcry_ctl_cmds {
+impl ::std::ops::BitAnd<gcry_ctl_cmds> for gcry_ctl_cmds {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_ctl_cmds(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_ctl_cmds {
+impl ::std::ops::BitAndAssign for gcry_ctl_cmds {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_ctl_cmds) {
         self.0 &= rhs.0;
@@ -2296,27 +2296,27 @@ impl gcry_sexp_format {
 impl gcry_sexp_format {
     pub const GCRYSEXP_FMT_ADVANCED: gcry_sexp_format = gcry_sexp_format(3);
 }
-impl ::core::ops::BitOr<gcry_sexp_format> for gcry_sexp_format {
+impl ::std::ops::BitOr<gcry_sexp_format> for gcry_sexp_format {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_sexp_format(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_sexp_format {
+impl ::std::ops::BitOrAssign for gcry_sexp_format {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_sexp_format) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_sexp_format> for gcry_sexp_format {
+impl ::std::ops::BitAnd<gcry_sexp_format> for gcry_sexp_format {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_sexp_format(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_sexp_format {
+impl ::std::ops::BitAndAssign for gcry_sexp_format {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_sexp_format) {
         self.0 &= rhs.0;
@@ -2328,7 +2328,7 @@ pub struct gcry_sexp_format(pub ::std::os::raw::c_uint);
 extern "C" {
     pub fn gcry_sexp_new(
         retsexp: *mut gcry_sexp_t,
-        buffer: *const ::core::ffi::c_void,
+        buffer: *const ::std::os::raw::c_void,
         length: usize,
         autodetect: ::std::os::raw::c_int,
     ) -> gcry_error_t;
@@ -2336,10 +2336,10 @@ extern "C" {
 extern "C" {
     pub fn gcry_sexp_create(
         retsexp: *mut gcry_sexp_t,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         length: usize,
         autodetect: ::std::os::raw::c_int,
-        freefnc: ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void)>,
+        freefnc: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
     ) -> gcry_error_t;
 }
 extern "C" {
@@ -2363,7 +2363,7 @@ extern "C" {
         retsexp: *mut gcry_sexp_t,
         erroff: *mut usize,
         format: *const ::std::os::raw::c_char,
-        arg_list: *mut *mut ::core::ffi::c_void,
+        arg_list: *mut *mut ::std::os::raw::c_void,
     ) -> gcry_error_t;
 }
 extern "C" {
@@ -2381,7 +2381,7 @@ extern "C" {
     pub fn gcry_sexp_sprint(
         sexp: gcry_sexp_t,
         mode: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         maxlength: usize,
     ) -> usize;
 }
@@ -2437,7 +2437,7 @@ extern "C" {
         list: gcry_sexp_t,
         number: ::std::os::raw::c_int,
         rlength: *mut usize,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn gcry_sexp_nth_string(
@@ -2481,27 +2481,27 @@ impl gcry_mpi_format {
 impl gcry_mpi_format {
     pub const GCRYMPI_FMT_OPAQUE: gcry_mpi_format = gcry_mpi_format(8);
 }
-impl ::core::ops::BitOr<gcry_mpi_format> for gcry_mpi_format {
+impl ::std::ops::BitOr<gcry_mpi_format> for gcry_mpi_format {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_mpi_format(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_mpi_format {
+impl ::std::ops::BitOrAssign for gcry_mpi_format {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_mpi_format) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_mpi_format> for gcry_mpi_format {
+impl ::std::ops::BitAnd<gcry_mpi_format> for gcry_mpi_format {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_mpi_format(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_mpi_format {
+impl ::std::ops::BitAndAssign for gcry_mpi_format {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_mpi_format) {
         self.0 &= rhs.0;
@@ -2534,27 +2534,27 @@ impl gcry_mpi_flag {
 impl gcry_mpi_flag {
     pub const GCRYMPI_FLAG_USER4: gcry_mpi_flag = gcry_mpi_flag(2048);
 }
-impl ::core::ops::BitOr<gcry_mpi_flag> for gcry_mpi_flag {
+impl ::std::ops::BitOr<gcry_mpi_flag> for gcry_mpi_flag {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_mpi_flag(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_mpi_flag {
+impl ::std::ops::BitOrAssign for gcry_mpi_flag {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_mpi_flag) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_mpi_flag> for gcry_mpi_flag {
+impl ::std::ops::BitAnd<gcry_mpi_flag> for gcry_mpi_flag {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_mpi_flag(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_mpi_flag {
+impl ::std::ops::BitAndAssign for gcry_mpi_flag {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_mpi_flag) {
         self.0 &= rhs.0;
@@ -2609,7 +2609,7 @@ extern "C" {
     pub fn gcry_mpi_scan(
         ret_mpi: *mut gcry_mpi_t,
         format: gcry_mpi_format,
-        buffer: *const ::core::ffi::c_void,
+        buffer: *const ::std::os::raw::c_void,
         buflen: usize,
         nscanned: *mut usize,
     ) -> gcry_error_t;
@@ -2828,14 +2828,14 @@ extern "C" {
 extern "C" {
     pub fn gcry_mpi_set_opaque(
         a: gcry_mpi_t,
-        p: *mut ::core::ffi::c_void,
+        p: *mut ::std::os::raw::c_void,
         nbits: ::std::os::raw::c_uint,
     ) -> gcry_mpi_t;
 }
 extern "C" {
     pub fn gcry_mpi_set_opaque_copy(
         a: gcry_mpi_t,
-        p: *const ::core::ffi::c_void,
+        p: *const ::std::os::raw::c_void,
         nbits: ::std::os::raw::c_uint,
     ) -> gcry_mpi_t;
 }
@@ -2843,7 +2843,7 @@ extern "C" {
     pub fn gcry_mpi_get_opaque(
         a: gcry_mpi_t,
         nbits: *mut ::std::os::raw::c_uint,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn gcry_mpi_set_flag(a: gcry_mpi_t, flag: gcry_mpi_flag);
@@ -2948,27 +2948,27 @@ impl gcry_cipher_algos {
 impl gcry_cipher_algos {
     pub const GCRY_CIPHER_SM4: gcry_cipher_algos = gcry_cipher_algos(318);
 }
-impl ::core::ops::BitOr<gcry_cipher_algos> for gcry_cipher_algos {
+impl ::std::ops::BitOr<gcry_cipher_algos> for gcry_cipher_algos {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_cipher_algos(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_cipher_algos {
+impl ::std::ops::BitOrAssign for gcry_cipher_algos {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_cipher_algos) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_cipher_algos> for gcry_cipher_algos {
+impl ::std::ops::BitAnd<gcry_cipher_algos> for gcry_cipher_algos {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_cipher_algos(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_cipher_algos {
+impl ::std::ops::BitAndAssign for gcry_cipher_algos {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_cipher_algos) {
         self.0 &= rhs.0;
@@ -3022,27 +3022,27 @@ impl gcry_cipher_modes {
 impl gcry_cipher_modes {
     pub const GCRY_CIPHER_MODE_EAX: gcry_cipher_modes = gcry_cipher_modes(14);
 }
-impl ::core::ops::BitOr<gcry_cipher_modes> for gcry_cipher_modes {
+impl ::std::ops::BitOr<gcry_cipher_modes> for gcry_cipher_modes {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_cipher_modes(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_cipher_modes {
+impl ::std::ops::BitOrAssign for gcry_cipher_modes {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_cipher_modes) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_cipher_modes> for gcry_cipher_modes {
+impl ::std::ops::BitAnd<gcry_cipher_modes> for gcry_cipher_modes {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_cipher_modes(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_cipher_modes {
+impl ::std::ops::BitAndAssign for gcry_cipher_modes {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_cipher_modes) {
         self.0 &= rhs.0;
@@ -3063,27 +3063,27 @@ impl gcry_cipher_flags {
 impl gcry_cipher_flags {
     pub const GCRY_CIPHER_CBC_MAC: gcry_cipher_flags = gcry_cipher_flags(8);
 }
-impl ::core::ops::BitOr<gcry_cipher_flags> for gcry_cipher_flags {
+impl ::std::ops::BitOr<gcry_cipher_flags> for gcry_cipher_flags {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_cipher_flags(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_cipher_flags {
+impl ::std::ops::BitOrAssign for gcry_cipher_flags {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_cipher_flags) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_cipher_flags> for gcry_cipher_flags {
+impl ::std::ops::BitAnd<gcry_cipher_flags> for gcry_cipher_flags {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_cipher_flags(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_cipher_flags {
+impl ::std::ops::BitAndAssign for gcry_cipher_flags {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_cipher_flags) {
         self.0 &= rhs.0;
@@ -3107,7 +3107,7 @@ extern "C" {
     pub fn gcry_cipher_ctl(
         h: gcry_cipher_hd_t,
         cmd: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         buflen: usize,
     ) -> gcry_error_t;
 }
@@ -3115,7 +3115,7 @@ extern "C" {
     pub fn gcry_cipher_info(
         h: gcry_cipher_hd_t,
         what: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         nbytes: *mut usize,
     ) -> gcry_error_t;
 }
@@ -3123,7 +3123,7 @@ extern "C" {
     pub fn gcry_cipher_algo_info(
         algo: ::std::os::raw::c_int,
         what: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         nbytes: *mut usize,
     ) -> gcry_error_t;
 }
@@ -3142,60 +3142,60 @@ extern "C" {
 extern "C" {
     pub fn gcry_cipher_encrypt(
         h: gcry_cipher_hd_t,
-        out: *mut ::core::ffi::c_void,
+        out: *mut ::std::os::raw::c_void,
         outsize: usize,
-        in_: *const ::core::ffi::c_void,
+        in_: *const ::std::os::raw::c_void,
         inlen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_decrypt(
         h: gcry_cipher_hd_t,
-        out: *mut ::core::ffi::c_void,
+        out: *mut ::std::os::raw::c_void,
         outsize: usize,
-        in_: *const ::core::ffi::c_void,
+        in_: *const ::std::os::raw::c_void,
         inlen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_setkey(
         hd: gcry_cipher_hd_t,
-        key: *const ::core::ffi::c_void,
+        key: *const ::std::os::raw::c_void,
         keylen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_setiv(
         hd: gcry_cipher_hd_t,
-        iv: *const ::core::ffi::c_void,
+        iv: *const ::std::os::raw::c_void,
         ivlen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_authenticate(
         hd: gcry_cipher_hd_t,
-        abuf: *const ::core::ffi::c_void,
+        abuf: *const ::std::os::raw::c_void,
         abuflen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_gettag(
         hd: gcry_cipher_hd_t,
-        outtag: *mut ::core::ffi::c_void,
+        outtag: *mut ::std::os::raw::c_void,
         taglen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_checktag(
         hd: gcry_cipher_hd_t,
-        intag: *const ::core::ffi::c_void,
+        intag: *const ::std::os::raw::c_void,
         taglen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_cipher_setctr(
         hd: gcry_cipher_hd_t,
-        ctr: *const ::core::ffi::c_void,
+        ctr: *const ::std::os::raw::c_void,
         ctrlen: usize,
     ) -> gpg_error_t;
 }
@@ -3235,27 +3235,27 @@ impl gcry_pk_algos {
 impl gcry_pk_algos {
     pub const GCRY_PK_EDDSA: gcry_pk_algos = gcry_pk_algos(303);
 }
-impl ::core::ops::BitOr<gcry_pk_algos> for gcry_pk_algos {
+impl ::std::ops::BitOr<gcry_pk_algos> for gcry_pk_algos {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_pk_algos(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_pk_algos {
+impl ::std::ops::BitOrAssign for gcry_pk_algos {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_pk_algos) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_pk_algos> for gcry_pk_algos {
+impl ::std::ops::BitAnd<gcry_pk_algos> for gcry_pk_algos {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_pk_algos(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_pk_algos {
+impl ::std::ops::BitAndAssign for gcry_pk_algos {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_pk_algos) {
         self.0 &= rhs.0;
@@ -3301,7 +3301,7 @@ extern "C" {
 extern "C" {
     pub fn gcry_pk_ctl(
         cmd: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         buflen: usize,
     ) -> gcry_error_t;
 }
@@ -3309,7 +3309,7 @@ extern "C" {
     pub fn gcry_pk_algo_info(
         algo: ::std::os::raw::c_int,
         what: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         nbytes: *mut usize,
     ) -> gcry_error_t;
 }
@@ -3354,27 +3354,27 @@ impl gcry_ecc_curves {
 impl gcry_ecc_curves {
     pub const GCRY_ECC_CURVE448: gcry_ecc_curves = gcry_ecc_curves(2);
 }
-impl ::core::ops::BitOr<gcry_ecc_curves> for gcry_ecc_curves {
+impl ::std::ops::BitOr<gcry_ecc_curves> for gcry_ecc_curves {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_ecc_curves(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_ecc_curves {
+impl ::std::ops::BitOrAssign for gcry_ecc_curves {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_ecc_curves) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_ecc_curves> for gcry_ecc_curves {
+impl ::std::ops::BitAnd<gcry_ecc_curves> for gcry_ecc_curves {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_ecc_curves(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_ecc_curves {
+impl ::std::ops::BitAndAssign for gcry_ecc_curves {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_ecc_curves) {
         self.0 &= rhs.0;
@@ -3511,27 +3511,27 @@ impl gcry_md_algos {
 impl gcry_md_algos {
     pub const GCRY_MD_SHA512_224: gcry_md_algos = gcry_md_algos(328);
 }
-impl ::core::ops::BitOr<gcry_md_algos> for gcry_md_algos {
+impl ::std::ops::BitOr<gcry_md_algos> for gcry_md_algos {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_md_algos(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_md_algos {
+impl ::std::ops::BitOrAssign for gcry_md_algos {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_md_algos) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_md_algos> for gcry_md_algos {
+impl ::std::ops::BitAnd<gcry_md_algos> for gcry_md_algos {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_md_algos(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_md_algos {
+impl ::std::ops::BitAndAssign for gcry_md_algos {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_md_algos) {
         self.0 &= rhs.0;
@@ -3549,27 +3549,27 @@ impl gcry_md_flags {
 impl gcry_md_flags {
     pub const GCRY_MD_FLAG_BUGEMU1: gcry_md_flags = gcry_md_flags(256);
 }
-impl ::core::ops::BitOr<gcry_md_flags> for gcry_md_flags {
+impl ::std::ops::BitOr<gcry_md_flags> for gcry_md_flags {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_md_flags(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_md_flags {
+impl ::std::ops::BitOrAssign for gcry_md_flags {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_md_flags) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_md_flags> for gcry_md_flags {
+impl ::std::ops::BitAnd<gcry_md_flags> for gcry_md_flags {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_md_flags(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_md_flags {
+impl ::std::ops::BitAndAssign for gcry_md_flags {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_md_flags) {
         self.0 &= rhs.0;
@@ -3594,17 +3594,17 @@ pub struct gcry_md_handle {
 #[test]
 fn bindgen_test_layout_gcry_md_handle() {
     assert_eq!(
-        ::core::mem::size_of::<gcry_md_handle>(),
+        ::std::mem::size_of::<gcry_md_handle>(),
         24usize,
         concat!("Size of: ", stringify!(gcry_md_handle))
     );
     assert_eq!(
-        ::core::mem::align_of::<gcry_md_handle>(),
+        ::std::mem::align_of::<gcry_md_handle>(),
         8usize,
         concat!("Alignment of ", stringify!(gcry_md_handle))
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_md_handle>())).ctx as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).ctx as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -3614,7 +3614,7 @@ fn bindgen_test_layout_gcry_md_handle() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_md_handle>())).bufpos as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).bufpos as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -3624,7 +3624,7 @@ fn bindgen_test_layout_gcry_md_handle() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_md_handle>())).bufsize as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).bufsize as *const _ as usize },
         12usize,
         concat!(
             "Offset of field: ",
@@ -3634,7 +3634,7 @@ fn bindgen_test_layout_gcry_md_handle() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<gcry_md_handle>())).buf as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).buf as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -3669,12 +3669,12 @@ extern "C" {
     pub fn gcry_md_ctl(
         hd: gcry_md_hd_t,
         cmd: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         buflen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_write(hd: gcry_md_hd_t, buffer: *const ::core::ffi::c_void, length: usize);
+    pub fn gcry_md_write(hd: gcry_md_hd_t, buffer: *const ::std::os::raw::c_void, length: usize);
 }
 extern "C" {
     pub fn gcry_md_read(
@@ -3686,15 +3686,15 @@ extern "C" {
     pub fn gcry_md_extract(
         hd: gcry_md_hd_t,
         algo: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         length: usize,
     ) -> gpg_error_t;
 }
 extern "C" {
     pub fn gcry_md_hash_buffer(
         algo: ::std::os::raw::c_int,
-        digest: *mut ::core::ffi::c_void,
-        buffer: *const ::core::ffi::c_void,
+        digest: *mut ::std::os::raw::c_void,
+        buffer: *const ::std::os::raw::c_void,
         length: usize,
     );
 }
@@ -3702,7 +3702,7 @@ extern "C" {
     pub fn gcry_md_hash_buffers(
         algo: ::std::os::raw::c_int,
         flags: ::std::os::raw::c_uint,
-        digest: *mut ::core::ffi::c_void,
+        digest: *mut ::std::os::raw::c_void,
         iov: *const gcry_buffer_t,
         iovcnt: ::std::os::raw::c_int,
     ) -> gpg_error_t;
@@ -3726,7 +3726,7 @@ extern "C" {
     pub fn gcry_md_info(
         h: gcry_md_hd_t,
         what: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         nbytes: *mut usize,
     ) -> gcry_error_t;
 }
@@ -3734,7 +3734,7 @@ extern "C" {
     pub fn gcry_md_algo_info(
         algo: ::std::os::raw::c_int,
         what: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         nbytes: *mut usize,
     ) -> gcry_error_t;
 }
@@ -3747,7 +3747,7 @@ extern "C" {
 extern "C" {
     pub fn gcry_md_setkey(
         hd: gcry_md_hd_t,
-        key: *const ::core::ffi::c_void,
+        key: *const ::std::os::raw::c_void,
         keylen: usize,
     ) -> gcry_error_t;
 }
@@ -3925,27 +3925,27 @@ impl gcry_mac_algos {
 impl gcry_mac_algos {
     pub const GCRY_MAC_POLY1305_SEED: gcry_mac_algos = gcry_mac_algos(506);
 }
-impl ::core::ops::BitOr<gcry_mac_algos> for gcry_mac_algos {
+impl ::std::ops::BitOr<gcry_mac_algos> for gcry_mac_algos {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_mac_algos(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_mac_algos {
+impl ::std::ops::BitOrAssign for gcry_mac_algos {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_mac_algos) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_mac_algos> for gcry_mac_algos {
+impl ::std::ops::BitAnd<gcry_mac_algos> for gcry_mac_algos {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_mac_algos(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_mac_algos {
+impl ::std::ops::BitAndAssign for gcry_mac_algos {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_mac_algos) {
         self.0 &= rhs.0;
@@ -3957,27 +3957,27 @@ pub struct gcry_mac_algos(pub ::std::os::raw::c_uint);
 impl gcry_mac_flags {
     pub const GCRY_MAC_FLAG_SECURE: gcry_mac_flags = gcry_mac_flags(1);
 }
-impl ::core::ops::BitOr<gcry_mac_flags> for gcry_mac_flags {
+impl ::std::ops::BitOr<gcry_mac_flags> for gcry_mac_flags {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_mac_flags(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_mac_flags {
+impl ::std::ops::BitOrAssign for gcry_mac_flags {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_mac_flags) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_mac_flags> for gcry_mac_flags {
+impl ::std::ops::BitAnd<gcry_mac_flags> for gcry_mac_flags {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_mac_flags(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_mac_flags {
+impl ::std::ops::BitAndAssign for gcry_mac_flags {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_mac_flags) {
         self.0 &= rhs.0;
@@ -4001,7 +4001,7 @@ extern "C" {
     pub fn gcry_mac_ctl(
         h: gcry_mac_hd_t,
         cmd: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         buflen: usize,
     ) -> gcry_error_t;
 }
@@ -4009,42 +4009,42 @@ extern "C" {
     pub fn gcry_mac_algo_info(
         algo: ::std::os::raw::c_int,
         what: ::std::os::raw::c_int,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         nbytes: *mut usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_mac_setkey(
         hd: gcry_mac_hd_t,
-        key: *const ::core::ffi::c_void,
+        key: *const ::std::os::raw::c_void,
         keylen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_mac_setiv(
         hd: gcry_mac_hd_t,
-        iv: *const ::core::ffi::c_void,
+        iv: *const ::std::os::raw::c_void,
         ivlen: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_mac_write(
         hd: gcry_mac_hd_t,
-        buffer: *const ::core::ffi::c_void,
+        buffer: *const ::std::os::raw::c_void,
         length: usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_mac_read(
         hd: gcry_mac_hd_t,
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         buflen: *mut usize,
     ) -> gcry_error_t;
 }
 extern "C" {
     pub fn gcry_mac_verify(
         hd: gcry_mac_hd_t,
-        buffer: *const ::core::ffi::c_void,
+        buffer: *const ::std::os::raw::c_void,
         buflen: usize,
     ) -> gcry_error_t;
 }
@@ -4084,27 +4084,27 @@ impl gcry_kdf_algos {
 impl gcry_kdf_algos {
     pub const GCRY_KDF_SCRYPT: gcry_kdf_algos = gcry_kdf_algos(48);
 }
-impl ::core::ops::BitOr<gcry_kdf_algos> for gcry_kdf_algos {
+impl ::std::ops::BitOr<gcry_kdf_algos> for gcry_kdf_algos {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_kdf_algos(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_kdf_algos {
+impl ::std::ops::BitOrAssign for gcry_kdf_algos {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_kdf_algos) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_kdf_algos> for gcry_kdf_algos {
+impl ::std::ops::BitAnd<gcry_kdf_algos> for gcry_kdf_algos {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_kdf_algos(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_kdf_algos {
+impl ::std::ops::BitAndAssign for gcry_kdf_algos {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_kdf_algos) {
         self.0 &= rhs.0;
@@ -4115,15 +4115,15 @@ impl ::core::ops::BitAndAssign for gcry_kdf_algos {
 pub struct gcry_kdf_algos(pub ::std::os::raw::c_uint);
 extern "C" {
     pub fn gcry_kdf_derive(
-        passphrase: *const ::core::ffi::c_void,
+        passphrase: *const ::std::os::raw::c_void,
         passphraselen: usize,
         algo: ::std::os::raw::c_int,
         subalgo: ::std::os::raw::c_int,
-        salt: *const ::core::ffi::c_void,
+        salt: *const ::std::os::raw::c_void,
         saltlen: usize,
         iterations: ::std::os::raw::c_ulong,
         keysize: usize,
-        keybuffer: *mut ::core::ffi::c_void,
+        keybuffer: *mut ::std::os::raw::c_void,
     ) -> gpg_error_t;
 }
 impl gcry_rng_types {
@@ -4135,27 +4135,27 @@ impl gcry_rng_types {
 impl gcry_rng_types {
     pub const GCRY_RNG_TYPE_SYSTEM: gcry_rng_types = gcry_rng_types(3);
 }
-impl ::core::ops::BitOr<gcry_rng_types> for gcry_rng_types {
+impl ::std::ops::BitOr<gcry_rng_types> for gcry_rng_types {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_rng_types(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_rng_types {
+impl ::std::ops::BitOrAssign for gcry_rng_types {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_rng_types) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_rng_types> for gcry_rng_types {
+impl ::std::ops::BitAnd<gcry_rng_types> for gcry_rng_types {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_rng_types(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_rng_types {
+impl ::std::ops::BitAndAssign for gcry_rng_types {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_rng_types) {
         self.0 &= rhs.0;
@@ -4173,27 +4173,27 @@ impl gcry_random_level {
 impl gcry_random_level {
     pub const GCRY_VERY_STRONG_RANDOM: gcry_random_level = gcry_random_level(2);
 }
-impl ::core::ops::BitOr<gcry_random_level> for gcry_random_level {
+impl ::std::ops::BitOr<gcry_random_level> for gcry_random_level {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_random_level(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_random_level {
+impl ::std::ops::BitOrAssign for gcry_random_level {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_random_level) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_random_level> for gcry_random_level {
+impl ::std::ops::BitAnd<gcry_random_level> for gcry_random_level {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_random_level(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_random_level {
+impl ::std::ops::BitAndAssign for gcry_random_level {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_random_level) {
         self.0 &= rhs.0;
@@ -4205,26 +4205,29 @@ pub struct gcry_random_level(pub ::std::os::raw::c_uint);
 pub use self::gcry_random_level as gcry_random_level_t;
 extern "C" {
     pub fn gcry_randomize(
-        buffer: *mut ::core::ffi::c_void,
+        buffer: *mut ::std::os::raw::c_void,
         length: usize,
         level: gcry_random_level,
     );
 }
 extern "C" {
     pub fn gcry_random_add_bytes(
-        buffer: *const ::core::ffi::c_void,
+        buffer: *const ::std::os::raw::c_void,
         length: usize,
         quality: ::std::os::raw::c_int,
     ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_random_bytes(nbytes: usize, level: gcry_random_level) -> *mut ::core::ffi::c_void;
+    pub fn gcry_random_bytes(
+        nbytes: usize,
+        level: gcry_random_level,
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn gcry_random_bytes_secure(
         nbytes: usize,
         level: gcry_random_level,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn gcry_mpi_randomize(
@@ -4234,11 +4237,11 @@ extern "C" {
     );
 }
 extern "C" {
-    pub fn gcry_create_nonce(buffer: *mut ::core::ffi::c_void, length: usize);
+    pub fn gcry_create_nonce(buffer: *mut ::std::os::raw::c_void, length: usize);
 }
-pub type gcry_prime_check_func_t = ::core::option::Option<
+pub type gcry_prime_check_func_t = ::std::option::Option<
     unsafe extern "C" fn(
-        arg: *mut ::core::ffi::c_void,
+        arg: *mut ::std::os::raw::c_void,
         mode: ::std::os::raw::c_int,
         candidate: gcry_mpi_t,
     ) -> ::std::os::raw::c_int,
@@ -4250,7 +4253,7 @@ extern "C" {
         factor_bits: ::std::os::raw::c_uint,
         factors: *mut *mut gcry_mpi_t,
         cb_func: gcry_prime_check_func_t,
-        cb_arg: *mut ::core::ffi::c_void,
+        cb_arg: *mut ::std::os::raw::c_void,
         random_level: gcry_random_level_t,
         flags: ::std::os::raw::c_uint,
     ) -> gcry_error_t;
@@ -4278,7 +4281,7 @@ extern "C" {
 extern "C" {
     pub fn gcry_log_debughex(
         text: *const ::std::os::raw::c_char,
-        buffer: *const ::core::ffi::c_void,
+        buffer: *const ::std::os::raw::c_void,
         length: usize,
     );
 }
@@ -4322,27 +4325,27 @@ impl gcry_log_levels {
 impl gcry_log_levels {
     pub const GCRY_LOG_DEBUG: gcry_log_levels = gcry_log_levels(100);
 }
-impl ::core::ops::BitOr<gcry_log_levels> for gcry_log_levels {
+impl ::std::ops::BitOr<gcry_log_levels> for gcry_log_levels {
     type Output = Self;
     #[inline]
     fn bitor(self, other: Self) -> Self {
         gcry_log_levels(self.0 | other.0)
     }
 }
-impl ::core::ops::BitOrAssign for gcry_log_levels {
+impl ::std::ops::BitOrAssign for gcry_log_levels {
     #[inline]
     fn bitor_assign(&mut self, rhs: gcry_log_levels) {
         self.0 |= rhs.0;
     }
 }
-impl ::core::ops::BitAnd<gcry_log_levels> for gcry_log_levels {
+impl ::std::ops::BitAnd<gcry_log_levels> for gcry_log_levels {
     type Output = Self;
     #[inline]
     fn bitand(self, other: Self) -> Self {
         gcry_log_levels(self.0 & other.0)
     }
 }
-impl ::core::ops::BitAndAssign for gcry_log_levels {
+impl ::std::ops::BitAndAssign for gcry_log_levels {
     #[inline]
     fn bitand_assign(&mut self, rhs: gcry_log_levels) {
         self.0 &= rhs.0;
@@ -4351,9 +4354,9 @@ impl ::core::ops::BitAndAssign for gcry_log_levels {
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_log_levels(pub ::std::os::raw::c_uint);
-pub type gcry_handler_progress_t = ::core::option::Option<
+pub type gcry_handler_progress_t = ::std::option::Option<
     unsafe extern "C" fn(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut ::std::os::raw::c_void,
         arg2: *const ::std::os::raw::c_char,
         arg3: ::std::os::raw::c_int,
         arg4: ::std::os::raw::c_int,
@@ -4361,32 +4364,32 @@ pub type gcry_handler_progress_t = ::core::option::Option<
     ),
 >;
 pub type gcry_handler_alloc_t =
-    ::core::option::Option<unsafe extern "C" fn(n: usize) -> *mut ::core::ffi::c_void>;
-pub type gcry_handler_secure_check_t = ::core::option::Option<
-    unsafe extern "C" fn(arg1: *const ::core::ffi::c_void) -> ::std::os::raw::c_int,
+    ::std::option::Option<unsafe extern "C" fn(n: usize) -> *mut ::std::os::raw::c_void>;
+pub type gcry_handler_secure_check_t = ::std::option::Option<
+    unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> ::std::os::raw::c_int,
 >;
-pub type gcry_handler_realloc_t = ::core::option::Option<
-    unsafe extern "C" fn(p: *mut ::core::ffi::c_void, n: usize) -> *mut ::core::ffi::c_void,
+pub type gcry_handler_realloc_t = ::std::option::Option<
+    unsafe extern "C" fn(p: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void,
 >;
 pub type gcry_handler_free_t =
-    ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void)>;
-pub type gcry_handler_no_mem_t = ::core::option::Option<
+    ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>;
+pub type gcry_handler_no_mem_t = ::std::option::Option<
     unsafe extern "C" fn(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut ::std::os::raw::c_void,
         arg2: usize,
         arg3: ::std::os::raw::c_uint,
     ) -> ::std::os::raw::c_int,
 >;
-pub type gcry_handler_error_t = ::core::option::Option<
+pub type gcry_handler_error_t = ::std::option::Option<
     unsafe extern "C" fn(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut ::std::os::raw::c_void,
         arg2: ::std::os::raw::c_int,
         arg3: *const ::std::os::raw::c_char,
     ),
 >;
-pub type gcry_handler_log_t = ::core::option::Option<
+pub type gcry_handler_log_t = ::std::option::Option<
     unsafe extern "C" fn(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut ::std::os::raw::c_void,
         arg2: ::std::os::raw::c_int,
         arg3: *const ::std::os::raw::c_char,
         arg4: *mut __va_list_tag,
@@ -4395,7 +4398,7 @@ pub type gcry_handler_log_t = ::core::option::Option<
 extern "C" {
     pub fn gcry_set_progress_handler(
         cb: gcry_handler_progress_t,
-        cb_data: *mut ::core::ffi::c_void,
+        cb_data: *mut ::std::os::raw::c_void,
     );
 }
 extern "C" {
@@ -4408,17 +4411,23 @@ extern "C" {
     );
 }
 extern "C" {
-    pub fn gcry_set_outofcore_handler(h: gcry_handler_no_mem_t, opaque: *mut ::core::ffi::c_void);
+    pub fn gcry_set_outofcore_handler(
+        h: gcry_handler_no_mem_t,
+        opaque: *mut ::std::os::raw::c_void,
+    );
 }
 extern "C" {
-    pub fn gcry_set_fatalerror_handler(fnc: gcry_handler_error_t, opaque: *mut ::core::ffi::c_void);
+    pub fn gcry_set_fatalerror_handler(
+        fnc: gcry_handler_error_t,
+        opaque: *mut ::std::os::raw::c_void,
+    );
 }
 extern "C" {
-    pub fn gcry_set_log_handler(f: gcry_handler_log_t, opaque: *mut ::core::ffi::c_void);
+    pub fn gcry_set_log_handler(f: gcry_handler_log_t, opaque: *mut ::std::os::raw::c_void);
 }
 extern "C" {
     pub fn gcry_set_gettext_handler(
-        f: ::core::option::Option<
+        f: ::std::option::Option<
             unsafe extern "C" fn(
                 arg1: *const ::std::os::raw::c_char,
             ) -> *const ::std::os::raw::c_char,
@@ -4426,46 +4435,46 @@ extern "C" {
     );
 }
 extern "C" {
-    pub fn gcry_malloc(n: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_malloc(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_calloc(n: usize, m: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_calloc(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_malloc_secure(n: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_malloc_secure(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_calloc_secure(n: usize, m: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_calloc_secure(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_realloc(a: *mut ::core::ffi::c_void, n: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_realloc(a: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn gcry_strdup(string: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_xmalloc(n: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_xmalloc(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xcalloc(n: usize, m: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_xcalloc(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xmalloc_secure(n: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_xmalloc_secure(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xcalloc_secure(n: usize, m: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_xcalloc_secure(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xrealloc(a: *mut ::core::ffi::c_void, n: usize) -> *mut ::core::ffi::c_void;
+    pub fn gcry_xrealloc(a: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn gcry_xstrdup(a: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_free(a: *mut ::core::ffi::c_void);
+    pub fn gcry_free(a: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn gcry_is_secure(a: *const ::core::ffi::c_void) -> ::std::os::raw::c_int;
+    pub fn gcry_is_secure(a: *const ::std::os::raw::c_void) -> ::std::os::raw::c_int;
 }
 pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
@@ -4473,23 +4482,23 @@ pub type __builtin_va_list = [__va_list_tag; 1usize];
 pub struct __va_list_tag {
     pub gp_offset: ::std::os::raw::c_uint,
     pub fp_offset: ::std::os::raw::c_uint,
-    pub overflow_arg_area: *mut ::core::ffi::c_void,
-    pub reg_save_area: *mut ::core::ffi::c_void,
+    pub overflow_arg_area: *mut ::std::os::raw::c_void,
+    pub reg_save_area: *mut ::std::os::raw::c_void,
 }
 #[test]
 fn bindgen_test_layout___va_list_tag() {
     assert_eq!(
-        ::core::mem::size_of::<__va_list_tag>(),
+        ::std::mem::size_of::<__va_list_tag>(),
         24usize,
         concat!("Size of: ", stringify!(__va_list_tag))
     );
     assert_eq!(
-        ::core::mem::align_of::<__va_list_tag>(),
+        ::std::mem::align_of::<__va_list_tag>(),
         8usize,
         concat!("Alignment of ", stringify!(__va_list_tag))
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -4499,7 +4508,7 @@ fn bindgen_test_layout___va_list_tag() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
         4usize,
         concat!(
             "Offset of field: ",
@@ -4509,9 +4518,7 @@ fn bindgen_test_layout___va_list_tag() {
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::core::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize
-        },
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -4521,7 +4528,7 @@ fn bindgen_test_layout___va_list_tag() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::core::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
