@@ -25,1872 +25,2496 @@ pub const GCRY_PRIME_FLAG_SECRET: u32 = 1;
 pub const GCRY_PRIME_FLAG_SPECIAL_FACTOR: u32 = 2;
 pub type __socklen_t = ::std::os::raw::c_uint;
 pub type va_list = __builtin_va_list;
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_UNKNOWN: gpg_err_source_t = gpg_err_source_t(0);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_UNKNOWN: gpg_err_source_t = gpg_err_source_t(0);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GCRYPT: gpg_err_source_t = gpg_err_source_t(1);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GCRYPT: gpg_err_source_t = gpg_err_source_t(1);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GPG: gpg_err_source_t = gpg_err_source_t(2);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GPG: gpg_err_source_t = gpg_err_source_t(2);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GPGSM: gpg_err_source_t = gpg_err_source_t(3);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GPGSM: gpg_err_source_t = gpg_err_source_t(3);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GPGAGENT: gpg_err_source_t = gpg_err_source_t(4);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GPGAGENT: gpg_err_source_t = gpg_err_source_t(4);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_PINENTRY: gpg_err_source_t = gpg_err_source_t(5);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_PINENTRY: gpg_err_source_t = gpg_err_source_t(5);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_SCD: gpg_err_source_t = gpg_err_source_t(6);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_SCD: gpg_err_source_t = gpg_err_source_t(6);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GPGME: gpg_err_source_t = gpg_err_source_t(7);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GPGME: gpg_err_source_t = gpg_err_source_t(7);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_KEYBOX: gpg_err_source_t = gpg_err_source_t(8);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_KEYBOX: gpg_err_source_t = gpg_err_source_t(8);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_KSBA: gpg_err_source_t = gpg_err_source_t(9);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_KSBA: gpg_err_source_t = gpg_err_source_t(9);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_DIRMNGR: gpg_err_source_t = gpg_err_source_t(10);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_DIRMNGR: gpg_err_source_t = gpg_err_source_t(10);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GSTI: gpg_err_source_t = gpg_err_source_t(11);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GSTI: gpg_err_source_t = gpg_err_source_t(11);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_GPA: gpg_err_source_t = gpg_err_source_t(12);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_GPA: gpg_err_source_t = gpg_err_source_t(12);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_KLEO: gpg_err_source_t = gpg_err_source_t(13);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_KLEO: gpg_err_source_t = gpg_err_source_t(13);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_G13: gpg_err_source_t = gpg_err_source_t(14);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_G13: gpg_err_source_t = gpg_err_source_t(14);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_ASSUAN: gpg_err_source_t = gpg_err_source_t(15);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_ASSUAN: gpg_err_source_t = gpg_err_source_t(15);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_TPM2D: gpg_err_source_t = gpg_err_source_t(16);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_TPM2D: gpg_err_source_t = gpg_err_source_t(16);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_TLS: gpg_err_source_t = gpg_err_source_t(17);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_TLS: gpg_err_source_t = gpg_err_source_t(17);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_ANY: gpg_err_source_t = gpg_err_source_t(31);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_ANY: gpg_err_source_t = gpg_err_source_t(31);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_USER_1: gpg_err_source_t = gpg_err_source_t(32);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_USER_1: gpg_err_source_t = gpg_err_source_t(32);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_USER_2: gpg_err_source_t = gpg_err_source_t(33);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_USER_2: gpg_err_source_t = gpg_err_source_t(33);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_USER_3: gpg_err_source_t = gpg_err_source_t(34);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_USER_3: gpg_err_source_t = gpg_err_source_t(34);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_USER_4: gpg_err_source_t = gpg_err_source_t(35);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_USER_4: gpg_err_source_t = gpg_err_source_t(35);
 }
-impl gpg_err_source_t {
-    pub const GPG_ERR_SOURCE_DIM: gpg_err_source_t = gpg_err_source_t(128);
+impl gpg_err_source_t
+{
+  pub const GPG_ERR_SOURCE_DIM: gpg_err_source_t = gpg_err_source_t(128);
 }
-impl ::std::ops::BitOr<gpg_err_source_t> for gpg_err_source_t {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gpg_err_source_t(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gpg_err_source_t> for gpg_err_source_t
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gpg_err_source_t(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gpg_err_source_t {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gpg_err_source_t) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gpg_err_source_t
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gpg_err_source_t)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gpg_err_source_t> for gpg_err_source_t {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gpg_err_source_t(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gpg_err_source_t> for gpg_err_source_t
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gpg_err_source_t(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gpg_err_source_t {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gpg_err_source_t) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gpg_err_source_t
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gpg_err_source_t)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gpg_err_source_t(pub ::std::os::raw::c_uint);
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_ERROR: gpg_err_code_t = gpg_err_code_t(0);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_GENERAL: gpg_err_code_t = gpg_err_code_t(1);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_PACKET: gpg_err_code_t = gpg_err_code_t(2);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_VERSION: gpg_err_code_t = gpg_err_code_t(3);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_PUBKEY_ALGO: gpg_err_code_t = gpg_err_code_t(4);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DIGEST_ALGO: gpg_err_code_t = gpg_err_code_t(5);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_PUBKEY: gpg_err_code_t = gpg_err_code_t(6);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_SECKEY: gpg_err_code_t = gpg_err_code_t(7);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_SIGNATURE: gpg_err_code_t = gpg_err_code_t(8);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_PUBKEY: gpg_err_code_t = gpg_err_code_t(9);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CHECKSUM: gpg_err_code_t = gpg_err_code_t(10);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_PASSPHRASE: gpg_err_code_t = gpg_err_code_t(11);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CIPHER_ALGO: gpg_err_code_t = gpg_err_code_t(12);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_KEYRING_OPEN: gpg_err_code_t = gpg_err_code_t(13);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_PACKET: gpg_err_code_t = gpg_err_code_t(14);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_ARMOR: gpg_err_code_t = gpg_err_code_t(15);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_USER_ID: gpg_err_code_t = gpg_err_code_t(16);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_SECKEY: gpg_err_code_t = gpg_err_code_t(17);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_SECKEY: gpg_err_code_t = gpg_err_code_t(18);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_KEY: gpg_err_code_t = gpg_err_code_t(19);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_COMPR_ALGO: gpg_err_code_t = gpg_err_code_t(20);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_PRIME: gpg_err_code_t = gpg_err_code_t(21);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_ENCODING_METHOD: gpg_err_code_t = gpg_err_code_t(22);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_ENCRYPTION_SCHEME: gpg_err_code_t = gpg_err_code_t(23);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_SIGNATURE_SCHEME: gpg_err_code_t = gpg_err_code_t(24);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_ATTR: gpg_err_code_t = gpg_err_code_t(25);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_VALUE: gpg_err_code_t = gpg_err_code_t(26);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(27);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_VALUE_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(28);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SYNTAX: gpg_err_code_t = gpg_err_code_t(29);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_MPI: gpg_err_code_t = gpg_err_code_t(30);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_PASSPHRASE: gpg_err_code_t = gpg_err_code_t(31);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SIG_CLASS: gpg_err_code_t = gpg_err_code_t(32);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_RESOURCE_LIMIT: gpg_err_code_t = gpg_err_code_t(33);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_KEYRING: gpg_err_code_t = gpg_err_code_t(34);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TRUSTDB: gpg_err_code_t = gpg_err_code_t(35);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_CERT: gpg_err_code_t = gpg_err_code_t(36);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_USER_ID: gpg_err_code_t = gpg_err_code_t(37);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNEXPECTED: gpg_err_code_t = gpg_err_code_t(38);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TIME_CONFLICT: gpg_err_code_t = gpg_err_code_t(39);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_KEYSERVER: gpg_err_code_t = gpg_err_code_t(40);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_PUBKEY_ALGO: gpg_err_code_t = gpg_err_code_t(41);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TRIBUTE_TO_D_A: gpg_err_code_t = gpg_err_code_t(42);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WEAK_KEY: gpg_err_code_t = gpg_err_code_t(43);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_KEYLEN: gpg_err_code_t = gpg_err_code_t(44);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_ARG: gpg_err_code_t = gpg_err_code_t(45);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_URI: gpg_err_code_t = gpg_err_code_t(46);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_URI: gpg_err_code_t = gpg_err_code_t(47);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NETWORK: gpg_err_code_t = gpg_err_code_t(48);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_HOST: gpg_err_code_t = gpg_err_code_t(49);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SELFTEST_FAILED: gpg_err_code_t = gpg_err_code_t(50);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_ENCRYPTED: gpg_err_code_t = gpg_err_code_t(51);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_PROCESSED: gpg_err_code_t = gpg_err_code_t(52);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNUSABLE_PUBKEY: gpg_err_code_t = gpg_err_code_t(53);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNUSABLE_SECKEY: gpg_err_code_t = gpg_err_code_t(54);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_VALUE: gpg_err_code_t = gpg_err_code_t(55);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_CERT_CHAIN: gpg_err_code_t = gpg_err_code_t(56);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_CERT: gpg_err_code_t = gpg_err_code_t(57);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_DATA: gpg_err_code_t = gpg_err_code_t(58);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BUG: gpg_err_code_t = gpg_err_code_t(59);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_SUPPORTED: gpg_err_code_t = gpg_err_code_t(60);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_OP: gpg_err_code_t = gpg_err_code_t(61);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TIMEOUT: gpg_err_code_t = gpg_err_code_t(62);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INTERNAL: gpg_err_code_t = gpg_err_code_t(63);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EOF_GCRYPT: gpg_err_code_t = gpg_err_code_t(64);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_OBJ: gpg_err_code_t = gpg_err_code_t(65);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TOO_SHORT: gpg_err_code_t = gpg_err_code_t(66);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(67);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_OBJ: gpg_err_code_t = gpg_err_code_t(68);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_IMPLEMENTED: gpg_err_code_t = gpg_err_code_t(69);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CONFLICT: gpg_err_code_t = gpg_err_code_t(70);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CIPHER_MODE: gpg_err_code_t = gpg_err_code_t(71);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_FLAG: gpg_err_code_t = gpg_err_code_t(72);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_HANDLE: gpg_err_code_t = gpg_err_code_t(73);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TRUNCATED: gpg_err_code_t = gpg_err_code_t(74);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INCOMPLETE_LINE: gpg_err_code_t = gpg_err_code_t(75);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_RESPONSE: gpg_err_code_t = gpg_err_code_t(76);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_AGENT: gpg_err_code_t = gpg_err_code_t(77);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_AGENT: gpg_err_code_t = gpg_err_code_t(78);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_DATA: gpg_err_code_t = gpg_err_code_t(79);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASSUAN_SERVER_FAULT: gpg_err_code_t = gpg_err_code_t(80);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASSUAN: gpg_err_code_t = gpg_err_code_t(81);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_SESSION_KEY: gpg_err_code_t = gpg_err_code_t(82);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_SEXP: gpg_err_code_t = gpg_err_code_t(83);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_ALGORITHM: gpg_err_code_t = gpg_err_code_t(84);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_PIN_ENTRY: gpg_err_code_t = gpg_err_code_t(85);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_PIN_ENTRY: gpg_err_code_t = gpg_err_code_t(86);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_PIN: gpg_err_code_t = gpg_err_code_t(87);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_NAME: gpg_err_code_t = gpg_err_code_t(88);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_DATA: gpg_err_code_t = gpg_err_code_t(89);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_PARAMETER: gpg_err_code_t = gpg_err_code_t(90);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_CARD: gpg_err_code_t = gpg_err_code_t(91);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_DIRMNGR: gpg_err_code_t = gpg_err_code_t(92);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DIRMNGR: gpg_err_code_t = gpg_err_code_t(93);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CERT_REVOKED: gpg_err_code_t = gpg_err_code_t(94);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_CRL_KNOWN: gpg_err_code_t = gpg_err_code_t(95);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CRL_TOO_OLD: gpg_err_code_t = gpg_err_code_t(96);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LINE_TOO_LONG: gpg_err_code_t = gpg_err_code_t(97);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_TRUSTED: gpg_err_code_t = gpg_err_code_t(98);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CANCELED: gpg_err_code_t = gpg_err_code_t(99);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_CA_CERT: gpg_err_code_t = gpg_err_code_t(100);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CERT_EXPIRED: gpg_err_code_t = gpg_err_code_t(101);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CERT_TOO_YOUNG: gpg_err_code_t = gpg_err_code_t(102);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_CERT: gpg_err_code_t = gpg_err_code_t(103);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_SEXP: gpg_err_code_t = gpg_err_code_t(104);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_PROTECTION: gpg_err_code_t = gpg_err_code_t(105);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CORRUPTED_PROTECTION: gpg_err_code_t = gpg_err_code_t(106);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_AMBIGUOUS_NAME: gpg_err_code_t = gpg_err_code_t(107);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CARD: gpg_err_code_t = gpg_err_code_t(108);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CARD_RESET: gpg_err_code_t = gpg_err_code_t(109);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CARD_REMOVED: gpg_err_code_t = gpg_err_code_t(110);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CARD: gpg_err_code_t = gpg_err_code_t(111);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CARD_NOT_PRESENT: gpg_err_code_t = gpg_err_code_t(112);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_PKCS15_APP: gpg_err_code_t = gpg_err_code_t(113);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_CONFIRMED: gpg_err_code_t = gpg_err_code_t(114);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CONFIGURATION: gpg_err_code_t = gpg_err_code_t(115);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_POLICY_MATCH: gpg_err_code_t = gpg_err_code_t(116);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_INDEX: gpg_err_code_t = gpg_err_code_t(117);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_ID: gpg_err_code_t = gpg_err_code_t(118);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_SCDAEMON: gpg_err_code_t = gpg_err_code_t(119);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SCDAEMON: gpg_err_code_t = gpg_err_code_t(120);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_PROTOCOL: gpg_err_code_t = gpg_err_code_t(121);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_PIN_METHOD: gpg_err_code_t = gpg_err_code_t(122);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CARD_NOT_INITIALIZED: gpg_err_code_t = gpg_err_code_t(123);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_OPERATION: gpg_err_code_t = gpg_err_code_t(124);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_KEY_USAGE: gpg_err_code_t = gpg_err_code_t(125);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOTHING_FOUND: gpg_err_code_t = gpg_err_code_t(126);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_BLOB_TYPE: gpg_err_code_t = gpg_err_code_t(127);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_VALUE: gpg_err_code_t = gpg_err_code_t(128);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_HARDWARE: gpg_err_code_t = gpg_err_code_t(129);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_PIN_BLOCKED: gpg_err_code_t = gpg_err_code_t(130);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USE_CONDITIONS: gpg_err_code_t = gpg_err_code_t(131);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_PIN_NOT_SYNCED: gpg_err_code_t = gpg_err_code_t(132);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CRL: gpg_err_code_t = gpg_err_code_t(133);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_BER: gpg_err_code_t = gpg_err_code_t(134);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_BER: gpg_err_code_t = gpg_err_code_t(135);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELEMENT_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(136);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_IDENTIFIER_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(137);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_TAG: gpg_err_code_t = gpg_err_code_t(138);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_LENGTH: gpg_err_code_t = gpg_err_code_t(139);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_KEYINFO: gpg_err_code_t = gpg_err_code_t(140);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNEXPECTED_TAG: gpg_err_code_t = gpg_err_code_t(141);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_DER_ENCODED: gpg_err_code_t = gpg_err_code_t(142);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(143);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(144);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(145);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(146);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_ENCODING: gpg_err_code_t = gpg_err_code_t(147);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_CMS_VERSION: gpg_err_code_t = gpg_err_code_t(148);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_ALGORITHM: gpg_err_code_t = gpg_err_code_t(149);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_ENGINE: gpg_err_code_t = gpg_err_code_t(150);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_PUBKEY_NOT_TRUSTED: gpg_err_code_t = gpg_err_code_t(151);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DECRYPT_FAILED: gpg_err_code_t = gpg_err_code_t(152);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_KEY_EXPIRED: gpg_err_code_t = gpg_err_code_t(153);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SIG_EXPIRED: gpg_err_code_t = gpg_err_code_t(154);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENCODING_PROBLEM: gpg_err_code_t = gpg_err_code_t(155);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_STATE: gpg_err_code_t = gpg_err_code_t(156);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DUP_VALUE: gpg_err_code_t = gpg_err_code_t(157);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_ACTION: gpg_err_code_t = gpg_err_code_t(158);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MODULE_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(159);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_OID_STRING: gpg_err_code_t = gpg_err_code_t(160);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_TIME: gpg_err_code_t = gpg_err_code_t(161);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CRL_OBJ: gpg_err_code_t = gpg_err_code_t(162);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNSUPPORTED_CRL_VERSION: gpg_err_code_t = gpg_err_code_t(163);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CERT_OBJ: gpg_err_code_t = gpg_err_code_t(164);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_NAME: gpg_err_code_t = gpg_err_code_t(165);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LOCALE_PROBLEM: gpg_err_code_t = gpg_err_code_t(166);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_LOCKED: gpg_err_code_t = gpg_err_code_t(167);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_PROTOCOL_VIOLATION: gpg_err_code_t = gpg_err_code_t(168);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_MAC: gpg_err_code_t = gpg_err_code_t(169);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_REQUEST: gpg_err_code_t = gpg_err_code_t(170);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_EXTN: gpg_err_code_t = gpg_err_code_t(171);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_CRIT_EXTN: gpg_err_code_t = gpg_err_code_t(172);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LOCKED: gpg_err_code_t = gpg_err_code_t(173);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_OPTION: gpg_err_code_t = gpg_err_code_t(174);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_COMMAND: gpg_err_code_t = gpg_err_code_t(175);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_OPERATIONAL: gpg_err_code_t = gpg_err_code_t(176);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_PASSPHRASE: gpg_err_code_t = gpg_err_code_t(177);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_PIN: gpg_err_code_t = gpg_err_code_t(178);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_ENABLED: gpg_err_code_t = gpg_err_code_t(179);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_ENGINE: gpg_err_code_t = gpg_err_code_t(180);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_KEY: gpg_err_code_t = gpg_err_code_t(181);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TOO_MANY: gpg_err_code_t = gpg_err_code_t(182);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LIMIT_REACHED: gpg_err_code_t = gpg_err_code_t(183);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NOT_INITIALIZED: gpg_err_code_t = gpg_err_code_t(184);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_ISSUER_CERT: gpg_err_code_t = gpg_err_code_t(185);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_KEYSERVER: gpg_err_code_t = gpg_err_code_t(186);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_CURVE: gpg_err_code_t = gpg_err_code_t(187);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_CURVE: gpg_err_code_t = gpg_err_code_t(188);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DUP_KEY: gpg_err_code_t = gpg_err_code_t(189);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_AMBIGUOUS: gpg_err_code_t = gpg_err_code_t(190);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_CRYPT_CTX: gpg_err_code_t = gpg_err_code_t(191);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_CRYPT_CTX: gpg_err_code_t = gpg_err_code_t(192);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_CRYPT_CTX: gpg_err_code_t = gpg_err_code_t(193);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CRYPT_CTX_CONFLICT: gpg_err_code_t = gpg_err_code_t(194);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BROKEN_PUBKEY: gpg_err_code_t = gpg_err_code_t(195);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BROKEN_SECKEY: gpg_err_code_t = gpg_err_code_t(196);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MAC_ALGO: gpg_err_code_t = gpg_err_code_t(197);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_FULLY_CANCELED: gpg_err_code_t = gpg_err_code_t(198);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNFINISHED: gpg_err_code_t = gpg_err_code_t(199);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BUFFER_TOO_SHORT: gpg_err_code_t = gpg_err_code_t(200);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_INV_LEN_SPEC: gpg_err_code_t = gpg_err_code_t(201);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_STRING_TOO_LONG: gpg_err_code_t = gpg_err_code_t(202);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_UNMATCHED_PAREN: gpg_err_code_t = gpg_err_code_t(203);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_NOT_CANONICAL: gpg_err_code_t = gpg_err_code_t(204);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_BAD_CHARACTER: gpg_err_code_t = gpg_err_code_t(205);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_BAD_QUOTATION: gpg_err_code_t = gpg_err_code_t(206);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_ZERO_PREFIX: gpg_err_code_t = gpg_err_code_t(207);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_NESTED_DH: gpg_err_code_t = gpg_err_code_t(208);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_UNMATCHED_DH: gpg_err_code_t = gpg_err_code_t(209);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_UNEXPECTED_PUNC: gpg_err_code_t = gpg_err_code_t(210);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_BAD_HEX_CHAR: gpg_err_code_t = gpg_err_code_t(211);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_ODD_HEX_NUMBERS: gpg_err_code_t = gpg_err_code_t(212);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SEXP_BAD_OCT_CHAR: gpg_err_code_t = gpg_err_code_t(213);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SUBKEYS_EXP_OR_REV: gpg_err_code_t = gpg_err_code_t(217);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DB_CORRUPTED: gpg_err_code_t = gpg_err_code_t(218);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SERVER_FAILED: gpg_err_code_t = gpg_err_code_t(219);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_NAME: gpg_err_code_t = gpg_err_code_t(220);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_KEY: gpg_err_code_t = gpg_err_code_t(221);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LEGACY_KEY: gpg_err_code_t = gpg_err_code_t(222);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_REQUEST_TOO_SHORT: gpg_err_code_t = gpg_err_code_t(223);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_REQUEST_TOO_LONG: gpg_err_code_t = gpg_err_code_t(224);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_OBJ_TERM_STATE: gpg_err_code_t = gpg_err_code_t(225);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_CERT_CHAIN: gpg_err_code_t = gpg_err_code_t(226);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CERT_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(227);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_RECORD: gpg_err_code_t = gpg_err_code_t(228);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_MAC: gpg_err_code_t = gpg_err_code_t(229);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNEXPECTED_MSG: gpg_err_code_t = gpg_err_code_t(230);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_COMPR_FAILED: gpg_err_code_t = gpg_err_code_t(231);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WOULD_WRAP: gpg_err_code_t = gpg_err_code_t(232);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_FATAL_ALERT: gpg_err_code_t = gpg_err_code_t(233);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_CIPHER: gpg_err_code_t = gpg_err_code_t(234);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_CLIENT_CERT: gpg_err_code_t = gpg_err_code_t(235);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CLOSE_NOTIFY: gpg_err_code_t = gpg_err_code_t(236);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TICKET_EXPIRED: gpg_err_code_t = gpg_err_code_t(237);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_TICKET: gpg_err_code_t = gpg_err_code_t(238);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_IDENTITY: gpg_err_code_t = gpg_err_code_t(239);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_CERT: gpg_err_code_t = gpg_err_code_t(240);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_CERT_REQ: gpg_err_code_t = gpg_err_code_t(241);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_CERT_VER: gpg_err_code_t = gpg_err_code_t(242);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_CHANGE_CIPHER: gpg_err_code_t = gpg_err_code_t(243);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_CLIENT_HELLO: gpg_err_code_t = gpg_err_code_t(244);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_SERVER_HELLO: gpg_err_code_t = gpg_err_code_t(245);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_SERVER_HELLO_DONE: gpg_err_code_t = gpg_err_code_t(246);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_FINISHED: gpg_err_code_t = gpg_err_code_t(247);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_SERVER_KEX: gpg_err_code_t = gpg_err_code_t(248);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_HS_CLIENT_KEX: gpg_err_code_t = gpg_err_code_t(249);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BOGUS_STRING: gpg_err_code_t = gpg_err_code_t(250);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_FORBIDDEN: gpg_err_code_t = gpg_err_code_t(251);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_KEY_DISABLED: gpg_err_code_t = gpg_err_code_t(252);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_KEY_ON_CARD: gpg_err_code_t = gpg_err_code_t(253);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_LOCK_OBJ: gpg_err_code_t = gpg_err_code_t(254);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TRUE: gpg_err_code_t = gpg_err_code_t(255);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_FALSE: gpg_err_code_t = gpg_err_code_t(256);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_GENERAL: gpg_err_code_t = gpg_err_code_t(257);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_ACCEPT_FAILED: gpg_err_code_t = gpg_err_code_t(258);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_CONNECT_FAILED: gpg_err_code_t = gpg_err_code_t(259);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_INV_RESPONSE: gpg_err_code_t = gpg_err_code_t(260);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_INV_VALUE: gpg_err_code_t = gpg_err_code_t(261);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_INCOMPLETE_LINE: gpg_err_code_t = gpg_err_code_t(262);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_LINE_TOO_LONG: gpg_err_code_t = gpg_err_code_t(263);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NESTED_COMMANDS: gpg_err_code_t = gpg_err_code_t(264);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NO_DATA_CB: gpg_err_code_t = gpg_err_code_t(265);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NO_INQUIRE_CB: gpg_err_code_t = gpg_err_code_t(266);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NOT_A_SERVER: gpg_err_code_t = gpg_err_code_t(267);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NOT_A_CLIENT: gpg_err_code_t = gpg_err_code_t(268);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_SERVER_START: gpg_err_code_t = gpg_err_code_t(269);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_READ_ERROR: gpg_err_code_t = gpg_err_code_t(270);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_WRITE_ERROR: gpg_err_code_t = gpg_err_code_t(271);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_TOO_MUCH_DATA: gpg_err_code_t = gpg_err_code_t(273);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_UNEXPECTED_CMD: gpg_err_code_t = gpg_err_code_t(274);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_UNKNOWN_CMD: gpg_err_code_t = gpg_err_code_t(275);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_SYNTAX: gpg_err_code_t = gpg_err_code_t(276);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_CANCELED: gpg_err_code_t = gpg_err_code_t(277);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NO_INPUT: gpg_err_code_t = gpg_err_code_t(278);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_NO_OUTPUT: gpg_err_code_t = gpg_err_code_t(279);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_PARAMETER: gpg_err_code_t = gpg_err_code_t(280);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ASS_UNKNOWN_INQUIRE: gpg_err_code_t = gpg_err_code_t(281);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENGINE_TOO_OLD: gpg_err_code_t = gpg_err_code_t(300);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WINDOW_TOO_SMALL: gpg_err_code_t = gpg_err_code_t(301);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WINDOW_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(302);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_ENVVAR: gpg_err_code_t = gpg_err_code_t(303);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_ID_EXISTS: gpg_err_code_t = gpg_err_code_t(304);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NAME_EXISTS: gpg_err_code_t = gpg_err_code_t(305);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DUP_NAME: gpg_err_code_t = gpg_err_code_t(306);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TOO_YOUNG: gpg_err_code_t = gpg_err_code_t(307);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TOO_OLD: gpg_err_code_t = gpg_err_code_t(308);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_FLAG: gpg_err_code_t = gpg_err_code_t(309);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_INV_ORDER: gpg_err_code_t = gpg_err_code_t(310);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ALREADY_FETCHED: gpg_err_code_t = gpg_err_code_t(311);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_TRY_LATER: gpg_err_code_t = gpg_err_code_t(312);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_WRONG_NAME: gpg_err_code_t = gpg_err_code_t(313);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_AUTH: gpg_err_code_t = gpg_err_code_t(314);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_BAD_AUTH: gpg_err_code_t = gpg_err_code_t(315);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_KEYBOXD: gpg_err_code_t = gpg_err_code_t(316);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_KEYBOXD: gpg_err_code_t = gpg_err_code_t(317);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_NO_SERVICE: gpg_err_code_t = gpg_err_code_t(318);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SERVICE: gpg_err_code_t = gpg_err_code_t(319);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SYSTEM_BUG: gpg_err_code_t = gpg_err_code_t(666);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_UNKNOWN: gpg_err_code_t = gpg_err_code_t(711);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_SECTION: gpg_err_code_t = gpg_err_code_t(712);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_ADDRESS: gpg_err_code_t = gpg_err_code_t(713);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_NO_QUERY: gpg_err_code_t = gpg_err_code_t(714);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_NO_ANSWER: gpg_err_code_t = gpg_err_code_t(715);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_CLOSED: gpg_err_code_t = gpg_err_code_t(716);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_VERIFY: gpg_err_code_t = gpg_err_code_t(717);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_DNS_TIMEOUT: gpg_err_code_t = gpg_err_code_t(718);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_GENERAL: gpg_err_code_t = gpg_err_code_t(721);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ATTR_GENERAL: gpg_err_code_t = gpg_err_code_t(722);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NAME_GENERAL: gpg_err_code_t = gpg_err_code_t(723);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_SECURITY_GENERAL: gpg_err_code_t = gpg_err_code_t(724);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_SERVICE_GENERAL: gpg_err_code_t = gpg_err_code_t(725);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_UPDATE_GENERAL: gpg_err_code_t = gpg_err_code_t(726);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_E_GENERAL: gpg_err_code_t = gpg_err_code_t(727);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_X_GENERAL: gpg_err_code_t = gpg_err_code_t(728);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_OTHER_GENERAL: gpg_err_code_t = gpg_err_code_t(729);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_X_CONNECTING: gpg_err_code_t = gpg_err_code_t(750);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_REFERRAL_LIMIT: gpg_err_code_t = gpg_err_code_t(751);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CLIENT_LOOP: gpg_err_code_t = gpg_err_code_t(752);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NO_RESULTS: gpg_err_code_t = gpg_err_code_t(754);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CONTROL_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(755);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NOT_SUPPORTED: gpg_err_code_t = gpg_err_code_t(756);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CONNECT: gpg_err_code_t = gpg_err_code_t(757);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NO_MEMORY: gpg_err_code_t = gpg_err_code_t(758);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_PARAM: gpg_err_code_t = gpg_err_code_t(759);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_USER_CANCELLED: gpg_err_code_t = gpg_err_code_t(760);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_FILTER: gpg_err_code_t = gpg_err_code_t(761);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_AUTH_UNKNOWN: gpg_err_code_t = gpg_err_code_t(762);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_TIMEOUT: gpg_err_code_t = gpg_err_code_t(763);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_DECODING: gpg_err_code_t = gpg_err_code_t(764);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ENCODING: gpg_err_code_t = gpg_err_code_t(765);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_LOCAL: gpg_err_code_t = gpg_err_code_t(766);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_SERVER_DOWN: gpg_err_code_t = gpg_err_code_t(767);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_SUCCESS: gpg_err_code_t = gpg_err_code_t(768);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_OPERATIONS: gpg_err_code_t = gpg_err_code_t(769);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_PROTOCOL: gpg_err_code_t = gpg_err_code_t(770);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_TIMELIMIT: gpg_err_code_t = gpg_err_code_t(771);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_SIZELIMIT: gpg_err_code_t = gpg_err_code_t(772);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_COMPARE_FALSE: gpg_err_code_t = gpg_err_code_t(773);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_COMPARE_TRUE: gpg_err_code_t = gpg_err_code_t(774);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_UNSUPPORTED_AUTH: gpg_err_code_t = gpg_err_code_t(775);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_STRONG_AUTH_RQRD: gpg_err_code_t = gpg_err_code_t(776);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_PARTIAL_RESULTS: gpg_err_code_t = gpg_err_code_t(777);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_REFERRAL: gpg_err_code_t = gpg_err_code_t(778);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ADMINLIMIT: gpg_err_code_t = gpg_err_code_t(779);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_UNAVAIL_CRIT_EXTN: gpg_err_code_t = gpg_err_code_t(780);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CONFIDENT_RQRD: gpg_err_code_t = gpg_err_code_t(781);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_SASL_BIND_INPROG: gpg_err_code_t = gpg_err_code_t(782);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NO_SUCH_ATTRIBUTE: gpg_err_code_t = gpg_err_code_t(784);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_UNDEFINED_TYPE: gpg_err_code_t = gpg_err_code_t(785);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_BAD_MATCHING: gpg_err_code_t = gpg_err_code_t(786);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CONST_VIOLATION: gpg_err_code_t = gpg_err_code_t(787);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_TYPE_VALUE_EXISTS: gpg_err_code_t = gpg_err_code_t(788);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_INV_SYNTAX: gpg_err_code_t = gpg_err_code_t(789);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NO_SUCH_OBJ: gpg_err_code_t = gpg_err_code_t(800);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ALIAS_PROBLEM: gpg_err_code_t = gpg_err_code_t(801);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_INV_DN_SYNTAX: gpg_err_code_t = gpg_err_code_t(802);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_IS_LEAF: gpg_err_code_t = gpg_err_code_t(803);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ALIAS_DEREF: gpg_err_code_t = gpg_err_code_t(804);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_X_PROXY_AUTH_FAIL: gpg_err_code_t = gpg_err_code_t(815);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_BAD_AUTH: gpg_err_code_t = gpg_err_code_t(816);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_INV_CREDENTIALS: gpg_err_code_t = gpg_err_code_t(817);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_INSUFFICIENT_ACC: gpg_err_code_t = gpg_err_code_t(818);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_BUSY: gpg_err_code_t = gpg_err_code_t(819);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_UNAVAILABLE: gpg_err_code_t = gpg_err_code_t(820);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_UNWILL_TO_PERFORM: gpg_err_code_t = gpg_err_code_t(821);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_LOOP_DETECT: gpg_err_code_t = gpg_err_code_t(822);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NAMING_VIOLATION: gpg_err_code_t = gpg_err_code_t(832);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_OBJ_CLS_VIOLATION: gpg_err_code_t = gpg_err_code_t(833);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NOT_ALLOW_NONLEAF: gpg_err_code_t = gpg_err_code_t(834);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NOT_ALLOW_ON_RDN: gpg_err_code_t = gpg_err_code_t(835);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ALREADY_EXISTS: gpg_err_code_t = gpg_err_code_t(836);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NO_OBJ_CLASS_MODS: gpg_err_code_t = gpg_err_code_t(837);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_RESULTS_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(838);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_AFFECTS_MULT_DSAS: gpg_err_code_t = gpg_err_code_t(839);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_VLV: gpg_err_code_t = gpg_err_code_t(844);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_OTHER: gpg_err_code_t = gpg_err_code_t(848);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CUP_RESOURCE_LIMIT: gpg_err_code_t = gpg_err_code_t(881);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CUP_SEC_VIOLATION: gpg_err_code_t = gpg_err_code_t(882);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CUP_INV_DATA: gpg_err_code_t = gpg_err_code_t(883);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CUP_UNSUP_SCHEME: gpg_err_code_t = gpg_err_code_t(884);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CUP_RELOAD: gpg_err_code_t = gpg_err_code_t(885);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CANCELLED: gpg_err_code_t = gpg_err_code_t(886);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_NO_SUCH_OPERATION: gpg_err_code_t = gpg_err_code_t(887);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_TOO_LATE: gpg_err_code_t = gpg_err_code_t(888);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_CANNOT_CANCEL: gpg_err_code_t = gpg_err_code_t(889);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_ASSERTION_FAILED: gpg_err_code_t = gpg_err_code_t(890);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_LDAP_PROX_AUTH_DENIED: gpg_err_code_t = gpg_err_code_t(891);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_1: gpg_err_code_t = gpg_err_code_t(1024);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_2: gpg_err_code_t = gpg_err_code_t(1025);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_3: gpg_err_code_t = gpg_err_code_t(1026);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_4: gpg_err_code_t = gpg_err_code_t(1027);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_5: gpg_err_code_t = gpg_err_code_t(1028);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_6: gpg_err_code_t = gpg_err_code_t(1029);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_7: gpg_err_code_t = gpg_err_code_t(1030);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_8: gpg_err_code_t = gpg_err_code_t(1031);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_9: gpg_err_code_t = gpg_err_code_t(1032);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_10: gpg_err_code_t = gpg_err_code_t(1033);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_11: gpg_err_code_t = gpg_err_code_t(1034);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_12: gpg_err_code_t = gpg_err_code_t(1035);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_13: gpg_err_code_t = gpg_err_code_t(1036);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_14: gpg_err_code_t = gpg_err_code_t(1037);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_15: gpg_err_code_t = gpg_err_code_t(1038);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_USER_16: gpg_err_code_t = gpg_err_code_t(1039);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_OK: gpg_err_code_t = gpg_err_code_t(1500);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_ERROR: gpg_err_code_t = gpg_err_code_t(1501);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_INTERNAL: gpg_err_code_t = gpg_err_code_t(1502);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_PERM: gpg_err_code_t = gpg_err_code_t(1503);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_ABORT: gpg_err_code_t = gpg_err_code_t(1504);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_BUSY: gpg_err_code_t = gpg_err_code_t(1505);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_LOCKED: gpg_err_code_t = gpg_err_code_t(1506);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_NOMEM: gpg_err_code_t = gpg_err_code_t(1507);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_READONLY: gpg_err_code_t = gpg_err_code_t(1508);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_INTERRUPT: gpg_err_code_t = gpg_err_code_t(1509);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_IOERR: gpg_err_code_t = gpg_err_code_t(1510);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_CORRUPT: gpg_err_code_t = gpg_err_code_t(1511);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_NOTFOUND: gpg_err_code_t = gpg_err_code_t(1512);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_FULL: gpg_err_code_t = gpg_err_code_t(1513);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_CANTOPEN: gpg_err_code_t = gpg_err_code_t(1514);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_PROTOCOL: gpg_err_code_t = gpg_err_code_t(1515);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_EMPTY: gpg_err_code_t = gpg_err_code_t(1516);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_SCHEMA: gpg_err_code_t = gpg_err_code_t(1517);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_TOOBIG: gpg_err_code_t = gpg_err_code_t(1518);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_CONSTRAINT: gpg_err_code_t = gpg_err_code_t(1519);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_MISMATCH: gpg_err_code_t = gpg_err_code_t(1520);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_MISUSE: gpg_err_code_t = gpg_err_code_t(1521);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_NOLFS: gpg_err_code_t = gpg_err_code_t(1522);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_AUTH: gpg_err_code_t = gpg_err_code_t(1523);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_FORMAT: gpg_err_code_t = gpg_err_code_t(1524);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_RANGE: gpg_err_code_t = gpg_err_code_t(1525);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_NOTADB: gpg_err_code_t = gpg_err_code_t(1526);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_NOTICE: gpg_err_code_t = gpg_err_code_t(1527);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_WARNING: gpg_err_code_t = gpg_err_code_t(1528);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_ROW: gpg_err_code_t = gpg_err_code_t(1600);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_SQL_DONE: gpg_err_code_t = gpg_err_code_t(1601);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_MISSING_ERRNO: gpg_err_code_t = gpg_err_code_t(16381);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_UNKNOWN_ERRNO: gpg_err_code_t = gpg_err_code_t(16382);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EOF: gpg_err_code_t = gpg_err_code_t(16383);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_E2BIG: gpg_err_code_t = gpg_err_code_t(32768);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EACCES: gpg_err_code_t = gpg_err_code_t(32769);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EADDRINUSE: gpg_err_code_t = gpg_err_code_t(32770);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EADDRNOTAVAIL: gpg_err_code_t = gpg_err_code_t(32771);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EADV: gpg_err_code_t = gpg_err_code_t(32772);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EAFNOSUPPORT: gpg_err_code_t = gpg_err_code_t(32773);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EAGAIN: gpg_err_code_t = gpg_err_code_t(32774);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EALREADY: gpg_err_code_t = gpg_err_code_t(32775);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EAUTH: gpg_err_code_t = gpg_err_code_t(32776);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBACKGROUND: gpg_err_code_t = gpg_err_code_t(32777);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADE: gpg_err_code_t = gpg_err_code_t(32778);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADF: gpg_err_code_t = gpg_err_code_t(32779);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADFD: gpg_err_code_t = gpg_err_code_t(32780);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADMSG: gpg_err_code_t = gpg_err_code_t(32781);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADR: gpg_err_code_t = gpg_err_code_t(32782);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADRPC: gpg_err_code_t = gpg_err_code_t(32783);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADRQC: gpg_err_code_t = gpg_err_code_t(32784);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBADSLT: gpg_err_code_t = gpg_err_code_t(32785);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBFONT: gpg_err_code_t = gpg_err_code_t(32786);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EBUSY: gpg_err_code_t = gpg_err_code_t(32787);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECANCELED: gpg_err_code_t = gpg_err_code_t(32788);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECHILD: gpg_err_code_t = gpg_err_code_t(32789);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECHRNG: gpg_err_code_t = gpg_err_code_t(32790);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECOMM: gpg_err_code_t = gpg_err_code_t(32791);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECONNABORTED: gpg_err_code_t = gpg_err_code_t(32792);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECONNREFUSED: gpg_err_code_t = gpg_err_code_t(32793);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ECONNRESET: gpg_err_code_t = gpg_err_code_t(32794);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ED: gpg_err_code_t = gpg_err_code_t(32795);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDEADLK: gpg_err_code_t = gpg_err_code_t(32796);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDEADLOCK: gpg_err_code_t = gpg_err_code_t(32797);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDESTADDRREQ: gpg_err_code_t = gpg_err_code_t(32798);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDIED: gpg_err_code_t = gpg_err_code_t(32799);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDOM: gpg_err_code_t = gpg_err_code_t(32800);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDOTDOT: gpg_err_code_t = gpg_err_code_t(32801);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EDQUOT: gpg_err_code_t = gpg_err_code_t(32802);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EEXIST: gpg_err_code_t = gpg_err_code_t(32803);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EFAULT: gpg_err_code_t = gpg_err_code_t(32804);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EFBIG: gpg_err_code_t = gpg_err_code_t(32805);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EFTYPE: gpg_err_code_t = gpg_err_code_t(32806);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EGRATUITOUS: gpg_err_code_t = gpg_err_code_t(32807);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EGREGIOUS: gpg_err_code_t = gpg_err_code_t(32808);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EHOSTDOWN: gpg_err_code_t = gpg_err_code_t(32809);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EHOSTUNREACH: gpg_err_code_t = gpg_err_code_t(32810);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EIDRM: gpg_err_code_t = gpg_err_code_t(32811);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EIEIO: gpg_err_code_t = gpg_err_code_t(32812);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EILSEQ: gpg_err_code_t = gpg_err_code_t(32813);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EINPROGRESS: gpg_err_code_t = gpg_err_code_t(32814);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EINTR: gpg_err_code_t = gpg_err_code_t(32815);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EINVAL: gpg_err_code_t = gpg_err_code_t(32816);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EIO: gpg_err_code_t = gpg_err_code_t(32817);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EISCONN: gpg_err_code_t = gpg_err_code_t(32818);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EISDIR: gpg_err_code_t = gpg_err_code_t(32819);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EISNAM: gpg_err_code_t = gpg_err_code_t(32820);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EL2HLT: gpg_err_code_t = gpg_err_code_t(32821);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EL2NSYNC: gpg_err_code_t = gpg_err_code_t(32822);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EL3HLT: gpg_err_code_t = gpg_err_code_t(32823);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EL3RST: gpg_err_code_t = gpg_err_code_t(32824);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELIBACC: gpg_err_code_t = gpg_err_code_t(32825);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELIBBAD: gpg_err_code_t = gpg_err_code_t(32826);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELIBEXEC: gpg_err_code_t = gpg_err_code_t(32827);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELIBMAX: gpg_err_code_t = gpg_err_code_t(32828);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELIBSCN: gpg_err_code_t = gpg_err_code_t(32829);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELNRNG: gpg_err_code_t = gpg_err_code_t(32830);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ELOOP: gpg_err_code_t = gpg_err_code_t(32831);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EMEDIUMTYPE: gpg_err_code_t = gpg_err_code_t(32832);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EMFILE: gpg_err_code_t = gpg_err_code_t(32833);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EMLINK: gpg_err_code_t = gpg_err_code_t(32834);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EMSGSIZE: gpg_err_code_t = gpg_err_code_t(32835);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EMULTIHOP: gpg_err_code_t = gpg_err_code_t(32836);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENAMETOOLONG: gpg_err_code_t = gpg_err_code_t(32837);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENAVAIL: gpg_err_code_t = gpg_err_code_t(32838);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENEEDAUTH: gpg_err_code_t = gpg_err_code_t(32839);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENETDOWN: gpg_err_code_t = gpg_err_code_t(32840);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENETRESET: gpg_err_code_t = gpg_err_code_t(32841);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENETUNREACH: gpg_err_code_t = gpg_err_code_t(32842);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENFILE: gpg_err_code_t = gpg_err_code_t(32843);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOANO: gpg_err_code_t = gpg_err_code_t(32844);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOBUFS: gpg_err_code_t = gpg_err_code_t(32845);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOCSI: gpg_err_code_t = gpg_err_code_t(32846);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENODATA: gpg_err_code_t = gpg_err_code_t(32847);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENODEV: gpg_err_code_t = gpg_err_code_t(32848);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOENT: gpg_err_code_t = gpg_err_code_t(32849);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOEXEC: gpg_err_code_t = gpg_err_code_t(32850);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOLCK: gpg_err_code_t = gpg_err_code_t(32851);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOLINK: gpg_err_code_t = gpg_err_code_t(32852);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOMEDIUM: gpg_err_code_t = gpg_err_code_t(32853);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOMEM: gpg_err_code_t = gpg_err_code_t(32854);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOMSG: gpg_err_code_t = gpg_err_code_t(32855);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENONET: gpg_err_code_t = gpg_err_code_t(32856);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOPKG: gpg_err_code_t = gpg_err_code_t(32857);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOPROTOOPT: gpg_err_code_t = gpg_err_code_t(32858);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOSPC: gpg_err_code_t = gpg_err_code_t(32859);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOSR: gpg_err_code_t = gpg_err_code_t(32860);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOSTR: gpg_err_code_t = gpg_err_code_t(32861);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOSYS: gpg_err_code_t = gpg_err_code_t(32862);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTBLK: gpg_err_code_t = gpg_err_code_t(32863);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTCONN: gpg_err_code_t = gpg_err_code_t(32864);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTDIR: gpg_err_code_t = gpg_err_code_t(32865);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTEMPTY: gpg_err_code_t = gpg_err_code_t(32866);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTNAM: gpg_err_code_t = gpg_err_code_t(32867);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTSOCK: gpg_err_code_t = gpg_err_code_t(32868);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTSUP: gpg_err_code_t = gpg_err_code_t(32869);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTTY: gpg_err_code_t = gpg_err_code_t(32870);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENOTUNIQ: gpg_err_code_t = gpg_err_code_t(32871);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ENXIO: gpg_err_code_t = gpg_err_code_t(32872);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EOPNOTSUPP: gpg_err_code_t = gpg_err_code_t(32873);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EOVERFLOW: gpg_err_code_t = gpg_err_code_t(32874);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPERM: gpg_err_code_t = gpg_err_code_t(32875);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPFNOSUPPORT: gpg_err_code_t = gpg_err_code_t(32876);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPIPE: gpg_err_code_t = gpg_err_code_t(32877);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROCLIM: gpg_err_code_t = gpg_err_code_t(32878);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROCUNAVAIL: gpg_err_code_t = gpg_err_code_t(32879);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROGMISMATCH: gpg_err_code_t = gpg_err_code_t(32880);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROGUNAVAIL: gpg_err_code_t = gpg_err_code_t(32881);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROTO: gpg_err_code_t = gpg_err_code_t(32882);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROTONOSUPPORT: gpg_err_code_t = gpg_err_code_t(32883);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EPROTOTYPE: gpg_err_code_t = gpg_err_code_t(32884);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ERANGE: gpg_err_code_t = gpg_err_code_t(32885);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EREMCHG: gpg_err_code_t = gpg_err_code_t(32886);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EREMOTE: gpg_err_code_t = gpg_err_code_t(32887);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EREMOTEIO: gpg_err_code_t = gpg_err_code_t(32888);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ERESTART: gpg_err_code_t = gpg_err_code_t(32889);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EROFS: gpg_err_code_t = gpg_err_code_t(32890);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ERPCMISMATCH: gpg_err_code_t = gpg_err_code_t(32891);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESHUTDOWN: gpg_err_code_t = gpg_err_code_t(32892);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESOCKTNOSUPPORT: gpg_err_code_t = gpg_err_code_t(32893);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESPIPE: gpg_err_code_t = gpg_err_code_t(32894);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESRCH: gpg_err_code_t = gpg_err_code_t(32895);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESRMNT: gpg_err_code_t = gpg_err_code_t(32896);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESTALE: gpg_err_code_t = gpg_err_code_t(32897);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ESTRPIPE: gpg_err_code_t = gpg_err_code_t(32898);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ETIME: gpg_err_code_t = gpg_err_code_t(32899);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ETIMEDOUT: gpg_err_code_t = gpg_err_code_t(32900);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ETOOMANYREFS: gpg_err_code_t = gpg_err_code_t(32901);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_ETXTBSY: gpg_err_code_t = gpg_err_code_t(32902);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EUCLEAN: gpg_err_code_t = gpg_err_code_t(32903);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EUNATCH: gpg_err_code_t = gpg_err_code_t(32904);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EUSERS: gpg_err_code_t = gpg_err_code_t(32905);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EWOULDBLOCK: gpg_err_code_t = gpg_err_code_t(32906);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EXDEV: gpg_err_code_t = gpg_err_code_t(32907);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_EXFULL: gpg_err_code_t = gpg_err_code_t(32908);
-}
-impl gpg_err_code_t {
-    pub const GPG_ERR_CODE_DIM: gpg_err_code_t = gpg_err_code_t(65536);
-}
-impl ::std::ops::BitOr<gpg_err_code_t> for gpg_err_code_t {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gpg_err_code_t(self.0 | other.0)
-    }
-}
-impl ::std::ops::BitOrAssign for gpg_err_code_t {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gpg_err_code_t) {
-        self.0 |= rhs.0;
-    }
-}
-impl ::std::ops::BitAnd<gpg_err_code_t> for gpg_err_code_t {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gpg_err_code_t(self.0 & other.0)
-    }
-}
-impl ::std::ops::BitAndAssign for gpg_err_code_t {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gpg_err_code_t) {
-        self.0 &= rhs.0;
-    }
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_ERROR: gpg_err_code_t = gpg_err_code_t(0);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_GENERAL: gpg_err_code_t = gpg_err_code_t(1);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_PACKET: gpg_err_code_t = gpg_err_code_t(2);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_VERSION: gpg_err_code_t = gpg_err_code_t(3);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_PUBKEY_ALGO: gpg_err_code_t = gpg_err_code_t(4);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DIGEST_ALGO: gpg_err_code_t = gpg_err_code_t(5);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_PUBKEY: gpg_err_code_t = gpg_err_code_t(6);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_SECKEY: gpg_err_code_t = gpg_err_code_t(7);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_SIGNATURE: gpg_err_code_t = gpg_err_code_t(8);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_PUBKEY: gpg_err_code_t = gpg_err_code_t(9);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CHECKSUM: gpg_err_code_t = gpg_err_code_t(10);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_PASSPHRASE: gpg_err_code_t = gpg_err_code_t(11);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CIPHER_ALGO: gpg_err_code_t = gpg_err_code_t(12);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_KEYRING_OPEN: gpg_err_code_t = gpg_err_code_t(13);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_PACKET: gpg_err_code_t = gpg_err_code_t(14);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_ARMOR: gpg_err_code_t = gpg_err_code_t(15);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_USER_ID: gpg_err_code_t = gpg_err_code_t(16);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_SECKEY: gpg_err_code_t = gpg_err_code_t(17);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_SECKEY: gpg_err_code_t = gpg_err_code_t(18);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_KEY: gpg_err_code_t = gpg_err_code_t(19);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_COMPR_ALGO: gpg_err_code_t = gpg_err_code_t(20);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_PRIME: gpg_err_code_t = gpg_err_code_t(21);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_ENCODING_METHOD: gpg_err_code_t = gpg_err_code_t(22);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_ENCRYPTION_SCHEME: gpg_err_code_t = gpg_err_code_t(23);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_SIGNATURE_SCHEME: gpg_err_code_t = gpg_err_code_t(24);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_ATTR: gpg_err_code_t = gpg_err_code_t(25);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_VALUE: gpg_err_code_t = gpg_err_code_t(26);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(27);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_VALUE_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(28);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SYNTAX: gpg_err_code_t = gpg_err_code_t(29);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_MPI: gpg_err_code_t = gpg_err_code_t(30);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_PASSPHRASE: gpg_err_code_t = gpg_err_code_t(31);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SIG_CLASS: gpg_err_code_t = gpg_err_code_t(32);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_RESOURCE_LIMIT: gpg_err_code_t = gpg_err_code_t(33);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_KEYRING: gpg_err_code_t = gpg_err_code_t(34);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TRUSTDB: gpg_err_code_t = gpg_err_code_t(35);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_CERT: gpg_err_code_t = gpg_err_code_t(36);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_USER_ID: gpg_err_code_t = gpg_err_code_t(37);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNEXPECTED: gpg_err_code_t = gpg_err_code_t(38);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TIME_CONFLICT: gpg_err_code_t = gpg_err_code_t(39);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_KEYSERVER: gpg_err_code_t = gpg_err_code_t(40);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_PUBKEY_ALGO: gpg_err_code_t = gpg_err_code_t(41);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TRIBUTE_TO_D_A: gpg_err_code_t = gpg_err_code_t(42);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WEAK_KEY: gpg_err_code_t = gpg_err_code_t(43);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_KEYLEN: gpg_err_code_t = gpg_err_code_t(44);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_ARG: gpg_err_code_t = gpg_err_code_t(45);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_URI: gpg_err_code_t = gpg_err_code_t(46);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_URI: gpg_err_code_t = gpg_err_code_t(47);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NETWORK: gpg_err_code_t = gpg_err_code_t(48);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_HOST: gpg_err_code_t = gpg_err_code_t(49);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SELFTEST_FAILED: gpg_err_code_t = gpg_err_code_t(50);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_ENCRYPTED: gpg_err_code_t = gpg_err_code_t(51);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_PROCESSED: gpg_err_code_t = gpg_err_code_t(52);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNUSABLE_PUBKEY: gpg_err_code_t = gpg_err_code_t(53);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNUSABLE_SECKEY: gpg_err_code_t = gpg_err_code_t(54);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_VALUE: gpg_err_code_t = gpg_err_code_t(55);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_CERT_CHAIN: gpg_err_code_t = gpg_err_code_t(56);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_CERT: gpg_err_code_t = gpg_err_code_t(57);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_DATA: gpg_err_code_t = gpg_err_code_t(58);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BUG: gpg_err_code_t = gpg_err_code_t(59);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_SUPPORTED: gpg_err_code_t = gpg_err_code_t(60);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_OP: gpg_err_code_t = gpg_err_code_t(61);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TIMEOUT: gpg_err_code_t = gpg_err_code_t(62);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INTERNAL: gpg_err_code_t = gpg_err_code_t(63);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EOF_GCRYPT: gpg_err_code_t = gpg_err_code_t(64);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_OBJ: gpg_err_code_t = gpg_err_code_t(65);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TOO_SHORT: gpg_err_code_t = gpg_err_code_t(66);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(67);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_OBJ: gpg_err_code_t = gpg_err_code_t(68);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_IMPLEMENTED: gpg_err_code_t = gpg_err_code_t(69);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CONFLICT: gpg_err_code_t = gpg_err_code_t(70);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CIPHER_MODE: gpg_err_code_t = gpg_err_code_t(71);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_FLAG: gpg_err_code_t = gpg_err_code_t(72);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_HANDLE: gpg_err_code_t = gpg_err_code_t(73);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TRUNCATED: gpg_err_code_t = gpg_err_code_t(74);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INCOMPLETE_LINE: gpg_err_code_t = gpg_err_code_t(75);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_RESPONSE: gpg_err_code_t = gpg_err_code_t(76);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_AGENT: gpg_err_code_t = gpg_err_code_t(77);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_AGENT: gpg_err_code_t = gpg_err_code_t(78);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_DATA: gpg_err_code_t = gpg_err_code_t(79);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASSUAN_SERVER_FAULT: gpg_err_code_t = gpg_err_code_t(80);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASSUAN: gpg_err_code_t = gpg_err_code_t(81);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_SESSION_KEY: gpg_err_code_t = gpg_err_code_t(82);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_SEXP: gpg_err_code_t = gpg_err_code_t(83);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_ALGORITHM: gpg_err_code_t = gpg_err_code_t(84);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_PIN_ENTRY: gpg_err_code_t = gpg_err_code_t(85);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_PIN_ENTRY: gpg_err_code_t = gpg_err_code_t(86);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_PIN: gpg_err_code_t = gpg_err_code_t(87);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_NAME: gpg_err_code_t = gpg_err_code_t(88);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_DATA: gpg_err_code_t = gpg_err_code_t(89);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_PARAMETER: gpg_err_code_t = gpg_err_code_t(90);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_CARD: gpg_err_code_t = gpg_err_code_t(91);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_DIRMNGR: gpg_err_code_t = gpg_err_code_t(92);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DIRMNGR: gpg_err_code_t = gpg_err_code_t(93);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CERT_REVOKED: gpg_err_code_t = gpg_err_code_t(94);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_CRL_KNOWN: gpg_err_code_t = gpg_err_code_t(95);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CRL_TOO_OLD: gpg_err_code_t = gpg_err_code_t(96);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LINE_TOO_LONG: gpg_err_code_t = gpg_err_code_t(97);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_TRUSTED: gpg_err_code_t = gpg_err_code_t(98);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CANCELED: gpg_err_code_t = gpg_err_code_t(99);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_CA_CERT: gpg_err_code_t = gpg_err_code_t(100);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CERT_EXPIRED: gpg_err_code_t = gpg_err_code_t(101);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CERT_TOO_YOUNG: gpg_err_code_t = gpg_err_code_t(102);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_CERT: gpg_err_code_t = gpg_err_code_t(103);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_SEXP: gpg_err_code_t = gpg_err_code_t(104);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_PROTECTION: gpg_err_code_t = gpg_err_code_t(105);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CORRUPTED_PROTECTION: gpg_err_code_t = gpg_err_code_t(106);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_AMBIGUOUS_NAME: gpg_err_code_t = gpg_err_code_t(107);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CARD: gpg_err_code_t = gpg_err_code_t(108);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CARD_RESET: gpg_err_code_t = gpg_err_code_t(109);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CARD_REMOVED: gpg_err_code_t = gpg_err_code_t(110);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CARD: gpg_err_code_t = gpg_err_code_t(111);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CARD_NOT_PRESENT: gpg_err_code_t = gpg_err_code_t(112);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_PKCS15_APP: gpg_err_code_t = gpg_err_code_t(113);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_CONFIRMED: gpg_err_code_t = gpg_err_code_t(114);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CONFIGURATION: gpg_err_code_t = gpg_err_code_t(115);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_POLICY_MATCH: gpg_err_code_t = gpg_err_code_t(116);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_INDEX: gpg_err_code_t = gpg_err_code_t(117);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_ID: gpg_err_code_t = gpg_err_code_t(118);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_SCDAEMON: gpg_err_code_t = gpg_err_code_t(119);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SCDAEMON: gpg_err_code_t = gpg_err_code_t(120);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_PROTOCOL: gpg_err_code_t = gpg_err_code_t(121);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_PIN_METHOD: gpg_err_code_t = gpg_err_code_t(122);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CARD_NOT_INITIALIZED: gpg_err_code_t = gpg_err_code_t(123);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_OPERATION: gpg_err_code_t = gpg_err_code_t(124);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_KEY_USAGE: gpg_err_code_t = gpg_err_code_t(125);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOTHING_FOUND: gpg_err_code_t = gpg_err_code_t(126);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_BLOB_TYPE: gpg_err_code_t = gpg_err_code_t(127);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_VALUE: gpg_err_code_t = gpg_err_code_t(128);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_HARDWARE: gpg_err_code_t = gpg_err_code_t(129);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_PIN_BLOCKED: gpg_err_code_t = gpg_err_code_t(130);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USE_CONDITIONS: gpg_err_code_t = gpg_err_code_t(131);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_PIN_NOT_SYNCED: gpg_err_code_t = gpg_err_code_t(132);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CRL: gpg_err_code_t = gpg_err_code_t(133);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_BER: gpg_err_code_t = gpg_err_code_t(134);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_BER: gpg_err_code_t = gpg_err_code_t(135);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELEMENT_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(136);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_IDENTIFIER_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(137);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_TAG: gpg_err_code_t = gpg_err_code_t(138);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_LENGTH: gpg_err_code_t = gpg_err_code_t(139);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_KEYINFO: gpg_err_code_t = gpg_err_code_t(140);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNEXPECTED_TAG: gpg_err_code_t = gpg_err_code_t(141);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_DER_ENCODED: gpg_err_code_t = gpg_err_code_t(142);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(143);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(144);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(145);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_CMS_OBJ: gpg_err_code_t = gpg_err_code_t(146);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_ENCODING: gpg_err_code_t = gpg_err_code_t(147);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_CMS_VERSION: gpg_err_code_t = gpg_err_code_t(148);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_ALGORITHM: gpg_err_code_t = gpg_err_code_t(149);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_ENGINE: gpg_err_code_t = gpg_err_code_t(150);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_PUBKEY_NOT_TRUSTED: gpg_err_code_t = gpg_err_code_t(151);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DECRYPT_FAILED: gpg_err_code_t = gpg_err_code_t(152);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_KEY_EXPIRED: gpg_err_code_t = gpg_err_code_t(153);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SIG_EXPIRED: gpg_err_code_t = gpg_err_code_t(154);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENCODING_PROBLEM: gpg_err_code_t = gpg_err_code_t(155);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_STATE: gpg_err_code_t = gpg_err_code_t(156);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DUP_VALUE: gpg_err_code_t = gpg_err_code_t(157);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_ACTION: gpg_err_code_t = gpg_err_code_t(158);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MODULE_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(159);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_OID_STRING: gpg_err_code_t = gpg_err_code_t(160);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_TIME: gpg_err_code_t = gpg_err_code_t(161);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CRL_OBJ: gpg_err_code_t = gpg_err_code_t(162);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNSUPPORTED_CRL_VERSION: gpg_err_code_t = gpg_err_code_t(163);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CERT_OBJ: gpg_err_code_t = gpg_err_code_t(164);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_NAME: gpg_err_code_t = gpg_err_code_t(165);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LOCALE_PROBLEM: gpg_err_code_t = gpg_err_code_t(166);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_LOCKED: gpg_err_code_t = gpg_err_code_t(167);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_PROTOCOL_VIOLATION: gpg_err_code_t = gpg_err_code_t(168);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_MAC: gpg_err_code_t = gpg_err_code_t(169);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_REQUEST: gpg_err_code_t = gpg_err_code_t(170);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_EXTN: gpg_err_code_t = gpg_err_code_t(171);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_CRIT_EXTN: gpg_err_code_t = gpg_err_code_t(172);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LOCKED: gpg_err_code_t = gpg_err_code_t(173);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_OPTION: gpg_err_code_t = gpg_err_code_t(174);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_COMMAND: gpg_err_code_t = gpg_err_code_t(175);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_OPERATIONAL: gpg_err_code_t = gpg_err_code_t(176);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_PASSPHRASE: gpg_err_code_t = gpg_err_code_t(177);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_PIN: gpg_err_code_t = gpg_err_code_t(178);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_ENABLED: gpg_err_code_t = gpg_err_code_t(179);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_ENGINE: gpg_err_code_t = gpg_err_code_t(180);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_KEY: gpg_err_code_t = gpg_err_code_t(181);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TOO_MANY: gpg_err_code_t = gpg_err_code_t(182);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LIMIT_REACHED: gpg_err_code_t = gpg_err_code_t(183);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NOT_INITIALIZED: gpg_err_code_t = gpg_err_code_t(184);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_ISSUER_CERT: gpg_err_code_t = gpg_err_code_t(185);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_KEYSERVER: gpg_err_code_t = gpg_err_code_t(186);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_CURVE: gpg_err_code_t = gpg_err_code_t(187);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_CURVE: gpg_err_code_t = gpg_err_code_t(188);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DUP_KEY: gpg_err_code_t = gpg_err_code_t(189);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_AMBIGUOUS: gpg_err_code_t = gpg_err_code_t(190);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_CRYPT_CTX: gpg_err_code_t = gpg_err_code_t(191);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_CRYPT_CTX: gpg_err_code_t = gpg_err_code_t(192);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_CRYPT_CTX: gpg_err_code_t = gpg_err_code_t(193);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CRYPT_CTX_CONFLICT: gpg_err_code_t = gpg_err_code_t(194);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BROKEN_PUBKEY: gpg_err_code_t = gpg_err_code_t(195);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BROKEN_SECKEY: gpg_err_code_t = gpg_err_code_t(196);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MAC_ALGO: gpg_err_code_t = gpg_err_code_t(197);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_FULLY_CANCELED: gpg_err_code_t = gpg_err_code_t(198);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNFINISHED: gpg_err_code_t = gpg_err_code_t(199);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BUFFER_TOO_SHORT: gpg_err_code_t = gpg_err_code_t(200);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_INV_LEN_SPEC: gpg_err_code_t = gpg_err_code_t(201);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_STRING_TOO_LONG: gpg_err_code_t = gpg_err_code_t(202);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_UNMATCHED_PAREN: gpg_err_code_t = gpg_err_code_t(203);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_NOT_CANONICAL: gpg_err_code_t = gpg_err_code_t(204);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_BAD_CHARACTER: gpg_err_code_t = gpg_err_code_t(205);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_BAD_QUOTATION: gpg_err_code_t = gpg_err_code_t(206);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_ZERO_PREFIX: gpg_err_code_t = gpg_err_code_t(207);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_NESTED_DH: gpg_err_code_t = gpg_err_code_t(208);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_UNMATCHED_DH: gpg_err_code_t = gpg_err_code_t(209);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_UNEXPECTED_PUNC: gpg_err_code_t = gpg_err_code_t(210);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_BAD_HEX_CHAR: gpg_err_code_t = gpg_err_code_t(211);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_ODD_HEX_NUMBERS: gpg_err_code_t = gpg_err_code_t(212);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SEXP_BAD_OCT_CHAR: gpg_err_code_t = gpg_err_code_t(213);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SUBKEYS_EXP_OR_REV: gpg_err_code_t = gpg_err_code_t(217);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DB_CORRUPTED: gpg_err_code_t = gpg_err_code_t(218);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SERVER_FAILED: gpg_err_code_t = gpg_err_code_t(219);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_NAME: gpg_err_code_t = gpg_err_code_t(220);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_KEY: gpg_err_code_t = gpg_err_code_t(221);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LEGACY_KEY: gpg_err_code_t = gpg_err_code_t(222);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_REQUEST_TOO_SHORT: gpg_err_code_t = gpg_err_code_t(223);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_REQUEST_TOO_LONG: gpg_err_code_t = gpg_err_code_t(224);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_OBJ_TERM_STATE: gpg_err_code_t = gpg_err_code_t(225);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_CERT_CHAIN: gpg_err_code_t = gpg_err_code_t(226);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CERT_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(227);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_RECORD: gpg_err_code_t = gpg_err_code_t(228);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_MAC: gpg_err_code_t = gpg_err_code_t(229);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNEXPECTED_MSG: gpg_err_code_t = gpg_err_code_t(230);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_COMPR_FAILED: gpg_err_code_t = gpg_err_code_t(231);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WOULD_WRAP: gpg_err_code_t = gpg_err_code_t(232);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_FATAL_ALERT: gpg_err_code_t = gpg_err_code_t(233);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_CIPHER: gpg_err_code_t = gpg_err_code_t(234);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_CLIENT_CERT: gpg_err_code_t = gpg_err_code_t(235);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CLOSE_NOTIFY: gpg_err_code_t = gpg_err_code_t(236);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TICKET_EXPIRED: gpg_err_code_t = gpg_err_code_t(237);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_TICKET: gpg_err_code_t = gpg_err_code_t(238);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_IDENTITY: gpg_err_code_t = gpg_err_code_t(239);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_CERT: gpg_err_code_t = gpg_err_code_t(240);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_CERT_REQ: gpg_err_code_t = gpg_err_code_t(241);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_CERT_VER: gpg_err_code_t = gpg_err_code_t(242);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_CHANGE_CIPHER: gpg_err_code_t = gpg_err_code_t(243);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_CLIENT_HELLO: gpg_err_code_t = gpg_err_code_t(244);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_SERVER_HELLO: gpg_err_code_t = gpg_err_code_t(245);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_SERVER_HELLO_DONE: gpg_err_code_t = gpg_err_code_t(246);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_FINISHED: gpg_err_code_t = gpg_err_code_t(247);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_SERVER_KEX: gpg_err_code_t = gpg_err_code_t(248);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_HS_CLIENT_KEX: gpg_err_code_t = gpg_err_code_t(249);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BOGUS_STRING: gpg_err_code_t = gpg_err_code_t(250);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_FORBIDDEN: gpg_err_code_t = gpg_err_code_t(251);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_KEY_DISABLED: gpg_err_code_t = gpg_err_code_t(252);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_KEY_ON_CARD: gpg_err_code_t = gpg_err_code_t(253);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_LOCK_OBJ: gpg_err_code_t = gpg_err_code_t(254);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TRUE: gpg_err_code_t = gpg_err_code_t(255);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_FALSE: gpg_err_code_t = gpg_err_code_t(256);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_GENERAL: gpg_err_code_t = gpg_err_code_t(257);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_ACCEPT_FAILED: gpg_err_code_t = gpg_err_code_t(258);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_CONNECT_FAILED: gpg_err_code_t = gpg_err_code_t(259);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_INV_RESPONSE: gpg_err_code_t = gpg_err_code_t(260);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_INV_VALUE: gpg_err_code_t = gpg_err_code_t(261);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_INCOMPLETE_LINE: gpg_err_code_t = gpg_err_code_t(262);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_LINE_TOO_LONG: gpg_err_code_t = gpg_err_code_t(263);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NESTED_COMMANDS: gpg_err_code_t = gpg_err_code_t(264);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NO_DATA_CB: gpg_err_code_t = gpg_err_code_t(265);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NO_INQUIRE_CB: gpg_err_code_t = gpg_err_code_t(266);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NOT_A_SERVER: gpg_err_code_t = gpg_err_code_t(267);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NOT_A_CLIENT: gpg_err_code_t = gpg_err_code_t(268);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_SERVER_START: gpg_err_code_t = gpg_err_code_t(269);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_READ_ERROR: gpg_err_code_t = gpg_err_code_t(270);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_WRITE_ERROR: gpg_err_code_t = gpg_err_code_t(271);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_TOO_MUCH_DATA: gpg_err_code_t = gpg_err_code_t(273);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_UNEXPECTED_CMD: gpg_err_code_t = gpg_err_code_t(274);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_UNKNOWN_CMD: gpg_err_code_t = gpg_err_code_t(275);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_SYNTAX: gpg_err_code_t = gpg_err_code_t(276);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_CANCELED: gpg_err_code_t = gpg_err_code_t(277);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NO_INPUT: gpg_err_code_t = gpg_err_code_t(278);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_NO_OUTPUT: gpg_err_code_t = gpg_err_code_t(279);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_PARAMETER: gpg_err_code_t = gpg_err_code_t(280);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ASS_UNKNOWN_INQUIRE: gpg_err_code_t = gpg_err_code_t(281);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENGINE_TOO_OLD: gpg_err_code_t = gpg_err_code_t(300);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WINDOW_TOO_SMALL: gpg_err_code_t = gpg_err_code_t(301);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WINDOW_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(302);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_ENVVAR: gpg_err_code_t = gpg_err_code_t(303);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_ID_EXISTS: gpg_err_code_t = gpg_err_code_t(304);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NAME_EXISTS: gpg_err_code_t = gpg_err_code_t(305);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DUP_NAME: gpg_err_code_t = gpg_err_code_t(306);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TOO_YOUNG: gpg_err_code_t = gpg_err_code_t(307);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TOO_OLD: gpg_err_code_t = gpg_err_code_t(308);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_FLAG: gpg_err_code_t = gpg_err_code_t(309);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_INV_ORDER: gpg_err_code_t = gpg_err_code_t(310);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ALREADY_FETCHED: gpg_err_code_t = gpg_err_code_t(311);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_TRY_LATER: gpg_err_code_t = gpg_err_code_t(312);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_WRONG_NAME: gpg_err_code_t = gpg_err_code_t(313);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_AUTH: gpg_err_code_t = gpg_err_code_t(314);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_BAD_AUTH: gpg_err_code_t = gpg_err_code_t(315);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_KEYBOXD: gpg_err_code_t = gpg_err_code_t(316);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_KEYBOXD: gpg_err_code_t = gpg_err_code_t(317);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_NO_SERVICE: gpg_err_code_t = gpg_err_code_t(318);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SERVICE: gpg_err_code_t = gpg_err_code_t(319);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SYSTEM_BUG: gpg_err_code_t = gpg_err_code_t(666);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_UNKNOWN: gpg_err_code_t = gpg_err_code_t(711);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_SECTION: gpg_err_code_t = gpg_err_code_t(712);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_ADDRESS: gpg_err_code_t = gpg_err_code_t(713);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_NO_QUERY: gpg_err_code_t = gpg_err_code_t(714);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_NO_ANSWER: gpg_err_code_t = gpg_err_code_t(715);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_CLOSED: gpg_err_code_t = gpg_err_code_t(716);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_VERIFY: gpg_err_code_t = gpg_err_code_t(717);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_DNS_TIMEOUT: gpg_err_code_t = gpg_err_code_t(718);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_GENERAL: gpg_err_code_t = gpg_err_code_t(721);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ATTR_GENERAL: gpg_err_code_t = gpg_err_code_t(722);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NAME_GENERAL: gpg_err_code_t = gpg_err_code_t(723);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_SECURITY_GENERAL: gpg_err_code_t = gpg_err_code_t(724);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_SERVICE_GENERAL: gpg_err_code_t = gpg_err_code_t(725);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_UPDATE_GENERAL: gpg_err_code_t = gpg_err_code_t(726);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_E_GENERAL: gpg_err_code_t = gpg_err_code_t(727);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_X_GENERAL: gpg_err_code_t = gpg_err_code_t(728);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_OTHER_GENERAL: gpg_err_code_t = gpg_err_code_t(729);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_X_CONNECTING: gpg_err_code_t = gpg_err_code_t(750);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_REFERRAL_LIMIT: gpg_err_code_t = gpg_err_code_t(751);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CLIENT_LOOP: gpg_err_code_t = gpg_err_code_t(752);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NO_RESULTS: gpg_err_code_t = gpg_err_code_t(754);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CONTROL_NOT_FOUND: gpg_err_code_t = gpg_err_code_t(755);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NOT_SUPPORTED: gpg_err_code_t = gpg_err_code_t(756);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CONNECT: gpg_err_code_t = gpg_err_code_t(757);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NO_MEMORY: gpg_err_code_t = gpg_err_code_t(758);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_PARAM: gpg_err_code_t = gpg_err_code_t(759);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_USER_CANCELLED: gpg_err_code_t = gpg_err_code_t(760);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_FILTER: gpg_err_code_t = gpg_err_code_t(761);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_AUTH_UNKNOWN: gpg_err_code_t = gpg_err_code_t(762);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_TIMEOUT: gpg_err_code_t = gpg_err_code_t(763);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_DECODING: gpg_err_code_t = gpg_err_code_t(764);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ENCODING: gpg_err_code_t = gpg_err_code_t(765);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_LOCAL: gpg_err_code_t = gpg_err_code_t(766);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_SERVER_DOWN: gpg_err_code_t = gpg_err_code_t(767);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_SUCCESS: gpg_err_code_t = gpg_err_code_t(768);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_OPERATIONS: gpg_err_code_t = gpg_err_code_t(769);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_PROTOCOL: gpg_err_code_t = gpg_err_code_t(770);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_TIMELIMIT: gpg_err_code_t = gpg_err_code_t(771);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_SIZELIMIT: gpg_err_code_t = gpg_err_code_t(772);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_COMPARE_FALSE: gpg_err_code_t = gpg_err_code_t(773);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_COMPARE_TRUE: gpg_err_code_t = gpg_err_code_t(774);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_UNSUPPORTED_AUTH: gpg_err_code_t = gpg_err_code_t(775);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_STRONG_AUTH_RQRD: gpg_err_code_t = gpg_err_code_t(776);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_PARTIAL_RESULTS: gpg_err_code_t = gpg_err_code_t(777);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_REFERRAL: gpg_err_code_t = gpg_err_code_t(778);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ADMINLIMIT: gpg_err_code_t = gpg_err_code_t(779);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_UNAVAIL_CRIT_EXTN: gpg_err_code_t = gpg_err_code_t(780);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CONFIDENT_RQRD: gpg_err_code_t = gpg_err_code_t(781);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_SASL_BIND_INPROG: gpg_err_code_t = gpg_err_code_t(782);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NO_SUCH_ATTRIBUTE: gpg_err_code_t = gpg_err_code_t(784);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_UNDEFINED_TYPE: gpg_err_code_t = gpg_err_code_t(785);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_BAD_MATCHING: gpg_err_code_t = gpg_err_code_t(786);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CONST_VIOLATION: gpg_err_code_t = gpg_err_code_t(787);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_TYPE_VALUE_EXISTS: gpg_err_code_t = gpg_err_code_t(788);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_INV_SYNTAX: gpg_err_code_t = gpg_err_code_t(789);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NO_SUCH_OBJ: gpg_err_code_t = gpg_err_code_t(800);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ALIAS_PROBLEM: gpg_err_code_t = gpg_err_code_t(801);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_INV_DN_SYNTAX: gpg_err_code_t = gpg_err_code_t(802);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_IS_LEAF: gpg_err_code_t = gpg_err_code_t(803);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ALIAS_DEREF: gpg_err_code_t = gpg_err_code_t(804);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_X_PROXY_AUTH_FAIL: gpg_err_code_t = gpg_err_code_t(815);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_BAD_AUTH: gpg_err_code_t = gpg_err_code_t(816);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_INV_CREDENTIALS: gpg_err_code_t = gpg_err_code_t(817);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_INSUFFICIENT_ACC: gpg_err_code_t = gpg_err_code_t(818);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_BUSY: gpg_err_code_t = gpg_err_code_t(819);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_UNAVAILABLE: gpg_err_code_t = gpg_err_code_t(820);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_UNWILL_TO_PERFORM: gpg_err_code_t = gpg_err_code_t(821);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_LOOP_DETECT: gpg_err_code_t = gpg_err_code_t(822);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NAMING_VIOLATION: gpg_err_code_t = gpg_err_code_t(832);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_OBJ_CLS_VIOLATION: gpg_err_code_t = gpg_err_code_t(833);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NOT_ALLOW_NONLEAF: gpg_err_code_t = gpg_err_code_t(834);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NOT_ALLOW_ON_RDN: gpg_err_code_t = gpg_err_code_t(835);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ALREADY_EXISTS: gpg_err_code_t = gpg_err_code_t(836);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NO_OBJ_CLASS_MODS: gpg_err_code_t = gpg_err_code_t(837);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_RESULTS_TOO_LARGE: gpg_err_code_t = gpg_err_code_t(838);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_AFFECTS_MULT_DSAS: gpg_err_code_t = gpg_err_code_t(839);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_VLV: gpg_err_code_t = gpg_err_code_t(844);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_OTHER: gpg_err_code_t = gpg_err_code_t(848);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CUP_RESOURCE_LIMIT: gpg_err_code_t = gpg_err_code_t(881);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CUP_SEC_VIOLATION: gpg_err_code_t = gpg_err_code_t(882);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CUP_INV_DATA: gpg_err_code_t = gpg_err_code_t(883);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CUP_UNSUP_SCHEME: gpg_err_code_t = gpg_err_code_t(884);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CUP_RELOAD: gpg_err_code_t = gpg_err_code_t(885);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CANCELLED: gpg_err_code_t = gpg_err_code_t(886);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_NO_SUCH_OPERATION: gpg_err_code_t = gpg_err_code_t(887);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_TOO_LATE: gpg_err_code_t = gpg_err_code_t(888);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_CANNOT_CANCEL: gpg_err_code_t = gpg_err_code_t(889);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_ASSERTION_FAILED: gpg_err_code_t = gpg_err_code_t(890);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_LDAP_PROX_AUTH_DENIED: gpg_err_code_t = gpg_err_code_t(891);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_1: gpg_err_code_t = gpg_err_code_t(1024);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_2: gpg_err_code_t = gpg_err_code_t(1025);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_3: gpg_err_code_t = gpg_err_code_t(1026);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_4: gpg_err_code_t = gpg_err_code_t(1027);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_5: gpg_err_code_t = gpg_err_code_t(1028);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_6: gpg_err_code_t = gpg_err_code_t(1029);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_7: gpg_err_code_t = gpg_err_code_t(1030);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_8: gpg_err_code_t = gpg_err_code_t(1031);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_9: gpg_err_code_t = gpg_err_code_t(1032);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_10: gpg_err_code_t = gpg_err_code_t(1033);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_11: gpg_err_code_t = gpg_err_code_t(1034);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_12: gpg_err_code_t = gpg_err_code_t(1035);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_13: gpg_err_code_t = gpg_err_code_t(1036);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_14: gpg_err_code_t = gpg_err_code_t(1037);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_15: gpg_err_code_t = gpg_err_code_t(1038);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_USER_16: gpg_err_code_t = gpg_err_code_t(1039);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_OK: gpg_err_code_t = gpg_err_code_t(1500);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_ERROR: gpg_err_code_t = gpg_err_code_t(1501);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_INTERNAL: gpg_err_code_t = gpg_err_code_t(1502);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_PERM: gpg_err_code_t = gpg_err_code_t(1503);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_ABORT: gpg_err_code_t = gpg_err_code_t(1504);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_BUSY: gpg_err_code_t = gpg_err_code_t(1505);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_LOCKED: gpg_err_code_t = gpg_err_code_t(1506);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_NOMEM: gpg_err_code_t = gpg_err_code_t(1507);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_READONLY: gpg_err_code_t = gpg_err_code_t(1508);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_INTERRUPT: gpg_err_code_t = gpg_err_code_t(1509);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_IOERR: gpg_err_code_t = gpg_err_code_t(1510);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_CORRUPT: gpg_err_code_t = gpg_err_code_t(1511);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_NOTFOUND: gpg_err_code_t = gpg_err_code_t(1512);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_FULL: gpg_err_code_t = gpg_err_code_t(1513);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_CANTOPEN: gpg_err_code_t = gpg_err_code_t(1514);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_PROTOCOL: gpg_err_code_t = gpg_err_code_t(1515);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_EMPTY: gpg_err_code_t = gpg_err_code_t(1516);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_SCHEMA: gpg_err_code_t = gpg_err_code_t(1517);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_TOOBIG: gpg_err_code_t = gpg_err_code_t(1518);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_CONSTRAINT: gpg_err_code_t = gpg_err_code_t(1519);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_MISMATCH: gpg_err_code_t = gpg_err_code_t(1520);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_MISUSE: gpg_err_code_t = gpg_err_code_t(1521);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_NOLFS: gpg_err_code_t = gpg_err_code_t(1522);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_AUTH: gpg_err_code_t = gpg_err_code_t(1523);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_FORMAT: gpg_err_code_t = gpg_err_code_t(1524);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_RANGE: gpg_err_code_t = gpg_err_code_t(1525);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_NOTADB: gpg_err_code_t = gpg_err_code_t(1526);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_NOTICE: gpg_err_code_t = gpg_err_code_t(1527);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_WARNING: gpg_err_code_t = gpg_err_code_t(1528);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_ROW: gpg_err_code_t = gpg_err_code_t(1600);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_SQL_DONE: gpg_err_code_t = gpg_err_code_t(1601);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_MISSING_ERRNO: gpg_err_code_t = gpg_err_code_t(16381);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_UNKNOWN_ERRNO: gpg_err_code_t = gpg_err_code_t(16382);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EOF: gpg_err_code_t = gpg_err_code_t(16383);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_E2BIG: gpg_err_code_t = gpg_err_code_t(32768);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EACCES: gpg_err_code_t = gpg_err_code_t(32769);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EADDRINUSE: gpg_err_code_t = gpg_err_code_t(32770);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EADDRNOTAVAIL: gpg_err_code_t = gpg_err_code_t(32771);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EADV: gpg_err_code_t = gpg_err_code_t(32772);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EAFNOSUPPORT: gpg_err_code_t = gpg_err_code_t(32773);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EAGAIN: gpg_err_code_t = gpg_err_code_t(32774);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EALREADY: gpg_err_code_t = gpg_err_code_t(32775);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EAUTH: gpg_err_code_t = gpg_err_code_t(32776);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBACKGROUND: gpg_err_code_t = gpg_err_code_t(32777);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADE: gpg_err_code_t = gpg_err_code_t(32778);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADF: gpg_err_code_t = gpg_err_code_t(32779);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADFD: gpg_err_code_t = gpg_err_code_t(32780);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADMSG: gpg_err_code_t = gpg_err_code_t(32781);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADR: gpg_err_code_t = gpg_err_code_t(32782);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADRPC: gpg_err_code_t = gpg_err_code_t(32783);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADRQC: gpg_err_code_t = gpg_err_code_t(32784);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBADSLT: gpg_err_code_t = gpg_err_code_t(32785);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBFONT: gpg_err_code_t = gpg_err_code_t(32786);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EBUSY: gpg_err_code_t = gpg_err_code_t(32787);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECANCELED: gpg_err_code_t = gpg_err_code_t(32788);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECHILD: gpg_err_code_t = gpg_err_code_t(32789);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECHRNG: gpg_err_code_t = gpg_err_code_t(32790);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECOMM: gpg_err_code_t = gpg_err_code_t(32791);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECONNABORTED: gpg_err_code_t = gpg_err_code_t(32792);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECONNREFUSED: gpg_err_code_t = gpg_err_code_t(32793);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ECONNRESET: gpg_err_code_t = gpg_err_code_t(32794);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ED: gpg_err_code_t = gpg_err_code_t(32795);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDEADLK: gpg_err_code_t = gpg_err_code_t(32796);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDEADLOCK: gpg_err_code_t = gpg_err_code_t(32797);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDESTADDRREQ: gpg_err_code_t = gpg_err_code_t(32798);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDIED: gpg_err_code_t = gpg_err_code_t(32799);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDOM: gpg_err_code_t = gpg_err_code_t(32800);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDOTDOT: gpg_err_code_t = gpg_err_code_t(32801);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EDQUOT: gpg_err_code_t = gpg_err_code_t(32802);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EEXIST: gpg_err_code_t = gpg_err_code_t(32803);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EFAULT: gpg_err_code_t = gpg_err_code_t(32804);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EFBIG: gpg_err_code_t = gpg_err_code_t(32805);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EFTYPE: gpg_err_code_t = gpg_err_code_t(32806);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EGRATUITOUS: gpg_err_code_t = gpg_err_code_t(32807);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EGREGIOUS: gpg_err_code_t = gpg_err_code_t(32808);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EHOSTDOWN: gpg_err_code_t = gpg_err_code_t(32809);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EHOSTUNREACH: gpg_err_code_t = gpg_err_code_t(32810);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EIDRM: gpg_err_code_t = gpg_err_code_t(32811);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EIEIO: gpg_err_code_t = gpg_err_code_t(32812);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EILSEQ: gpg_err_code_t = gpg_err_code_t(32813);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EINPROGRESS: gpg_err_code_t = gpg_err_code_t(32814);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EINTR: gpg_err_code_t = gpg_err_code_t(32815);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EINVAL: gpg_err_code_t = gpg_err_code_t(32816);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EIO: gpg_err_code_t = gpg_err_code_t(32817);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EISCONN: gpg_err_code_t = gpg_err_code_t(32818);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EISDIR: gpg_err_code_t = gpg_err_code_t(32819);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EISNAM: gpg_err_code_t = gpg_err_code_t(32820);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EL2HLT: gpg_err_code_t = gpg_err_code_t(32821);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EL2NSYNC: gpg_err_code_t = gpg_err_code_t(32822);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EL3HLT: gpg_err_code_t = gpg_err_code_t(32823);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EL3RST: gpg_err_code_t = gpg_err_code_t(32824);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELIBACC: gpg_err_code_t = gpg_err_code_t(32825);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELIBBAD: gpg_err_code_t = gpg_err_code_t(32826);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELIBEXEC: gpg_err_code_t = gpg_err_code_t(32827);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELIBMAX: gpg_err_code_t = gpg_err_code_t(32828);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELIBSCN: gpg_err_code_t = gpg_err_code_t(32829);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELNRNG: gpg_err_code_t = gpg_err_code_t(32830);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ELOOP: gpg_err_code_t = gpg_err_code_t(32831);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EMEDIUMTYPE: gpg_err_code_t = gpg_err_code_t(32832);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EMFILE: gpg_err_code_t = gpg_err_code_t(32833);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EMLINK: gpg_err_code_t = gpg_err_code_t(32834);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EMSGSIZE: gpg_err_code_t = gpg_err_code_t(32835);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EMULTIHOP: gpg_err_code_t = gpg_err_code_t(32836);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENAMETOOLONG: gpg_err_code_t = gpg_err_code_t(32837);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENAVAIL: gpg_err_code_t = gpg_err_code_t(32838);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENEEDAUTH: gpg_err_code_t = gpg_err_code_t(32839);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENETDOWN: gpg_err_code_t = gpg_err_code_t(32840);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENETRESET: gpg_err_code_t = gpg_err_code_t(32841);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENETUNREACH: gpg_err_code_t = gpg_err_code_t(32842);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENFILE: gpg_err_code_t = gpg_err_code_t(32843);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOANO: gpg_err_code_t = gpg_err_code_t(32844);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOBUFS: gpg_err_code_t = gpg_err_code_t(32845);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOCSI: gpg_err_code_t = gpg_err_code_t(32846);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENODATA: gpg_err_code_t = gpg_err_code_t(32847);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENODEV: gpg_err_code_t = gpg_err_code_t(32848);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOENT: gpg_err_code_t = gpg_err_code_t(32849);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOEXEC: gpg_err_code_t = gpg_err_code_t(32850);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOLCK: gpg_err_code_t = gpg_err_code_t(32851);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOLINK: gpg_err_code_t = gpg_err_code_t(32852);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOMEDIUM: gpg_err_code_t = gpg_err_code_t(32853);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOMEM: gpg_err_code_t = gpg_err_code_t(32854);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOMSG: gpg_err_code_t = gpg_err_code_t(32855);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENONET: gpg_err_code_t = gpg_err_code_t(32856);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOPKG: gpg_err_code_t = gpg_err_code_t(32857);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOPROTOOPT: gpg_err_code_t = gpg_err_code_t(32858);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOSPC: gpg_err_code_t = gpg_err_code_t(32859);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOSR: gpg_err_code_t = gpg_err_code_t(32860);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOSTR: gpg_err_code_t = gpg_err_code_t(32861);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOSYS: gpg_err_code_t = gpg_err_code_t(32862);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTBLK: gpg_err_code_t = gpg_err_code_t(32863);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTCONN: gpg_err_code_t = gpg_err_code_t(32864);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTDIR: gpg_err_code_t = gpg_err_code_t(32865);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTEMPTY: gpg_err_code_t = gpg_err_code_t(32866);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTNAM: gpg_err_code_t = gpg_err_code_t(32867);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTSOCK: gpg_err_code_t = gpg_err_code_t(32868);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTSUP: gpg_err_code_t = gpg_err_code_t(32869);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTTY: gpg_err_code_t = gpg_err_code_t(32870);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENOTUNIQ: gpg_err_code_t = gpg_err_code_t(32871);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ENXIO: gpg_err_code_t = gpg_err_code_t(32872);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EOPNOTSUPP: gpg_err_code_t = gpg_err_code_t(32873);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EOVERFLOW: gpg_err_code_t = gpg_err_code_t(32874);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPERM: gpg_err_code_t = gpg_err_code_t(32875);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPFNOSUPPORT: gpg_err_code_t = gpg_err_code_t(32876);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPIPE: gpg_err_code_t = gpg_err_code_t(32877);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROCLIM: gpg_err_code_t = gpg_err_code_t(32878);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROCUNAVAIL: gpg_err_code_t = gpg_err_code_t(32879);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROGMISMATCH: gpg_err_code_t = gpg_err_code_t(32880);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROGUNAVAIL: gpg_err_code_t = gpg_err_code_t(32881);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROTO: gpg_err_code_t = gpg_err_code_t(32882);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROTONOSUPPORT: gpg_err_code_t = gpg_err_code_t(32883);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EPROTOTYPE: gpg_err_code_t = gpg_err_code_t(32884);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ERANGE: gpg_err_code_t = gpg_err_code_t(32885);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EREMCHG: gpg_err_code_t = gpg_err_code_t(32886);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EREMOTE: gpg_err_code_t = gpg_err_code_t(32887);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EREMOTEIO: gpg_err_code_t = gpg_err_code_t(32888);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ERESTART: gpg_err_code_t = gpg_err_code_t(32889);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EROFS: gpg_err_code_t = gpg_err_code_t(32890);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ERPCMISMATCH: gpg_err_code_t = gpg_err_code_t(32891);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESHUTDOWN: gpg_err_code_t = gpg_err_code_t(32892);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESOCKTNOSUPPORT: gpg_err_code_t = gpg_err_code_t(32893);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESPIPE: gpg_err_code_t = gpg_err_code_t(32894);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESRCH: gpg_err_code_t = gpg_err_code_t(32895);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESRMNT: gpg_err_code_t = gpg_err_code_t(32896);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESTALE: gpg_err_code_t = gpg_err_code_t(32897);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ESTRPIPE: gpg_err_code_t = gpg_err_code_t(32898);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ETIME: gpg_err_code_t = gpg_err_code_t(32899);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ETIMEDOUT: gpg_err_code_t = gpg_err_code_t(32900);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ETOOMANYREFS: gpg_err_code_t = gpg_err_code_t(32901);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_ETXTBSY: gpg_err_code_t = gpg_err_code_t(32902);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EUCLEAN: gpg_err_code_t = gpg_err_code_t(32903);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EUNATCH: gpg_err_code_t = gpg_err_code_t(32904);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EUSERS: gpg_err_code_t = gpg_err_code_t(32905);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EWOULDBLOCK: gpg_err_code_t = gpg_err_code_t(32906);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EXDEV: gpg_err_code_t = gpg_err_code_t(32907);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_EXFULL: gpg_err_code_t = gpg_err_code_t(32908);
+}
+impl gpg_err_code_t
+{
+  pub const GPG_ERR_CODE_DIM: gpg_err_code_t = gpg_err_code_t(65536);
+}
+impl ::std::ops::BitOr<gpg_err_code_t> for gpg_err_code_t
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gpg_err_code_t(self.0 | other.0)
+  }
+}
+impl ::std::ops::BitOrAssign for gpg_err_code_t
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gpg_err_code_t)
+  {
+    self.0 |= rhs.0;
+  }
+}
+impl ::std::ops::BitAnd<gpg_err_code_t> for gpg_err_code_t
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gpg_err_code_t(self.0 & other.0)
+  }
+}
+impl ::std::ops::BitAndAssign for gpg_err_code_t
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gpg_err_code_t)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
@@ -1899,2642 +2523,2897 @@ pub type gpg_error_t = ::std::os::raw::c_uint;
 pub type socklen_t = __socklen_t;
 pub type gcry_socklen_t = socklen_t;
 pub type gcry_error_t = gpg_error_t;
-pub use self::gpg_err_code_t as gcry_err_code_t;
-pub use self::gpg_err_source_t as gcry_err_source_t;
+pub use self::{gpg_err_code_t as gcry_err_code_t, gpg_err_source_t as gcry_err_source_t};
 extern "C" {
-    pub fn gcry_strerror(err: gcry_error_t) -> *const ::std::os::raw::c_char;
+  pub fn gcry_strerror(err: gcry_error_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_strsource(err: gcry_error_t) -> *const ::std::os::raw::c_char;
+  pub fn gcry_strsource(err: gcry_error_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_err_code_from_errno(err: ::std::os::raw::c_int) -> gcry_err_code_t;
+  pub fn gcry_err_code_from_errno(err: ::std::os::raw::c_int) -> gcry_err_code_t;
 }
 extern "C" {
-    pub fn gcry_err_code_to_errno(code: gcry_err_code_t) -> ::std::os::raw::c_int;
+  pub fn gcry_err_code_to_errno(code: gcry_err_code_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_err_make_from_errno(
-        source: gcry_err_source_t,
-        err: ::std::os::raw::c_int,
-    ) -> gcry_error_t;
+  pub fn gcry_err_make_from_errno(source: gcry_err_source_t, err: ::std::os::raw::c_int) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_error_from_errno(err: ::std::os::raw::c_int) -> gcry_error_t;
+  pub fn gcry_error_from_errno(err: ::std::os::raw::c_int) -> gcry_error_t;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_thread_cbs {
-    pub option: ::std::os::raw::c_uint,
+pub struct gcry_thread_cbs
+{
+  pub option: ::std::os::raw::c_uint,
 }
 #[test]
-fn bindgen_test_layout_gcry_thread_cbs() {
-    assert_eq!(
-        ::std::mem::size_of::<gcry_thread_cbs>(),
-        4usize,
-        concat!("Size of: ", stringify!(gcry_thread_cbs))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<gcry_thread_cbs>(),
-        4usize,
-        concat!("Alignment of ", stringify!(gcry_thread_cbs))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_thread_cbs>())).option as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_thread_cbs),
-            "::",
-            stringify!(option)
-        )
-    );
+fn bindgen_test_layout_gcry_thread_cbs()
+{
+  assert_eq!(
+    ::std::mem::size_of::<gcry_thread_cbs>(),
+    4usize,
+    concat!("Size of: ", stringify!(gcry_thread_cbs))
+  );
+  assert_eq!(
+    ::std::mem::align_of::<gcry_thread_cbs>(),
+    4usize,
+    concat!("Alignment of ", stringify!(gcry_thread_cbs))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_thread_cbs>())).option as *const _ as usize },
+    0usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(gcry_thread_cbs),
+      "::",
+      stringify!(option)
+    )
+  );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_context {
-    _unused: [u8; 0],
+pub struct gcry_context
+{
+  _unused: [u8; 0],
 }
 pub type gcry_ctx_t = *mut gcry_context;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_mpi {
-    _unused: [u8; 0],
+pub struct gcry_mpi
+{
+  _unused: [u8; 0],
 }
 pub type gcry_mpi_t = *mut gcry_mpi;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_mpi_point {
-    _unused: [u8; 0],
+pub struct gcry_mpi_point
+{
+  _unused: [u8; 0],
 }
 pub type gcry_mpi_point_t = *mut gcry_mpi_point;
 pub type GCRY_MPI = *mut gcry_mpi;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_buffer_t {
-    pub size: usize,
-    pub off: usize,
-    pub len: usize,
-    pub data: *mut ::std::os::raw::c_void,
+pub struct gcry_buffer_t
+{
+  pub size: usize,
+  pub off: usize,
+  pub len: usize,
+  pub data: *mut ::std::os::raw::c_void,
 }
 #[test]
-fn bindgen_test_layout_gcry_buffer_t() {
-    assert_eq!(
-        ::std::mem::size_of::<gcry_buffer_t>(),
-        32usize,
-        concat!("Size of: ", stringify!(gcry_buffer_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<gcry_buffer_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(gcry_buffer_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_buffer_t),
-            "::",
-            stringify!(size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).off as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_buffer_t),
-            "::",
-            stringify!(off)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).len as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_buffer_t),
-            "::",
-            stringify!(len)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).data as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_buffer_t),
-            "::",
-            stringify!(data)
-        )
-    );
+fn bindgen_test_layout_gcry_buffer_t()
+{
+  assert_eq!(
+    ::std::mem::size_of::<gcry_buffer_t>(),
+    32usize,
+    concat!("Size of: ", stringify!(gcry_buffer_t))
+  );
+  assert_eq!(
+    ::std::mem::align_of::<gcry_buffer_t>(),
+    8usize,
+    concat!("Alignment of ", stringify!(gcry_buffer_t))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).size as *const _ as usize },
+    0usize,
+    concat!("Offset of field: ", stringify!(gcry_buffer_t), "::", stringify!(size))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).off as *const _ as usize },
+    8usize,
+    concat!("Offset of field: ", stringify!(gcry_buffer_t), "::", stringify!(off))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).len as *const _ as usize },
+    16usize,
+    concat!("Offset of field: ", stringify!(gcry_buffer_t), "::", stringify!(len))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_buffer_t>())).data as *const _ as usize },
+    24usize,
+    concat!("Offset of field: ", stringify!(gcry_buffer_t), "::", stringify!(data))
+  );
 }
 extern "C" {
-    pub fn gcry_check_version(
-        req_version: *const ::std::os::raw::c_char,
-    ) -> *const ::std::os::raw::c_char;
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_CFB_SYNC: gcry_ctl_cmds = gcry_ctl_cmds(3);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_RESET: gcry_ctl_cmds = gcry_ctl_cmds(4);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_FINALIZE: gcry_ctl_cmds = gcry_ctl_cmds(5);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_KEYLEN: gcry_ctl_cmds = gcry_ctl_cmds(6);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_BLKLEN: gcry_ctl_cmds = gcry_ctl_cmds(7);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_TEST_ALGO: gcry_ctl_cmds = gcry_ctl_cmds(8);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_IS_SECURE: gcry_ctl_cmds = gcry_ctl_cmds(9);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_ASNOID: gcry_ctl_cmds = gcry_ctl_cmds(10);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_ENABLE_ALGO: gcry_ctl_cmds = gcry_ctl_cmds(11);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_ALGO: gcry_ctl_cmds = gcry_ctl_cmds(12);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DUMP_RANDOM_STATS: gcry_ctl_cmds = gcry_ctl_cmds(13);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DUMP_SECMEM_STATS: gcry_ctl_cmds = gcry_ctl_cmds(14);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_ALGO_NPKEY: gcry_ctl_cmds = gcry_ctl_cmds(15);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_ALGO_NSKEY: gcry_ctl_cmds = gcry_ctl_cmds(16);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_ALGO_NSIGN: gcry_ctl_cmds = gcry_ctl_cmds(17);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_ALGO_NENCR: gcry_ctl_cmds = gcry_ctl_cmds(18);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_VERBOSITY: gcry_ctl_cmds = gcry_ctl_cmds(19);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_DEBUG_FLAGS: gcry_ctl_cmds = gcry_ctl_cmds(20);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_CLEAR_DEBUG_FLAGS: gcry_ctl_cmds = gcry_ctl_cmds(21);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_USE_SECURE_RNDPOOL: gcry_ctl_cmds = gcry_ctl_cmds(22);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DUMP_MEMORY_STATS: gcry_ctl_cmds = gcry_ctl_cmds(23);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_INIT_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(24);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_TERM_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(25);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_SECMEM_WARN: gcry_ctl_cmds = gcry_ctl_cmds(27);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SUSPEND_SECMEM_WARN: gcry_ctl_cmds = gcry_ctl_cmds(28);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_RESUME_SECMEM_WARN: gcry_ctl_cmds = gcry_ctl_cmds(29);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DROP_PRIVS: gcry_ctl_cmds = gcry_ctl_cmds(30);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_ENABLE_M_GUARD: gcry_ctl_cmds = gcry_ctl_cmds(31);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_START_DUMP: gcry_ctl_cmds = gcry_ctl_cmds(32);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_STOP_DUMP: gcry_ctl_cmds = gcry_ctl_cmds(33);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_ALGO_USAGE: gcry_ctl_cmds = gcry_ctl_cmds(34);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_IS_ALGO_ENABLED: gcry_ctl_cmds = gcry_ctl_cmds(35);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_INTERNAL_LOCKING: gcry_ctl_cmds = gcry_ctl_cmds(36);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(37);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_INITIALIZATION_FINISHED: gcry_ctl_cmds = gcry_ctl_cmds(38);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_INITIALIZATION_FINISHED_P: gcry_ctl_cmds = gcry_ctl_cmds(39);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_ANY_INITIALIZATION_P: gcry_ctl_cmds = gcry_ctl_cmds(40);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_CBC_CTS: gcry_ctl_cmds = gcry_ctl_cmds(41);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_CBC_MAC: gcry_ctl_cmds = gcry_ctl_cmds(42);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_ENABLE_QUICK_RANDOM: gcry_ctl_cmds = gcry_ctl_cmds(44);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_RANDOM_SEED_FILE: gcry_ctl_cmds = gcry_ctl_cmds(45);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_UPDATE_RANDOM_SEED_FILE: gcry_ctl_cmds = gcry_ctl_cmds(46);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_THREAD_CBS: gcry_ctl_cmds = gcry_ctl_cmds(47);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_FAST_POLL: gcry_ctl_cmds = gcry_ctl_cmds(48);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_RANDOM_DAEMON_SOCKET: gcry_ctl_cmds = gcry_ctl_cmds(49);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_USE_RANDOM_DAEMON: gcry_ctl_cmds = gcry_ctl_cmds(50);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_FAKED_RANDOM_P: gcry_ctl_cmds = gcry_ctl_cmds(51);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_RNDEGD_SOCKET: gcry_ctl_cmds = gcry_ctl_cmds(52);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_PRINT_CONFIG: gcry_ctl_cmds = gcry_ctl_cmds(53);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_OPERATIONAL_P: gcry_ctl_cmds = gcry_ctl_cmds(54);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_FIPS_MODE_P: gcry_ctl_cmds = gcry_ctl_cmds(55);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_FORCE_FIPS_MODE: gcry_ctl_cmds = gcry_ctl_cmds(56);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SELFTEST: gcry_ctl_cmds = gcry_ctl_cmds(57);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_HWF: gcry_ctl_cmds = gcry_ctl_cmds(63);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_ENFORCED_FIPS_FLAG: gcry_ctl_cmds = gcry_ctl_cmds(64);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_PREFERRED_RNG_TYPE: gcry_ctl_cmds = gcry_ctl_cmds(65);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_CURRENT_RNG_TYPE: gcry_ctl_cmds = gcry_ctl_cmds(66);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_LOCKED_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(67);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DISABLE_PRIV_DROP: gcry_ctl_cmds = gcry_ctl_cmds(68);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_CCM_LENGTHS: gcry_ctl_cmds = gcry_ctl_cmds(69);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_CLOSE_RANDOM_DEVICE: gcry_ctl_cmds = gcry_ctl_cmds(70);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_INACTIVATE_FIPS_FLAG: gcry_ctl_cmds = gcry_ctl_cmds(71);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_REACTIVATE_FIPS_FLAG: gcry_ctl_cmds = gcry_ctl_cmds(72);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_SBOX: gcry_ctl_cmds = gcry_ctl_cmds(73);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_DRBG_REINIT: gcry_ctl_cmds = gcry_ctl_cmds(74);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_TAGLEN: gcry_ctl_cmds = gcry_ctl_cmds(75);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_GET_TAGLEN: gcry_ctl_cmds = gcry_ctl_cmds(76);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_REINIT_SYSCALL_CLAMP: gcry_ctl_cmds = gcry_ctl_cmds(77);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_AUTO_EXPAND_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(78);
-}
-impl gcry_ctl_cmds {
-    pub const GCRYCTL_SET_ALLOW_WEAK_KEY: gcry_ctl_cmds = gcry_ctl_cmds(79);
-}
-impl ::std::ops::BitOr<gcry_ctl_cmds> for gcry_ctl_cmds {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_ctl_cmds(self.0 | other.0)
-    }
-}
-impl ::std::ops::BitOrAssign for gcry_ctl_cmds {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_ctl_cmds) {
-        self.0 |= rhs.0;
-    }
-}
-impl ::std::ops::BitAnd<gcry_ctl_cmds> for gcry_ctl_cmds {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_ctl_cmds(self.0 & other.0)
-    }
-}
-impl ::std::ops::BitAndAssign for gcry_ctl_cmds {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_ctl_cmds) {
-        self.0 &= rhs.0;
-    }
+  pub fn gcry_check_version(req_version: *const ::std::os::raw::c_char) -> *const ::std::os::raw::c_char;
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_CFB_SYNC: gcry_ctl_cmds = gcry_ctl_cmds(3);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_RESET: gcry_ctl_cmds = gcry_ctl_cmds(4);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_FINALIZE: gcry_ctl_cmds = gcry_ctl_cmds(5);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_KEYLEN: gcry_ctl_cmds = gcry_ctl_cmds(6);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_BLKLEN: gcry_ctl_cmds = gcry_ctl_cmds(7);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_TEST_ALGO: gcry_ctl_cmds = gcry_ctl_cmds(8);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_IS_SECURE: gcry_ctl_cmds = gcry_ctl_cmds(9);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_ASNOID: gcry_ctl_cmds = gcry_ctl_cmds(10);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_ENABLE_ALGO: gcry_ctl_cmds = gcry_ctl_cmds(11);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_ALGO: gcry_ctl_cmds = gcry_ctl_cmds(12);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DUMP_RANDOM_STATS: gcry_ctl_cmds = gcry_ctl_cmds(13);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DUMP_SECMEM_STATS: gcry_ctl_cmds = gcry_ctl_cmds(14);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_ALGO_NPKEY: gcry_ctl_cmds = gcry_ctl_cmds(15);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_ALGO_NSKEY: gcry_ctl_cmds = gcry_ctl_cmds(16);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_ALGO_NSIGN: gcry_ctl_cmds = gcry_ctl_cmds(17);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_ALGO_NENCR: gcry_ctl_cmds = gcry_ctl_cmds(18);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_VERBOSITY: gcry_ctl_cmds = gcry_ctl_cmds(19);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_DEBUG_FLAGS: gcry_ctl_cmds = gcry_ctl_cmds(20);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_CLEAR_DEBUG_FLAGS: gcry_ctl_cmds = gcry_ctl_cmds(21);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_USE_SECURE_RNDPOOL: gcry_ctl_cmds = gcry_ctl_cmds(22);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DUMP_MEMORY_STATS: gcry_ctl_cmds = gcry_ctl_cmds(23);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_INIT_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(24);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_TERM_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(25);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_SECMEM_WARN: gcry_ctl_cmds = gcry_ctl_cmds(27);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SUSPEND_SECMEM_WARN: gcry_ctl_cmds = gcry_ctl_cmds(28);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_RESUME_SECMEM_WARN: gcry_ctl_cmds = gcry_ctl_cmds(29);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DROP_PRIVS: gcry_ctl_cmds = gcry_ctl_cmds(30);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_ENABLE_M_GUARD: gcry_ctl_cmds = gcry_ctl_cmds(31);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_START_DUMP: gcry_ctl_cmds = gcry_ctl_cmds(32);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_STOP_DUMP: gcry_ctl_cmds = gcry_ctl_cmds(33);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_ALGO_USAGE: gcry_ctl_cmds = gcry_ctl_cmds(34);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_IS_ALGO_ENABLED: gcry_ctl_cmds = gcry_ctl_cmds(35);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_INTERNAL_LOCKING: gcry_ctl_cmds = gcry_ctl_cmds(36);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(37);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_INITIALIZATION_FINISHED: gcry_ctl_cmds = gcry_ctl_cmds(38);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_INITIALIZATION_FINISHED_P: gcry_ctl_cmds = gcry_ctl_cmds(39);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_ANY_INITIALIZATION_P: gcry_ctl_cmds = gcry_ctl_cmds(40);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_CBC_CTS: gcry_ctl_cmds = gcry_ctl_cmds(41);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_CBC_MAC: gcry_ctl_cmds = gcry_ctl_cmds(42);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_ENABLE_QUICK_RANDOM: gcry_ctl_cmds = gcry_ctl_cmds(44);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_RANDOM_SEED_FILE: gcry_ctl_cmds = gcry_ctl_cmds(45);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_UPDATE_RANDOM_SEED_FILE: gcry_ctl_cmds = gcry_ctl_cmds(46);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_THREAD_CBS: gcry_ctl_cmds = gcry_ctl_cmds(47);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_FAST_POLL: gcry_ctl_cmds = gcry_ctl_cmds(48);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_RANDOM_DAEMON_SOCKET: gcry_ctl_cmds = gcry_ctl_cmds(49);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_USE_RANDOM_DAEMON: gcry_ctl_cmds = gcry_ctl_cmds(50);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_FAKED_RANDOM_P: gcry_ctl_cmds = gcry_ctl_cmds(51);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_RNDEGD_SOCKET: gcry_ctl_cmds = gcry_ctl_cmds(52);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_PRINT_CONFIG: gcry_ctl_cmds = gcry_ctl_cmds(53);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_OPERATIONAL_P: gcry_ctl_cmds = gcry_ctl_cmds(54);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_FIPS_MODE_P: gcry_ctl_cmds = gcry_ctl_cmds(55);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_FORCE_FIPS_MODE: gcry_ctl_cmds = gcry_ctl_cmds(56);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SELFTEST: gcry_ctl_cmds = gcry_ctl_cmds(57);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_HWF: gcry_ctl_cmds = gcry_ctl_cmds(63);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_ENFORCED_FIPS_FLAG: gcry_ctl_cmds = gcry_ctl_cmds(64);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_PREFERRED_RNG_TYPE: gcry_ctl_cmds = gcry_ctl_cmds(65);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_CURRENT_RNG_TYPE: gcry_ctl_cmds = gcry_ctl_cmds(66);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_LOCKED_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(67);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DISABLE_PRIV_DROP: gcry_ctl_cmds = gcry_ctl_cmds(68);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_CCM_LENGTHS: gcry_ctl_cmds = gcry_ctl_cmds(69);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_CLOSE_RANDOM_DEVICE: gcry_ctl_cmds = gcry_ctl_cmds(70);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_INACTIVATE_FIPS_FLAG: gcry_ctl_cmds = gcry_ctl_cmds(71);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_REACTIVATE_FIPS_FLAG: gcry_ctl_cmds = gcry_ctl_cmds(72);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_SBOX: gcry_ctl_cmds = gcry_ctl_cmds(73);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_DRBG_REINIT: gcry_ctl_cmds = gcry_ctl_cmds(74);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_TAGLEN: gcry_ctl_cmds = gcry_ctl_cmds(75);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_GET_TAGLEN: gcry_ctl_cmds = gcry_ctl_cmds(76);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_REINIT_SYSCALL_CLAMP: gcry_ctl_cmds = gcry_ctl_cmds(77);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_AUTO_EXPAND_SECMEM: gcry_ctl_cmds = gcry_ctl_cmds(78);
+}
+impl gcry_ctl_cmds
+{
+  pub const GCRYCTL_SET_ALLOW_WEAK_KEY: gcry_ctl_cmds = gcry_ctl_cmds(79);
+}
+impl ::std::ops::BitOr<gcry_ctl_cmds> for gcry_ctl_cmds
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_ctl_cmds(self.0 | other.0)
+  }
+}
+impl ::std::ops::BitOrAssign for gcry_ctl_cmds
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_ctl_cmds)
+  {
+    self.0 |= rhs.0;
+  }
+}
+impl ::std::ops::BitAnd<gcry_ctl_cmds> for gcry_ctl_cmds
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_ctl_cmds(self.0 & other.0)
+  }
+}
+impl ::std::ops::BitAndAssign for gcry_ctl_cmds
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_ctl_cmds)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_ctl_cmds(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_control(CMD: gcry_ctl_cmds, ...) -> gcry_error_t;
+  pub fn gcry_control(CMD: gcry_ctl_cmds, ...) -> gcry_error_t;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_sexp {
-    _unused: [u8; 0],
+pub struct gcry_sexp
+{
+  _unused: [u8; 0],
 }
 pub type gcry_sexp_t = *mut gcry_sexp;
 pub type GCRY_SEXP = *mut gcry_sexp;
-impl gcry_sexp_format {
-    pub const GCRYSEXP_FMT_DEFAULT: gcry_sexp_format = gcry_sexp_format(0);
+impl gcry_sexp_format
+{
+  pub const GCRYSEXP_FMT_DEFAULT: gcry_sexp_format = gcry_sexp_format(0);
 }
-impl gcry_sexp_format {
-    pub const GCRYSEXP_FMT_CANON: gcry_sexp_format = gcry_sexp_format(1);
+impl gcry_sexp_format
+{
+  pub const GCRYSEXP_FMT_CANON: gcry_sexp_format = gcry_sexp_format(1);
 }
-impl gcry_sexp_format {
-    pub const GCRYSEXP_FMT_BASE64: gcry_sexp_format = gcry_sexp_format(2);
+impl gcry_sexp_format
+{
+  pub const GCRYSEXP_FMT_BASE64: gcry_sexp_format = gcry_sexp_format(2);
 }
-impl gcry_sexp_format {
-    pub const GCRYSEXP_FMT_ADVANCED: gcry_sexp_format = gcry_sexp_format(3);
+impl gcry_sexp_format
+{
+  pub const GCRYSEXP_FMT_ADVANCED: gcry_sexp_format = gcry_sexp_format(3);
 }
-impl ::std::ops::BitOr<gcry_sexp_format> for gcry_sexp_format {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_sexp_format(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_sexp_format> for gcry_sexp_format
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_sexp_format(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_sexp_format {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_sexp_format) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_sexp_format
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_sexp_format)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_sexp_format> for gcry_sexp_format {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_sexp_format(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_sexp_format> for gcry_sexp_format
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_sexp_format(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_sexp_format {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_sexp_format) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_sexp_format
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_sexp_format)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_sexp_format(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_sexp_new(
-        retsexp: *mut gcry_sexp_t,
-        buffer: *const ::std::os::raw::c_void,
-        length: usize,
-        autodetect: ::std::os::raw::c_int,
-    ) -> gcry_error_t;
+  pub fn gcry_sexp_new(
+    retsexp: *mut gcry_sexp_t,
+    buffer: *const ::std::os::raw::c_void,
+    length: usize,
+    autodetect: ::std::os::raw::c_int,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_sexp_create(
-        retsexp: *mut gcry_sexp_t,
-        buffer: *mut ::std::os::raw::c_void,
-        length: usize,
-        autodetect: ::std::os::raw::c_int,
-        freefnc: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
-    ) -> gcry_error_t;
+  pub fn gcry_sexp_create(
+    retsexp: *mut gcry_sexp_t,
+    buffer: *mut ::std::os::raw::c_void,
+    length: usize,
+    autodetect: ::std::os::raw::c_int,
+    freefnc: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_sexp_sscan(
-        retsexp: *mut gcry_sexp_t,
-        erroff: *mut usize,
-        buffer: *const ::std::os::raw::c_char,
-        length: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_sexp_sscan(
+    retsexp: *mut gcry_sexp_t,
+    erroff: *mut usize,
+    buffer: *const ::std::os::raw::c_char,
+    length: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_sexp_build(
-        retsexp: *mut gcry_sexp_t,
-        erroff: *mut usize,
-        format: *const ::std::os::raw::c_char,
-        ...
-    ) -> gcry_error_t;
+  pub fn gcry_sexp_build(
+    retsexp: *mut gcry_sexp_t,
+    erroff: *mut usize,
+    format: *const ::std::os::raw::c_char,
+    ...
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_sexp_build_array(
-        retsexp: *mut gcry_sexp_t,
-        erroff: *mut usize,
-        format: *const ::std::os::raw::c_char,
-        arg_list: *mut *mut ::std::os::raw::c_void,
-    ) -> gcry_error_t;
+  pub fn gcry_sexp_build_array(
+    retsexp: *mut gcry_sexp_t,
+    erroff: *mut usize,
+    format: *const ::std::os::raw::c_char,
+    arg_list: *mut *mut ::std::os::raw::c_void,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_sexp_release(sexp: gcry_sexp_t);
+  pub fn gcry_sexp_release(sexp: gcry_sexp_t);
 }
 extern "C" {
-    pub fn gcry_sexp_canon_len(
-        buffer: *const ::std::os::raw::c_uchar,
-        length: usize,
-        erroff: *mut usize,
-        errcode: *mut gcry_error_t,
-    ) -> usize;
+  pub fn gcry_sexp_canon_len(
+    buffer: *const ::std::os::raw::c_uchar,
+    length: usize,
+    erroff: *mut usize,
+    errcode: *mut gcry_error_t,
+  ) -> usize;
 }
 extern "C" {
-    pub fn gcry_sexp_sprint(
-        sexp: gcry_sexp_t,
-        mode: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        maxlength: usize,
-    ) -> usize;
+  pub fn gcry_sexp_sprint(
+    sexp: gcry_sexp_t,
+    mode: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    maxlength: usize,
+  ) -> usize;
 }
 extern "C" {
-    pub fn gcry_sexp_dump(a: gcry_sexp_t);
+  pub fn gcry_sexp_dump(a: gcry_sexp_t);
 }
 extern "C" {
-    pub fn gcry_sexp_cons(a: gcry_sexp_t, b: gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_cons(a: gcry_sexp_t, b: gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_alist(array: *const gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_alist(array: *const gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_vlist(a: gcry_sexp_t, ...) -> gcry_sexp_t;
+  pub fn gcry_sexp_vlist(a: gcry_sexp_t, ...) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_append(a: gcry_sexp_t, n: gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_append(a: gcry_sexp_t, n: gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_prepend(a: gcry_sexp_t, n: gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_prepend(a: gcry_sexp_t, n: gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_find_token(
-        list: gcry_sexp_t,
-        tok: *const ::std::os::raw::c_char,
-        toklen: usize,
-    ) -> gcry_sexp_t;
+  pub fn gcry_sexp_find_token(list: gcry_sexp_t, tok: *const ::std::os::raw::c_char, toklen: usize) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_length(list: gcry_sexp_t) -> ::std::os::raw::c_int;
+  pub fn gcry_sexp_length(list: gcry_sexp_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_sexp_nth(list: gcry_sexp_t, number: ::std::os::raw::c_int) -> gcry_sexp_t;
+  pub fn gcry_sexp_nth(list: gcry_sexp_t, number: ::std::os::raw::c_int) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_car(list: gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_car(list: gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_cdr(list: gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_cdr(list: gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_cadr(list: gcry_sexp_t) -> gcry_sexp_t;
+  pub fn gcry_sexp_cadr(list: gcry_sexp_t) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_sexp_nth_data(
-        list: gcry_sexp_t,
-        number: ::std::os::raw::c_int,
-        datalen: *mut usize,
-    ) -> *const ::std::os::raw::c_char;
+  pub fn gcry_sexp_nth_data(
+    list: gcry_sexp_t,
+    number: ::std::os::raw::c_int,
+    datalen: *mut usize,
+  ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_sexp_nth_buffer(
-        list: gcry_sexp_t,
-        number: ::std::os::raw::c_int,
-        rlength: *mut usize,
-    ) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_sexp_nth_buffer(
+    list: gcry_sexp_t,
+    number: ::std::os::raw::c_int,
+    rlength: *mut usize,
+  ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_sexp_nth_string(
-        list: gcry_sexp_t,
-        number: ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+  pub fn gcry_sexp_nth_string(list: gcry_sexp_t, number: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_sexp_nth_mpi(
-        list: gcry_sexp_t,
-        number: ::std::os::raw::c_int,
-        mpifmt: ::std::os::raw::c_int,
-    ) -> gcry_mpi_t;
+  pub fn gcry_sexp_nth_mpi(
+    list: gcry_sexp_t,
+    number: ::std::os::raw::c_int,
+    mpifmt: ::std::os::raw::c_int,
+  ) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_sexp_extract_param(
-        sexp: gcry_sexp_t,
-        path: *const ::std::os::raw::c_char,
-        list: *const ::std::os::raw::c_char,
-        ...
-    ) -> gpg_error_t;
+  pub fn gcry_sexp_extract_param(
+    sexp: gcry_sexp_t,
+    path: *const ::std::os::raw::c_char,
+    list: *const ::std::os::raw::c_char,
+    ...
+  ) -> gpg_error_t;
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_NONE: gcry_mpi_format = gcry_mpi_format(0);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_NONE: gcry_mpi_format = gcry_mpi_format(0);
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_STD: gcry_mpi_format = gcry_mpi_format(1);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_STD: gcry_mpi_format = gcry_mpi_format(1);
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_PGP: gcry_mpi_format = gcry_mpi_format(2);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_PGP: gcry_mpi_format = gcry_mpi_format(2);
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_SSH: gcry_mpi_format = gcry_mpi_format(3);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_SSH: gcry_mpi_format = gcry_mpi_format(3);
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_HEX: gcry_mpi_format = gcry_mpi_format(4);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_HEX: gcry_mpi_format = gcry_mpi_format(4);
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_USG: gcry_mpi_format = gcry_mpi_format(5);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_USG: gcry_mpi_format = gcry_mpi_format(5);
 }
-impl gcry_mpi_format {
-    pub const GCRYMPI_FMT_OPAQUE: gcry_mpi_format = gcry_mpi_format(8);
+impl gcry_mpi_format
+{
+  pub const GCRYMPI_FMT_OPAQUE: gcry_mpi_format = gcry_mpi_format(8);
 }
-impl ::std::ops::BitOr<gcry_mpi_format> for gcry_mpi_format {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_mpi_format(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_mpi_format> for gcry_mpi_format
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_mpi_format(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_mpi_format {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_mpi_format) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_mpi_format
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_mpi_format)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_mpi_format> for gcry_mpi_format {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_mpi_format(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_mpi_format> for gcry_mpi_format
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_mpi_format(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_mpi_format {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_mpi_format) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_mpi_format
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_mpi_format)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_mpi_format(pub ::std::os::raw::c_uint);
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_SECURE: gcry_mpi_flag = gcry_mpi_flag(1);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_SECURE: gcry_mpi_flag = gcry_mpi_flag(1);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_OPAQUE: gcry_mpi_flag = gcry_mpi_flag(2);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_OPAQUE: gcry_mpi_flag = gcry_mpi_flag(2);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_IMMUTABLE: gcry_mpi_flag = gcry_mpi_flag(4);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_IMMUTABLE: gcry_mpi_flag = gcry_mpi_flag(4);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_CONST: gcry_mpi_flag = gcry_mpi_flag(8);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_CONST: gcry_mpi_flag = gcry_mpi_flag(8);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_USER1: gcry_mpi_flag = gcry_mpi_flag(256);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_USER1: gcry_mpi_flag = gcry_mpi_flag(256);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_USER2: gcry_mpi_flag = gcry_mpi_flag(512);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_USER2: gcry_mpi_flag = gcry_mpi_flag(512);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_USER3: gcry_mpi_flag = gcry_mpi_flag(1024);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_USER3: gcry_mpi_flag = gcry_mpi_flag(1024);
 }
-impl gcry_mpi_flag {
-    pub const GCRYMPI_FLAG_USER4: gcry_mpi_flag = gcry_mpi_flag(2048);
+impl gcry_mpi_flag
+{
+  pub const GCRYMPI_FLAG_USER4: gcry_mpi_flag = gcry_mpi_flag(2048);
 }
-impl ::std::ops::BitOr<gcry_mpi_flag> for gcry_mpi_flag {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_mpi_flag(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_mpi_flag> for gcry_mpi_flag
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_mpi_flag(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_mpi_flag {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_mpi_flag) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_mpi_flag
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_mpi_flag)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_mpi_flag> for gcry_mpi_flag {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_mpi_flag(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_mpi_flag> for gcry_mpi_flag
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_mpi_flag(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_mpi_flag {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_mpi_flag) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_mpi_flag
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_mpi_flag)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_mpi_flag(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_mpi_new(nbits: ::std::os::raw::c_uint) -> gcry_mpi_t;
+  pub fn gcry_mpi_new(nbits: ::std::os::raw::c_uint) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_snew(nbits: ::std::os::raw::c_uint) -> gcry_mpi_t;
+  pub fn gcry_mpi_snew(nbits: ::std::os::raw::c_uint) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_release(a: gcry_mpi_t);
+  pub fn gcry_mpi_release(a: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_copy(a: gcry_mpi_t) -> gcry_mpi_t;
+  pub fn gcry_mpi_copy(a: gcry_mpi_t) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_snatch(w: gcry_mpi_t, u: gcry_mpi_t);
+  pub fn gcry_mpi_snatch(w: gcry_mpi_t, u: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_set(w: gcry_mpi_t, u: gcry_mpi_t) -> gcry_mpi_t;
+  pub fn gcry_mpi_set(w: gcry_mpi_t, u: gcry_mpi_t) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_set_ui(w: gcry_mpi_t, u: ::std::os::raw::c_ulong) -> gcry_mpi_t;
+  pub fn gcry_mpi_set_ui(w: gcry_mpi_t, u: ::std::os::raw::c_ulong) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_get_ui(w: *mut ::std::os::raw::c_uint, u: gcry_mpi_t) -> gpg_error_t;
+  pub fn gcry_mpi_get_ui(w: *mut ::std::os::raw::c_uint, u: gcry_mpi_t) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_swap(a: gcry_mpi_t, b: gcry_mpi_t);
+  pub fn gcry_mpi_swap(a: gcry_mpi_t, b: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_is_neg(a: gcry_mpi_t) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_is_neg(a: gcry_mpi_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_neg(w: gcry_mpi_t, u: gcry_mpi_t);
+  pub fn gcry_mpi_neg(w: gcry_mpi_t, u: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_abs(w: gcry_mpi_t);
+  pub fn gcry_mpi_abs(w: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_cmp(u: gcry_mpi_t, v: gcry_mpi_t) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_cmp(u: gcry_mpi_t, v: gcry_mpi_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_cmp_ui(u: gcry_mpi_t, v: ::std::os::raw::c_ulong) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_cmp_ui(u: gcry_mpi_t, v: ::std::os::raw::c_ulong) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_scan(
-        ret_mpi: *mut gcry_mpi_t,
-        format: gcry_mpi_format,
-        buffer: *const ::std::os::raw::c_void,
-        buflen: usize,
-        nscanned: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mpi_scan(
+    ret_mpi: *mut gcry_mpi_t,
+    format: gcry_mpi_format,
+    buffer: *const ::std::os::raw::c_void,
+    buflen: usize,
+    nscanned: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_print(
-        format: gcry_mpi_format,
-        buffer: *mut ::std::os::raw::c_uchar,
-        buflen: usize,
-        nwritten: *mut usize,
-        a: gcry_mpi_t,
-    ) -> gcry_error_t;
+  pub fn gcry_mpi_print(
+    format: gcry_mpi_format,
+    buffer: *mut ::std::os::raw::c_uchar,
+    buflen: usize,
+    nwritten: *mut usize,
+    a: gcry_mpi_t,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_aprint(
-        format: gcry_mpi_format,
-        buffer: *mut *mut ::std::os::raw::c_uchar,
-        nwritten: *mut usize,
-        a: gcry_mpi_t,
-    ) -> gcry_error_t;
+  pub fn gcry_mpi_aprint(
+    format: gcry_mpi_format,
+    buffer: *mut *mut ::std::os::raw::c_uchar,
+    nwritten: *mut usize,
+    a: gcry_mpi_t,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_dump(a: gcry_mpi_t);
+  pub fn gcry_mpi_dump(a: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_add(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t);
+  pub fn gcry_mpi_add(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_add_ui(w: gcry_mpi_t, u: gcry_mpi_t, v: ::std::os::raw::c_ulong);
+  pub fn gcry_mpi_add_ui(w: gcry_mpi_t, u: gcry_mpi_t, v: ::std::os::raw::c_ulong);
 }
 extern "C" {
-    pub fn gcry_mpi_addm(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t, m: gcry_mpi_t);
+  pub fn gcry_mpi_addm(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t, m: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_sub(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t);
+  pub fn gcry_mpi_sub(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_sub_ui(w: gcry_mpi_t, u: gcry_mpi_t, v: ::std::os::raw::c_ulong);
+  pub fn gcry_mpi_sub_ui(w: gcry_mpi_t, u: gcry_mpi_t, v: ::std::os::raw::c_ulong);
 }
 extern "C" {
-    pub fn gcry_mpi_subm(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t, m: gcry_mpi_t);
+  pub fn gcry_mpi_subm(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t, m: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_mul(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t);
+  pub fn gcry_mpi_mul(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_mul_ui(w: gcry_mpi_t, u: gcry_mpi_t, v: ::std::os::raw::c_ulong);
+  pub fn gcry_mpi_mul_ui(w: gcry_mpi_t, u: gcry_mpi_t, v: ::std::os::raw::c_ulong);
 }
 extern "C" {
-    pub fn gcry_mpi_mulm(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t, m: gcry_mpi_t);
+  pub fn gcry_mpi_mulm(w: gcry_mpi_t, u: gcry_mpi_t, v: gcry_mpi_t, m: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_mul_2exp(w: gcry_mpi_t, u: gcry_mpi_t, cnt: ::std::os::raw::c_ulong);
+  pub fn gcry_mpi_mul_2exp(w: gcry_mpi_t, u: gcry_mpi_t, cnt: ::std::os::raw::c_ulong);
 }
 extern "C" {
-    pub fn gcry_mpi_div(
-        q: gcry_mpi_t,
-        r: gcry_mpi_t,
-        dividend: gcry_mpi_t,
-        divisor: gcry_mpi_t,
-        round: ::std::os::raw::c_int,
-    );
+  pub fn gcry_mpi_div(
+    q: gcry_mpi_t,
+    r: gcry_mpi_t,
+    dividend: gcry_mpi_t,
+    divisor: gcry_mpi_t,
+    round: ::std::os::raw::c_int,
+  );
 }
 extern "C" {
-    pub fn gcry_mpi_mod(r: gcry_mpi_t, dividend: gcry_mpi_t, divisor: gcry_mpi_t);
+  pub fn gcry_mpi_mod(r: gcry_mpi_t, dividend: gcry_mpi_t, divisor: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_powm(w: gcry_mpi_t, b: gcry_mpi_t, e: gcry_mpi_t, m: gcry_mpi_t);
+  pub fn gcry_mpi_powm(w: gcry_mpi_t, b: gcry_mpi_t, e: gcry_mpi_t, m: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_mpi_gcd(g: gcry_mpi_t, a: gcry_mpi_t, b: gcry_mpi_t) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_gcd(g: gcry_mpi_t, a: gcry_mpi_t, b: gcry_mpi_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_invm(x: gcry_mpi_t, a: gcry_mpi_t, m: gcry_mpi_t) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_invm(x: gcry_mpi_t, a: gcry_mpi_t, m: gcry_mpi_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_point_new(nbits: ::std::os::raw::c_uint) -> gcry_mpi_point_t;
+  pub fn gcry_mpi_point_new(nbits: ::std::os::raw::c_uint) -> gcry_mpi_point_t;
 }
 extern "C" {
-    pub fn gcry_mpi_point_release(point: gcry_mpi_point_t);
+  pub fn gcry_mpi_point_release(point: gcry_mpi_point_t);
 }
 extern "C" {
-    pub fn gcry_mpi_point_copy(point: gcry_mpi_point_t) -> gcry_mpi_point_t;
+  pub fn gcry_mpi_point_copy(point: gcry_mpi_point_t) -> gcry_mpi_point_t;
 }
 extern "C" {
-    pub fn gcry_mpi_point_get(x: gcry_mpi_t, y: gcry_mpi_t, z: gcry_mpi_t, point: gcry_mpi_point_t);
+  pub fn gcry_mpi_point_get(x: gcry_mpi_t, y: gcry_mpi_t, z: gcry_mpi_t, point: gcry_mpi_point_t);
 }
 extern "C" {
-    pub fn gcry_mpi_point_snatch_get(
-        x: gcry_mpi_t,
-        y: gcry_mpi_t,
-        z: gcry_mpi_t,
-        point: gcry_mpi_point_t,
-    );
+  pub fn gcry_mpi_point_snatch_get(x: gcry_mpi_t, y: gcry_mpi_t, z: gcry_mpi_t, point: gcry_mpi_point_t);
 }
 extern "C" {
-    pub fn gcry_mpi_point_set(
-        point: gcry_mpi_point_t,
-        x: gcry_mpi_t,
-        y: gcry_mpi_t,
-        z: gcry_mpi_t,
-    ) -> gcry_mpi_point_t;
+  pub fn gcry_mpi_point_set(point: gcry_mpi_point_t, x: gcry_mpi_t, y: gcry_mpi_t, z: gcry_mpi_t) -> gcry_mpi_point_t;
 }
 extern "C" {
-    pub fn gcry_mpi_point_snatch_set(
-        point: gcry_mpi_point_t,
-        x: gcry_mpi_t,
-        y: gcry_mpi_t,
-        z: gcry_mpi_t,
-    ) -> gcry_mpi_point_t;
+  pub fn gcry_mpi_point_snatch_set(
+    point: gcry_mpi_point_t,
+    x: gcry_mpi_t,
+    y: gcry_mpi_t,
+    z: gcry_mpi_t,
+  ) -> gcry_mpi_point_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_new(
-        r_ctx: *mut gcry_ctx_t,
-        keyparam: gcry_sexp_t,
-        curvename: *const ::std::os::raw::c_char,
-    ) -> gpg_error_t;
+  pub fn gcry_mpi_ec_new(
+    r_ctx: *mut gcry_ctx_t,
+    keyparam: gcry_sexp_t,
+    curvename: *const ::std::os::raw::c_char,
+  ) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_get_mpi(
-        name: *const ::std::os::raw::c_char,
-        ctx: gcry_ctx_t,
-        copy: ::std::os::raw::c_int,
-    ) -> gcry_mpi_t;
+  pub fn gcry_mpi_ec_get_mpi(
+    name: *const ::std::os::raw::c_char,
+    ctx: gcry_ctx_t,
+    copy: ::std::os::raw::c_int,
+  ) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_get_point(
-        name: *const ::std::os::raw::c_char,
-        ctx: gcry_ctx_t,
-        copy: ::std::os::raw::c_int,
-    ) -> gcry_mpi_point_t;
+  pub fn gcry_mpi_ec_get_point(
+    name: *const ::std::os::raw::c_char,
+    ctx: gcry_ctx_t,
+    copy: ::std::os::raw::c_int,
+  ) -> gcry_mpi_point_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_set_mpi(
-        name: *const ::std::os::raw::c_char,
-        newvalue: gcry_mpi_t,
-        ctx: gcry_ctx_t,
-    ) -> gpg_error_t;
+  pub fn gcry_mpi_ec_set_mpi(name: *const ::std::os::raw::c_char, newvalue: gcry_mpi_t, ctx: gcry_ctx_t)
+  -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_set_point(
-        name: *const ::std::os::raw::c_char,
-        newvalue: gcry_mpi_point_t,
-        ctx: gcry_ctx_t,
-    ) -> gpg_error_t;
+  pub fn gcry_mpi_ec_set_point(
+    name: *const ::std::os::raw::c_char,
+    newvalue: gcry_mpi_point_t,
+    ctx: gcry_ctx_t,
+  ) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_decode_point(
-        result: gcry_mpi_point_t,
-        value: gcry_mpi_t,
-        ctx: gcry_ctx_t,
-    ) -> gpg_error_t;
+  pub fn gcry_mpi_ec_decode_point(result: gcry_mpi_point_t, value: gcry_mpi_t, ctx: gcry_ctx_t) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_get_affine(
-        x: gcry_mpi_t,
-        y: gcry_mpi_t,
-        point: gcry_mpi_point_t,
-        ctx: gcry_ctx_t,
-    ) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_ec_get_affine(
+    x: gcry_mpi_t,
+    y: gcry_mpi_t,
+    point: gcry_mpi_point_t,
+    ctx: gcry_ctx_t,
+  ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_ec_dup(w: gcry_mpi_point_t, u: gcry_mpi_point_t, ctx: gcry_ctx_t);
+  pub fn gcry_mpi_ec_dup(w: gcry_mpi_point_t, u: gcry_mpi_point_t, ctx: gcry_ctx_t);
 }
 extern "C" {
-    pub fn gcry_mpi_ec_add(
-        w: gcry_mpi_point_t,
-        u: gcry_mpi_point_t,
-        v: gcry_mpi_point_t,
-        ctx: gcry_ctx_t,
-    );
+  pub fn gcry_mpi_ec_add(w: gcry_mpi_point_t, u: gcry_mpi_point_t, v: gcry_mpi_point_t, ctx: gcry_ctx_t);
 }
 extern "C" {
-    pub fn gcry_mpi_ec_sub(
-        w: gcry_mpi_point_t,
-        u: gcry_mpi_point_t,
-        v: gcry_mpi_point_t,
-        ctx: gcry_ctx_t,
-    );
+  pub fn gcry_mpi_ec_sub(w: gcry_mpi_point_t, u: gcry_mpi_point_t, v: gcry_mpi_point_t, ctx: gcry_ctx_t);
 }
 extern "C" {
-    pub fn gcry_mpi_ec_mul(
-        w: gcry_mpi_point_t,
-        n: gcry_mpi_t,
-        u: gcry_mpi_point_t,
-        ctx: gcry_ctx_t,
-    );
+  pub fn gcry_mpi_ec_mul(w: gcry_mpi_point_t, n: gcry_mpi_t, u: gcry_mpi_point_t, ctx: gcry_ctx_t);
 }
 extern "C" {
-    pub fn gcry_mpi_ec_curve_point(w: gcry_mpi_point_t, ctx: gcry_ctx_t) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_ec_curve_point(w: gcry_mpi_point_t, ctx: gcry_ctx_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_get_nbits(a: gcry_mpi_t) -> ::std::os::raw::c_uint;
+  pub fn gcry_mpi_get_nbits(a: gcry_mpi_t) -> ::std::os::raw::c_uint;
 }
 extern "C" {
-    pub fn gcry_mpi_test_bit(a: gcry_mpi_t, n: ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_test_bit(a: gcry_mpi_t, n: ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mpi_set_bit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
+  pub fn gcry_mpi_set_bit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
 }
 extern "C" {
-    pub fn gcry_mpi_clear_bit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
+  pub fn gcry_mpi_clear_bit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
 }
 extern "C" {
-    pub fn gcry_mpi_set_highbit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
+  pub fn gcry_mpi_set_highbit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
 }
 extern "C" {
-    pub fn gcry_mpi_clear_highbit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
+  pub fn gcry_mpi_clear_highbit(a: gcry_mpi_t, n: ::std::os::raw::c_uint);
 }
 extern "C" {
-    pub fn gcry_mpi_rshift(x: gcry_mpi_t, a: gcry_mpi_t, n: ::std::os::raw::c_uint);
+  pub fn gcry_mpi_rshift(x: gcry_mpi_t, a: gcry_mpi_t, n: ::std::os::raw::c_uint);
 }
 extern "C" {
-    pub fn gcry_mpi_lshift(x: gcry_mpi_t, a: gcry_mpi_t, n: ::std::os::raw::c_uint);
+  pub fn gcry_mpi_lshift(x: gcry_mpi_t, a: gcry_mpi_t, n: ::std::os::raw::c_uint);
 }
 extern "C" {
-    pub fn gcry_mpi_set_opaque(
-        a: gcry_mpi_t,
-        p: *mut ::std::os::raw::c_void,
-        nbits: ::std::os::raw::c_uint,
-    ) -> gcry_mpi_t;
+  pub fn gcry_mpi_set_opaque(
+    a: gcry_mpi_t,
+    p: *mut ::std::os::raw::c_void,
+    nbits: ::std::os::raw::c_uint,
+  ) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_set_opaque_copy(
-        a: gcry_mpi_t,
-        p: *const ::std::os::raw::c_void,
-        nbits: ::std::os::raw::c_uint,
-    ) -> gcry_mpi_t;
+  pub fn gcry_mpi_set_opaque_copy(
+    a: gcry_mpi_t,
+    p: *const ::std::os::raw::c_void,
+    nbits: ::std::os::raw::c_uint,
+  ) -> gcry_mpi_t;
 }
 extern "C" {
-    pub fn gcry_mpi_get_opaque(
-        a: gcry_mpi_t,
-        nbits: *mut ::std::os::raw::c_uint,
-    ) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_mpi_get_opaque(a: gcry_mpi_t, nbits: *mut ::std::os::raw::c_uint) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_mpi_set_flag(a: gcry_mpi_t, flag: gcry_mpi_flag);
+  pub fn gcry_mpi_set_flag(a: gcry_mpi_t, flag: gcry_mpi_flag);
 }
 extern "C" {
-    pub fn gcry_mpi_clear_flag(a: gcry_mpi_t, flag: gcry_mpi_flag);
+  pub fn gcry_mpi_clear_flag(a: gcry_mpi_t, flag: gcry_mpi_flag);
 }
 extern "C" {
-    pub fn gcry_mpi_get_flag(a: gcry_mpi_t, flag: gcry_mpi_flag) -> ::std::os::raw::c_int;
+  pub fn gcry_mpi_get_flag(a: gcry_mpi_t, flag: gcry_mpi_flag) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_cipher_handle {
-    _unused: [u8; 0],
+pub struct gcry_cipher_handle
+{
+  _unused: [u8; 0],
 }
 pub type gcry_cipher_hd_t = *mut gcry_cipher_handle;
 pub type GCRY_CIPHER_HD = *mut gcry_cipher_handle;
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_NONE: gcry_cipher_algos = gcry_cipher_algos(0);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_NONE: gcry_cipher_algos = gcry_cipher_algos(0);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_IDEA: gcry_cipher_algos = gcry_cipher_algos(1);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_IDEA: gcry_cipher_algos = gcry_cipher_algos(1);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_3DES: gcry_cipher_algos = gcry_cipher_algos(2);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_3DES: gcry_cipher_algos = gcry_cipher_algos(2);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_CAST5: gcry_cipher_algos = gcry_cipher_algos(3);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_CAST5: gcry_cipher_algos = gcry_cipher_algos(3);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_BLOWFISH: gcry_cipher_algos = gcry_cipher_algos(4);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_BLOWFISH: gcry_cipher_algos = gcry_cipher_algos(4);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SAFER_SK128: gcry_cipher_algos = gcry_cipher_algos(5);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SAFER_SK128: gcry_cipher_algos = gcry_cipher_algos(5);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_DES_SK: gcry_cipher_algos = gcry_cipher_algos(6);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_DES_SK: gcry_cipher_algos = gcry_cipher_algos(6);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_AES: gcry_cipher_algos = gcry_cipher_algos(7);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_AES: gcry_cipher_algos = gcry_cipher_algos(7);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_AES192: gcry_cipher_algos = gcry_cipher_algos(8);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_AES192: gcry_cipher_algos = gcry_cipher_algos(8);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_AES256: gcry_cipher_algos = gcry_cipher_algos(9);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_AES256: gcry_cipher_algos = gcry_cipher_algos(9);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_TWOFISH: gcry_cipher_algos = gcry_cipher_algos(10);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_TWOFISH: gcry_cipher_algos = gcry_cipher_algos(10);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_ARCFOUR: gcry_cipher_algos = gcry_cipher_algos(301);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_ARCFOUR: gcry_cipher_algos = gcry_cipher_algos(301);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_DES: gcry_cipher_algos = gcry_cipher_algos(302);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_DES: gcry_cipher_algos = gcry_cipher_algos(302);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_TWOFISH128: gcry_cipher_algos = gcry_cipher_algos(303);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_TWOFISH128: gcry_cipher_algos = gcry_cipher_algos(303);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SERPENT128: gcry_cipher_algos = gcry_cipher_algos(304);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SERPENT128: gcry_cipher_algos = gcry_cipher_algos(304);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SERPENT192: gcry_cipher_algos = gcry_cipher_algos(305);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SERPENT192: gcry_cipher_algos = gcry_cipher_algos(305);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SERPENT256: gcry_cipher_algos = gcry_cipher_algos(306);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SERPENT256: gcry_cipher_algos = gcry_cipher_algos(306);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_RFC2268_40: gcry_cipher_algos = gcry_cipher_algos(307);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_RFC2268_40: gcry_cipher_algos = gcry_cipher_algos(307);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_RFC2268_128: gcry_cipher_algos = gcry_cipher_algos(308);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_RFC2268_128: gcry_cipher_algos = gcry_cipher_algos(308);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SEED: gcry_cipher_algos = gcry_cipher_algos(309);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SEED: gcry_cipher_algos = gcry_cipher_algos(309);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_CAMELLIA128: gcry_cipher_algos = gcry_cipher_algos(310);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_CAMELLIA128: gcry_cipher_algos = gcry_cipher_algos(310);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_CAMELLIA192: gcry_cipher_algos = gcry_cipher_algos(311);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_CAMELLIA192: gcry_cipher_algos = gcry_cipher_algos(311);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_CAMELLIA256: gcry_cipher_algos = gcry_cipher_algos(312);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_CAMELLIA256: gcry_cipher_algos = gcry_cipher_algos(312);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SALSA20: gcry_cipher_algos = gcry_cipher_algos(313);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SALSA20: gcry_cipher_algos = gcry_cipher_algos(313);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SALSA20R12: gcry_cipher_algos = gcry_cipher_algos(314);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SALSA20R12: gcry_cipher_algos = gcry_cipher_algos(314);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_GOST28147: gcry_cipher_algos = gcry_cipher_algos(315);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_GOST28147: gcry_cipher_algos = gcry_cipher_algos(315);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_CHACHA20: gcry_cipher_algos = gcry_cipher_algos(316);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_CHACHA20: gcry_cipher_algos = gcry_cipher_algos(316);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_GOST28147_MESH: gcry_cipher_algos = gcry_cipher_algos(317);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_GOST28147_MESH: gcry_cipher_algos = gcry_cipher_algos(317);
 }
-impl gcry_cipher_algos {
-    pub const GCRY_CIPHER_SM4: gcry_cipher_algos = gcry_cipher_algos(318);
+impl gcry_cipher_algos
+{
+  pub const GCRY_CIPHER_SM4: gcry_cipher_algos = gcry_cipher_algos(318);
 }
-impl ::std::ops::BitOr<gcry_cipher_algos> for gcry_cipher_algos {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_cipher_algos(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_cipher_algos> for gcry_cipher_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_cipher_algos(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_cipher_algos {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_cipher_algos) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_cipher_algos
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_cipher_algos)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_cipher_algos> for gcry_cipher_algos {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_cipher_algos(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_cipher_algos> for gcry_cipher_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_cipher_algos(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_cipher_algos {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_cipher_algos) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_cipher_algos
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_cipher_algos)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_cipher_algos(pub ::std::os::raw::c_uint);
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_NONE: gcry_cipher_modes = gcry_cipher_modes(0);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_NONE: gcry_cipher_modes = gcry_cipher_modes(0);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_ECB: gcry_cipher_modes = gcry_cipher_modes(1);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_ECB: gcry_cipher_modes = gcry_cipher_modes(1);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_CFB: gcry_cipher_modes = gcry_cipher_modes(2);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_CFB: gcry_cipher_modes = gcry_cipher_modes(2);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_CBC: gcry_cipher_modes = gcry_cipher_modes(3);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_CBC: gcry_cipher_modes = gcry_cipher_modes(3);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_STREAM: gcry_cipher_modes = gcry_cipher_modes(4);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_STREAM: gcry_cipher_modes = gcry_cipher_modes(4);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_OFB: gcry_cipher_modes = gcry_cipher_modes(5);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_OFB: gcry_cipher_modes = gcry_cipher_modes(5);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_CTR: gcry_cipher_modes = gcry_cipher_modes(6);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_CTR: gcry_cipher_modes = gcry_cipher_modes(6);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_AESWRAP: gcry_cipher_modes = gcry_cipher_modes(7);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_AESWRAP: gcry_cipher_modes = gcry_cipher_modes(7);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_CCM: gcry_cipher_modes = gcry_cipher_modes(8);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_CCM: gcry_cipher_modes = gcry_cipher_modes(8);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_GCM: gcry_cipher_modes = gcry_cipher_modes(9);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_GCM: gcry_cipher_modes = gcry_cipher_modes(9);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_POLY1305: gcry_cipher_modes = gcry_cipher_modes(10);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_POLY1305: gcry_cipher_modes = gcry_cipher_modes(10);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_OCB: gcry_cipher_modes = gcry_cipher_modes(11);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_OCB: gcry_cipher_modes = gcry_cipher_modes(11);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_CFB8: gcry_cipher_modes = gcry_cipher_modes(12);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_CFB8: gcry_cipher_modes = gcry_cipher_modes(12);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_XTS: gcry_cipher_modes = gcry_cipher_modes(13);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_XTS: gcry_cipher_modes = gcry_cipher_modes(13);
 }
-impl gcry_cipher_modes {
-    pub const GCRY_CIPHER_MODE_EAX: gcry_cipher_modes = gcry_cipher_modes(14);
+impl gcry_cipher_modes
+{
+  pub const GCRY_CIPHER_MODE_EAX: gcry_cipher_modes = gcry_cipher_modes(14);
 }
-impl ::std::ops::BitOr<gcry_cipher_modes> for gcry_cipher_modes {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_cipher_modes(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_cipher_modes> for gcry_cipher_modes
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_cipher_modes(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_cipher_modes {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_cipher_modes) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_cipher_modes
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_cipher_modes)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_cipher_modes> for gcry_cipher_modes {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_cipher_modes(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_cipher_modes> for gcry_cipher_modes
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_cipher_modes(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_cipher_modes {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_cipher_modes) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_cipher_modes
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_cipher_modes)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_cipher_modes(pub ::std::os::raw::c_uint);
-impl gcry_cipher_flags {
-    pub const GCRY_CIPHER_SECURE: gcry_cipher_flags = gcry_cipher_flags(1);
+impl gcry_cipher_flags
+{
+  pub const GCRY_CIPHER_SECURE: gcry_cipher_flags = gcry_cipher_flags(1);
 }
-impl gcry_cipher_flags {
-    pub const GCRY_CIPHER_ENABLE_SYNC: gcry_cipher_flags = gcry_cipher_flags(2);
+impl gcry_cipher_flags
+{
+  pub const GCRY_CIPHER_ENABLE_SYNC: gcry_cipher_flags = gcry_cipher_flags(2);
 }
-impl gcry_cipher_flags {
-    pub const GCRY_CIPHER_CBC_CTS: gcry_cipher_flags = gcry_cipher_flags(4);
+impl gcry_cipher_flags
+{
+  pub const GCRY_CIPHER_CBC_CTS: gcry_cipher_flags = gcry_cipher_flags(4);
 }
-impl gcry_cipher_flags {
-    pub const GCRY_CIPHER_CBC_MAC: gcry_cipher_flags = gcry_cipher_flags(8);
+impl gcry_cipher_flags
+{
+  pub const GCRY_CIPHER_CBC_MAC: gcry_cipher_flags = gcry_cipher_flags(8);
 }
-impl ::std::ops::BitOr<gcry_cipher_flags> for gcry_cipher_flags {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_cipher_flags(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_cipher_flags> for gcry_cipher_flags
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_cipher_flags(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_cipher_flags {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_cipher_flags) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_cipher_flags
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_cipher_flags)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_cipher_flags> for gcry_cipher_flags {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_cipher_flags(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_cipher_flags> for gcry_cipher_flags
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_cipher_flags(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_cipher_flags {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_cipher_flags) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_cipher_flags
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_cipher_flags)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_cipher_flags(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_cipher_open(
-        handle: *mut gcry_cipher_hd_t,
-        algo: ::std::os::raw::c_int,
-        mode: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_uint,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_open(
+    handle: *mut gcry_cipher_hd_t,
+    algo: ::std::os::raw::c_int,
+    mode: ::std::os::raw::c_int,
+    flags: ::std::os::raw::c_uint,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_close(h: gcry_cipher_hd_t);
+  pub fn gcry_cipher_close(h: gcry_cipher_hd_t);
 }
 extern "C" {
-    pub fn gcry_cipher_ctl(
-        h: gcry_cipher_hd_t,
-        cmd: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        buflen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_ctl(
+    h: gcry_cipher_hd_t,
+    cmd: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    buflen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_info(
-        h: gcry_cipher_hd_t,
-        what: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        nbytes: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_info(
+    h: gcry_cipher_hd_t,
+    what: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    nbytes: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_algo_info(
-        algo: ::std::os::raw::c_int,
-        what: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        nbytes: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_algo_info(
+    algo: ::std::os::raw::c_int,
+    what: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    nbytes: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_algo_name(algorithm: ::std::os::raw::c_int)
-        -> *const ::std::os::raw::c_char;
+  pub fn gcry_cipher_algo_name(algorithm: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_cipher_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+  pub fn gcry_cipher_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_cipher_mode_from_oid(
-        string: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+  pub fn gcry_cipher_mode_from_oid(string: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_cipher_encrypt(
-        h: gcry_cipher_hd_t,
-        out: *mut ::std::os::raw::c_void,
-        outsize: usize,
-        in_: *const ::std::os::raw::c_void,
-        inlen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_encrypt(
+    h: gcry_cipher_hd_t,
+    out: *mut ::std::os::raw::c_void,
+    outsize: usize,
+    in_: *const ::std::os::raw::c_void,
+    inlen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_decrypt(
-        h: gcry_cipher_hd_t,
-        out: *mut ::std::os::raw::c_void,
-        outsize: usize,
-        in_: *const ::std::os::raw::c_void,
-        inlen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_decrypt(
+    h: gcry_cipher_hd_t,
+    out: *mut ::std::os::raw::c_void,
+    outsize: usize,
+    in_: *const ::std::os::raw::c_void,
+    inlen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_setkey(
-        hd: gcry_cipher_hd_t,
-        key: *const ::std::os::raw::c_void,
-        keylen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_setkey(hd: gcry_cipher_hd_t, key: *const ::std::os::raw::c_void, keylen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_setiv(
-        hd: gcry_cipher_hd_t,
-        iv: *const ::std::os::raw::c_void,
-        ivlen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_setiv(hd: gcry_cipher_hd_t, iv: *const ::std::os::raw::c_void, ivlen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_authenticate(
-        hd: gcry_cipher_hd_t,
-        abuf: *const ::std::os::raw::c_void,
-        abuflen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_authenticate(
+    hd: gcry_cipher_hd_t,
+    abuf: *const ::std::os::raw::c_void,
+    abuflen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_gettag(
-        hd: gcry_cipher_hd_t,
-        outtag: *mut ::std::os::raw::c_void,
-        taglen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_gettag(hd: gcry_cipher_hd_t, outtag: *mut ::std::os::raw::c_void, taglen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_checktag(
-        hd: gcry_cipher_hd_t,
-        intag: *const ::std::os::raw::c_void,
-        taglen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_cipher_checktag(
+    hd: gcry_cipher_hd_t,
+    intag: *const ::std::os::raw::c_void,
+    taglen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_setctr(
-        hd: gcry_cipher_hd_t,
-        ctr: *const ::std::os::raw::c_void,
-        ctrlen: usize,
-    ) -> gpg_error_t;
+  pub fn gcry_cipher_setctr(hd: gcry_cipher_hd_t, ctr: *const ::std::os::raw::c_void, ctrlen: usize) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_cipher_get_algo_keylen(algo: ::std::os::raw::c_int) -> usize;
+  pub fn gcry_cipher_get_algo_keylen(algo: ::std::os::raw::c_int) -> usize;
 }
 extern "C" {
-    pub fn gcry_cipher_get_algo_blklen(algo: ::std::os::raw::c_int) -> usize;
+  pub fn gcry_cipher_get_algo_blklen(algo: ::std::os::raw::c_int) -> usize;
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_RSA: gcry_pk_algos = gcry_pk_algos(1);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_RSA: gcry_pk_algos = gcry_pk_algos(1);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_RSA_E: gcry_pk_algos = gcry_pk_algos(2);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_RSA_E: gcry_pk_algos = gcry_pk_algos(2);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_RSA_S: gcry_pk_algos = gcry_pk_algos(3);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_RSA_S: gcry_pk_algos = gcry_pk_algos(3);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_ELG_E: gcry_pk_algos = gcry_pk_algos(16);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_ELG_E: gcry_pk_algos = gcry_pk_algos(16);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_DSA: gcry_pk_algos = gcry_pk_algos(17);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_DSA: gcry_pk_algos = gcry_pk_algos(17);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_ECC: gcry_pk_algos = gcry_pk_algos(18);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_ECC: gcry_pk_algos = gcry_pk_algos(18);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_ELG: gcry_pk_algos = gcry_pk_algos(20);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_ELG: gcry_pk_algos = gcry_pk_algos(20);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_ECDSA: gcry_pk_algos = gcry_pk_algos(301);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_ECDSA: gcry_pk_algos = gcry_pk_algos(301);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_ECDH: gcry_pk_algos = gcry_pk_algos(302);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_ECDH: gcry_pk_algos = gcry_pk_algos(302);
 }
-impl gcry_pk_algos {
-    pub const GCRY_PK_EDDSA: gcry_pk_algos = gcry_pk_algos(303);
+impl gcry_pk_algos
+{
+  pub const GCRY_PK_EDDSA: gcry_pk_algos = gcry_pk_algos(303);
 }
-impl ::std::ops::BitOr<gcry_pk_algos> for gcry_pk_algos {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_pk_algos(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_pk_algos> for gcry_pk_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_pk_algos(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_pk_algos {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_pk_algos) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_pk_algos
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_pk_algos)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_pk_algos> for gcry_pk_algos {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_pk_algos(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_pk_algos> for gcry_pk_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_pk_algos(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_pk_algos {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_pk_algos) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_pk_algos
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_pk_algos)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_pk_algos(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_pk_encrypt(
-        result: *mut gcry_sexp_t,
-        data: gcry_sexp_t,
-        pkey: gcry_sexp_t,
-    ) -> gcry_error_t;
+  pub fn gcry_pk_encrypt(result: *mut gcry_sexp_t, data: gcry_sexp_t, pkey: gcry_sexp_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_decrypt(
-        result: *mut gcry_sexp_t,
-        data: gcry_sexp_t,
-        skey: gcry_sexp_t,
-    ) -> gcry_error_t;
+  pub fn gcry_pk_decrypt(result: *mut gcry_sexp_t, data: gcry_sexp_t, skey: gcry_sexp_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_sign(
-        result: *mut gcry_sexp_t,
-        data: gcry_sexp_t,
-        skey: gcry_sexp_t,
-    ) -> gcry_error_t;
+  pub fn gcry_pk_sign(result: *mut gcry_sexp_t, data: gcry_sexp_t, skey: gcry_sexp_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_verify(
-        sigval: gcry_sexp_t,
-        data: gcry_sexp_t,
-        pkey: gcry_sexp_t,
-    ) -> gcry_error_t;
+  pub fn gcry_pk_verify(sigval: gcry_sexp_t, data: gcry_sexp_t, pkey: gcry_sexp_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_testkey(key: gcry_sexp_t) -> gcry_error_t;
+  pub fn gcry_pk_testkey(key: gcry_sexp_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_genkey(r_key: *mut gcry_sexp_t, s_parms: gcry_sexp_t) -> gcry_error_t;
+  pub fn gcry_pk_genkey(r_key: *mut gcry_sexp_t, s_parms: gcry_sexp_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_ctl(
-        cmd: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        buflen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_pk_ctl(cmd: ::std::os::raw::c_int, buffer: *mut ::std::os::raw::c_void, buflen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_algo_info(
-        algo: ::std::os::raw::c_int,
-        what: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        nbytes: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_pk_algo_info(
+    algo: ::std::os::raw::c_int,
+    what: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    nbytes: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_pk_algo_name(algorithm: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
+  pub fn gcry_pk_algo_name(algorithm: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_pk_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+  pub fn gcry_pk_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_pk_get_nbits(key: gcry_sexp_t) -> ::std::os::raw::c_uint;
+  pub fn gcry_pk_get_nbits(key: gcry_sexp_t) -> ::std::os::raw::c_uint;
 }
 extern "C" {
-    pub fn gcry_pk_get_keygrip(
-        key: gcry_sexp_t,
-        array: *mut ::std::os::raw::c_uchar,
-    ) -> *mut ::std::os::raw::c_uchar;
+  pub fn gcry_pk_get_keygrip(key: gcry_sexp_t, array: *mut ::std::os::raw::c_uchar) -> *mut ::std::os::raw::c_uchar;
 }
 extern "C" {
-    pub fn gcry_pk_get_curve(
-        key: gcry_sexp_t,
-        iterator: ::std::os::raw::c_int,
-        r_nbits: *mut ::std::os::raw::c_uint,
-    ) -> *const ::std::os::raw::c_char;
+  pub fn gcry_pk_get_curve(
+    key: gcry_sexp_t,
+    iterator: ::std::os::raw::c_int,
+    r_nbits: *mut ::std::os::raw::c_uint,
+  ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_pk_get_param(
-        algo: ::std::os::raw::c_int,
-        name: *const ::std::os::raw::c_char,
-    ) -> gcry_sexp_t;
+  pub fn gcry_pk_get_param(algo: ::std::os::raw::c_int, name: *const ::std::os::raw::c_char) -> gcry_sexp_t;
 }
 extern "C" {
-    pub fn gcry_pubkey_get_sexp(
-        r_sexp: *mut gcry_sexp_t,
-        mode: ::std::os::raw::c_int,
-        ctx: gcry_ctx_t,
-    ) -> gcry_error_t;
+  pub fn gcry_pubkey_get_sexp(r_sexp: *mut gcry_sexp_t, mode: ::std::os::raw::c_int, ctx: gcry_ctx_t) -> gcry_error_t;
 }
-impl gcry_ecc_curves {
-    pub const GCRY_ECC_CURVE25519: gcry_ecc_curves = gcry_ecc_curves(1);
+impl gcry_ecc_curves
+{
+  pub const GCRY_ECC_CURVE25519: gcry_ecc_curves = gcry_ecc_curves(1);
 }
-impl gcry_ecc_curves {
-    pub const GCRY_ECC_CURVE448: gcry_ecc_curves = gcry_ecc_curves(2);
+impl gcry_ecc_curves
+{
+  pub const GCRY_ECC_CURVE448: gcry_ecc_curves = gcry_ecc_curves(2);
 }
-impl ::std::ops::BitOr<gcry_ecc_curves> for gcry_ecc_curves {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_ecc_curves(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_ecc_curves> for gcry_ecc_curves
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_ecc_curves(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_ecc_curves {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_ecc_curves) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_ecc_curves
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_ecc_curves)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_ecc_curves> for gcry_ecc_curves {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_ecc_curves(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_ecc_curves> for gcry_ecc_curves
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_ecc_curves(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_ecc_curves {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_ecc_curves) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_ecc_curves
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_ecc_curves)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_ecc_curves(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_ecc_get_algo_keylen(curveid: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+  pub fn gcry_ecc_get_algo_keylen(curveid: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
 }
 extern "C" {
-    pub fn gcry_ecc_mul_point(
-        curveid: ::std::os::raw::c_int,
-        result: *mut ::std::os::raw::c_uchar,
-        scalar: *const ::std::os::raw::c_uchar,
-        point: *const ::std::os::raw::c_uchar,
-    ) -> gpg_error_t;
+  pub fn gcry_ecc_mul_point(
+    curveid: ::std::os::raw::c_int,
+    result: *mut ::std::os::raw::c_uchar,
+    scalar: *const ::std::os::raw::c_uchar,
+    point: *const ::std::os::raw::c_uchar,
+  ) -> gpg_error_t;
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_NONE: gcry_md_algos = gcry_md_algos(0);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_NONE: gcry_md_algos = gcry_md_algos(0);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_MD5: gcry_md_algos = gcry_md_algos(1);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_MD5: gcry_md_algos = gcry_md_algos(1);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA1: gcry_md_algos = gcry_md_algos(2);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA1: gcry_md_algos = gcry_md_algos(2);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_RMD160: gcry_md_algos = gcry_md_algos(3);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_RMD160: gcry_md_algos = gcry_md_algos(3);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_MD2: gcry_md_algos = gcry_md_algos(5);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_MD2: gcry_md_algos = gcry_md_algos(5);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_TIGER: gcry_md_algos = gcry_md_algos(6);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_TIGER: gcry_md_algos = gcry_md_algos(6);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_HAVAL: gcry_md_algos = gcry_md_algos(7);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_HAVAL: gcry_md_algos = gcry_md_algos(7);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA256: gcry_md_algos = gcry_md_algos(8);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA256: gcry_md_algos = gcry_md_algos(8);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA384: gcry_md_algos = gcry_md_algos(9);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA384: gcry_md_algos = gcry_md_algos(9);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA512: gcry_md_algos = gcry_md_algos(10);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA512: gcry_md_algos = gcry_md_algos(10);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA224: gcry_md_algos = gcry_md_algos(11);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA224: gcry_md_algos = gcry_md_algos(11);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_MD4: gcry_md_algos = gcry_md_algos(301);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_MD4: gcry_md_algos = gcry_md_algos(301);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_CRC32: gcry_md_algos = gcry_md_algos(302);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_CRC32: gcry_md_algos = gcry_md_algos(302);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_CRC32_RFC1510: gcry_md_algos = gcry_md_algos(303);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_CRC32_RFC1510: gcry_md_algos = gcry_md_algos(303);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_CRC24_RFC2440: gcry_md_algos = gcry_md_algos(304);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_CRC24_RFC2440: gcry_md_algos = gcry_md_algos(304);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_WHIRLPOOL: gcry_md_algos = gcry_md_algos(305);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_WHIRLPOOL: gcry_md_algos = gcry_md_algos(305);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_TIGER1: gcry_md_algos = gcry_md_algos(306);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_TIGER1: gcry_md_algos = gcry_md_algos(306);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_TIGER2: gcry_md_algos = gcry_md_algos(307);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_TIGER2: gcry_md_algos = gcry_md_algos(307);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_GOSTR3411_94: gcry_md_algos = gcry_md_algos(308);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_GOSTR3411_94: gcry_md_algos = gcry_md_algos(308);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_STRIBOG256: gcry_md_algos = gcry_md_algos(309);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_STRIBOG256: gcry_md_algos = gcry_md_algos(309);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_STRIBOG512: gcry_md_algos = gcry_md_algos(310);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_STRIBOG512: gcry_md_algos = gcry_md_algos(310);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_GOSTR3411_CP: gcry_md_algos = gcry_md_algos(311);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_GOSTR3411_CP: gcry_md_algos = gcry_md_algos(311);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA3_224: gcry_md_algos = gcry_md_algos(312);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA3_224: gcry_md_algos = gcry_md_algos(312);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA3_256: gcry_md_algos = gcry_md_algos(313);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA3_256: gcry_md_algos = gcry_md_algos(313);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA3_384: gcry_md_algos = gcry_md_algos(314);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA3_384: gcry_md_algos = gcry_md_algos(314);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA3_512: gcry_md_algos = gcry_md_algos(315);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA3_512: gcry_md_algos = gcry_md_algos(315);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHAKE128: gcry_md_algos = gcry_md_algos(316);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHAKE128: gcry_md_algos = gcry_md_algos(316);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHAKE256: gcry_md_algos = gcry_md_algos(317);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHAKE256: gcry_md_algos = gcry_md_algos(317);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2B_512: gcry_md_algos = gcry_md_algos(318);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2B_512: gcry_md_algos = gcry_md_algos(318);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2B_384: gcry_md_algos = gcry_md_algos(319);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2B_384: gcry_md_algos = gcry_md_algos(319);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2B_256: gcry_md_algos = gcry_md_algos(320);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2B_256: gcry_md_algos = gcry_md_algos(320);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2B_160: gcry_md_algos = gcry_md_algos(321);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2B_160: gcry_md_algos = gcry_md_algos(321);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2S_256: gcry_md_algos = gcry_md_algos(322);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2S_256: gcry_md_algos = gcry_md_algos(322);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2S_224: gcry_md_algos = gcry_md_algos(323);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2S_224: gcry_md_algos = gcry_md_algos(323);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2S_160: gcry_md_algos = gcry_md_algos(324);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2S_160: gcry_md_algos = gcry_md_algos(324);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_BLAKE2S_128: gcry_md_algos = gcry_md_algos(325);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_BLAKE2S_128: gcry_md_algos = gcry_md_algos(325);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SM3: gcry_md_algos = gcry_md_algos(326);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SM3: gcry_md_algos = gcry_md_algos(326);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA512_256: gcry_md_algos = gcry_md_algos(327);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA512_256: gcry_md_algos = gcry_md_algos(327);
 }
-impl gcry_md_algos {
-    pub const GCRY_MD_SHA512_224: gcry_md_algos = gcry_md_algos(328);
+impl gcry_md_algos
+{
+  pub const GCRY_MD_SHA512_224: gcry_md_algos = gcry_md_algos(328);
 }
-impl ::std::ops::BitOr<gcry_md_algos> for gcry_md_algos {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_md_algos(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_md_algos> for gcry_md_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_md_algos(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_md_algos {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_md_algos) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_md_algos
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_md_algos)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_md_algos> for gcry_md_algos {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_md_algos(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_md_algos> for gcry_md_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_md_algos(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_md_algos {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_md_algos) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_md_algos
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_md_algos)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_md_algos(pub ::std::os::raw::c_uint);
-impl gcry_md_flags {
-    pub const GCRY_MD_FLAG_SECURE: gcry_md_flags = gcry_md_flags(1);
+impl gcry_md_flags
+{
+  pub const GCRY_MD_FLAG_SECURE: gcry_md_flags = gcry_md_flags(1);
 }
-impl gcry_md_flags {
-    pub const GCRY_MD_FLAG_HMAC: gcry_md_flags = gcry_md_flags(2);
+impl gcry_md_flags
+{
+  pub const GCRY_MD_FLAG_HMAC: gcry_md_flags = gcry_md_flags(2);
 }
-impl gcry_md_flags {
-    pub const GCRY_MD_FLAG_BUGEMU1: gcry_md_flags = gcry_md_flags(256);
+impl gcry_md_flags
+{
+  pub const GCRY_MD_FLAG_BUGEMU1: gcry_md_flags = gcry_md_flags(256);
 }
-impl ::std::ops::BitOr<gcry_md_flags> for gcry_md_flags {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_md_flags(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_md_flags> for gcry_md_flags
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_md_flags(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_md_flags {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_md_flags) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_md_flags
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_md_flags)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_md_flags> for gcry_md_flags {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_md_flags(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_md_flags> for gcry_md_flags
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_md_flags(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_md_flags {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_md_flags) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_md_flags
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_md_flags)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_md_flags(pub ::std::os::raw::c_uint);
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_md_context {
-    _unused: [u8; 0],
+pub struct gcry_md_context
+{
+  _unused: [u8; 0],
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_md_handle {
-    pub ctx: *mut gcry_md_context,
-    pub bufpos: ::std::os::raw::c_int,
-    pub bufsize: ::std::os::raw::c_int,
-    pub buf: [::std::os::raw::c_uchar; 1usize],
+pub struct gcry_md_handle
+{
+  pub ctx: *mut gcry_md_context,
+  pub bufpos: ::std::os::raw::c_int,
+  pub bufsize: ::std::os::raw::c_int,
+  pub buf: [::std::os::raw::c_uchar; 1usize],
 }
 #[test]
-fn bindgen_test_layout_gcry_md_handle() {
-    assert_eq!(
-        ::std::mem::size_of::<gcry_md_handle>(),
-        24usize,
-        concat!("Size of: ", stringify!(gcry_md_handle))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<gcry_md_handle>(),
-        8usize,
-        concat!("Alignment of ", stringify!(gcry_md_handle))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).ctx as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_md_handle),
-            "::",
-            stringify!(ctx)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).bufpos as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_md_handle),
-            "::",
-            stringify!(bufpos)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).bufsize as *const _ as usize },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_md_handle),
-            "::",
-            stringify!(bufsize)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).buf as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(gcry_md_handle),
-            "::",
-            stringify!(buf)
-        )
-    );
+fn bindgen_test_layout_gcry_md_handle()
+{
+  assert_eq!(
+    ::std::mem::size_of::<gcry_md_handle>(),
+    24usize,
+    concat!("Size of: ", stringify!(gcry_md_handle))
+  );
+  assert_eq!(
+    ::std::mem::align_of::<gcry_md_handle>(),
+    8usize,
+    concat!("Alignment of ", stringify!(gcry_md_handle))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).ctx as *const _ as usize },
+    0usize,
+    concat!("Offset of field: ", stringify!(gcry_md_handle), "::", stringify!(ctx))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).bufpos as *const _ as usize },
+    8usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(gcry_md_handle),
+      "::",
+      stringify!(bufpos)
+    )
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).bufsize as *const _ as usize },
+    12usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(gcry_md_handle),
+      "::",
+      stringify!(bufsize)
+    )
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<gcry_md_handle>())).buf as *const _ as usize },
+    16usize,
+    concat!("Offset of field: ", stringify!(gcry_md_handle), "::", stringify!(buf))
+  );
 }
 pub type gcry_md_hd_t = *mut gcry_md_handle;
 pub type GCRY_MD_HD = *mut gcry_md_handle;
 extern "C" {
-    pub fn gcry_md_open(
-        h: *mut gcry_md_hd_t,
-        algo: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_uint,
-    ) -> gcry_error_t;
+  pub fn gcry_md_open(h: *mut gcry_md_hd_t, algo: ::std::os::raw::c_int, flags: ::std::os::raw::c_uint)
+  -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_close(hd: gcry_md_hd_t);
+  pub fn gcry_md_close(hd: gcry_md_hd_t);
 }
 extern "C" {
-    pub fn gcry_md_enable(hd: gcry_md_hd_t, algo: ::std::os::raw::c_int) -> gcry_error_t;
+  pub fn gcry_md_enable(hd: gcry_md_hd_t, algo: ::std::os::raw::c_int) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_copy(bhd: *mut gcry_md_hd_t, ahd: gcry_md_hd_t) -> gcry_error_t;
+  pub fn gcry_md_copy(bhd: *mut gcry_md_hd_t, ahd: gcry_md_hd_t) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_reset(hd: gcry_md_hd_t);
+  pub fn gcry_md_reset(hd: gcry_md_hd_t);
 }
 extern "C" {
-    pub fn gcry_md_ctl(
-        hd: gcry_md_hd_t,
-        cmd: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        buflen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_md_ctl(
+    hd: gcry_md_hd_t,
+    cmd: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    buflen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_write(hd: gcry_md_hd_t, buffer: *const ::std::os::raw::c_void, length: usize);
+  pub fn gcry_md_write(hd: gcry_md_hd_t, buffer: *const ::std::os::raw::c_void, length: usize);
 }
 extern "C" {
-    pub fn gcry_md_read(
-        hd: gcry_md_hd_t,
-        algo: ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_uchar;
+  pub fn gcry_md_read(hd: gcry_md_hd_t, algo: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_uchar;
 }
 extern "C" {
-    pub fn gcry_md_extract(
-        hd: gcry_md_hd_t,
-        algo: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        length: usize,
-    ) -> gpg_error_t;
+  pub fn gcry_md_extract(
+    hd: gcry_md_hd_t,
+    algo: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    length: usize,
+  ) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_md_hash_buffer(
-        algo: ::std::os::raw::c_int,
-        digest: *mut ::std::os::raw::c_void,
-        buffer: *const ::std::os::raw::c_void,
-        length: usize,
-    );
+  pub fn gcry_md_hash_buffer(
+    algo: ::std::os::raw::c_int,
+    digest: *mut ::std::os::raw::c_void,
+    buffer: *const ::std::os::raw::c_void,
+    length: usize,
+  );
 }
 extern "C" {
-    pub fn gcry_md_hash_buffers(
-        algo: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_uint,
-        digest: *mut ::std::os::raw::c_void,
-        iov: *const gcry_buffer_t,
-        iovcnt: ::std::os::raw::c_int,
-    ) -> gpg_error_t;
+  pub fn gcry_md_hash_buffers(
+    algo: ::std::os::raw::c_int,
+    flags: ::std::os::raw::c_uint,
+    digest: *mut ::std::os::raw::c_void,
+    iov: *const gcry_buffer_t,
+    iovcnt: ::std::os::raw::c_int,
+  ) -> gpg_error_t;
 }
 extern "C" {
-    pub fn gcry_md_get_algo(hd: gcry_md_hd_t) -> ::std::os::raw::c_int;
+  pub fn gcry_md_get_algo(hd: gcry_md_hd_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_md_get_algo_dlen(algo: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+  pub fn gcry_md_get_algo_dlen(algo: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
 }
 extern "C" {
-    pub fn gcry_md_is_enabled(
-        a: gcry_md_hd_t,
-        algo: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+  pub fn gcry_md_is_enabled(a: gcry_md_hd_t, algo: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_md_is_secure(a: gcry_md_hd_t) -> ::std::os::raw::c_int;
+  pub fn gcry_md_is_secure(a: gcry_md_hd_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_md_info(
-        h: gcry_md_hd_t,
-        what: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        nbytes: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_md_info(
+    h: gcry_md_hd_t,
+    what: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    nbytes: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_algo_info(
-        algo: ::std::os::raw::c_int,
-        what: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        nbytes: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_md_algo_info(
+    algo: ::std::os::raw::c_int,
+    what: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    nbytes: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_algo_name(algo: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
+  pub fn gcry_md_algo_name(algo: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_md_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+  pub fn gcry_md_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_md_setkey(
-        hd: gcry_md_hd_t,
-        key: *const ::std::os::raw::c_void,
-        keylen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_md_setkey(hd: gcry_md_hd_t, key: *const ::std::os::raw::c_void, keylen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_md_debug(hd: gcry_md_hd_t, suffix: *const ::std::os::raw::c_char);
+  pub fn gcry_md_debug(hd: gcry_md_hd_t, suffix: *const ::std::os::raw::c_char);
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct gcry_mac_handle {
-    _unused: [u8; 0],
+pub struct gcry_mac_handle
+{
+  _unused: [u8; 0],
 }
 pub type gcry_mac_hd_t = *mut gcry_mac_handle;
-impl gcry_mac_algos {
-    pub const GCRY_MAC_NONE: gcry_mac_algos = gcry_mac_algos(0);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_NONE: gcry_mac_algos = gcry_mac_algos(0);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_GOST28147_IMIT: gcry_mac_algos = gcry_mac_algos(1);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_GOST28147_IMIT: gcry_mac_algos = gcry_mac_algos(1);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA256: gcry_mac_algos = gcry_mac_algos(101);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA256: gcry_mac_algos = gcry_mac_algos(101);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA224: gcry_mac_algos = gcry_mac_algos(102);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA224: gcry_mac_algos = gcry_mac_algos(102);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA512: gcry_mac_algos = gcry_mac_algos(103);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA512: gcry_mac_algos = gcry_mac_algos(103);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA384: gcry_mac_algos = gcry_mac_algos(104);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA384: gcry_mac_algos = gcry_mac_algos(104);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA1: gcry_mac_algos = gcry_mac_algos(105);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA1: gcry_mac_algos = gcry_mac_algos(105);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_MD5: gcry_mac_algos = gcry_mac_algos(106);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_MD5: gcry_mac_algos = gcry_mac_algos(106);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_MD4: gcry_mac_algos = gcry_mac_algos(107);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_MD4: gcry_mac_algos = gcry_mac_algos(107);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_RMD160: gcry_mac_algos = gcry_mac_algos(108);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_RMD160: gcry_mac_algos = gcry_mac_algos(108);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_TIGER1: gcry_mac_algos = gcry_mac_algos(109);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_TIGER1: gcry_mac_algos = gcry_mac_algos(109);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_WHIRLPOOL: gcry_mac_algos = gcry_mac_algos(110);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_WHIRLPOOL: gcry_mac_algos = gcry_mac_algos(110);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_GOSTR3411_94: gcry_mac_algos = gcry_mac_algos(111);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_GOSTR3411_94: gcry_mac_algos = gcry_mac_algos(111);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_STRIBOG256: gcry_mac_algos = gcry_mac_algos(112);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_STRIBOG256: gcry_mac_algos = gcry_mac_algos(112);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_STRIBOG512: gcry_mac_algos = gcry_mac_algos(113);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_STRIBOG512: gcry_mac_algos = gcry_mac_algos(113);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_MD2: gcry_mac_algos = gcry_mac_algos(114);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_MD2: gcry_mac_algos = gcry_mac_algos(114);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA3_224: gcry_mac_algos = gcry_mac_algos(115);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA3_224: gcry_mac_algos = gcry_mac_algos(115);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA3_256: gcry_mac_algos = gcry_mac_algos(116);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA3_256: gcry_mac_algos = gcry_mac_algos(116);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA3_384: gcry_mac_algos = gcry_mac_algos(117);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA3_384: gcry_mac_algos = gcry_mac_algos(117);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA3_512: gcry_mac_algos = gcry_mac_algos(118);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA3_512: gcry_mac_algos = gcry_mac_algos(118);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_GOSTR3411_CP: gcry_mac_algos = gcry_mac_algos(119);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_GOSTR3411_CP: gcry_mac_algos = gcry_mac_algos(119);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2B_512: gcry_mac_algos = gcry_mac_algos(120);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2B_512: gcry_mac_algos = gcry_mac_algos(120);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2B_384: gcry_mac_algos = gcry_mac_algos(121);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2B_384: gcry_mac_algos = gcry_mac_algos(121);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2B_256: gcry_mac_algos = gcry_mac_algos(122);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2B_256: gcry_mac_algos = gcry_mac_algos(122);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2B_160: gcry_mac_algos = gcry_mac_algos(123);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2B_160: gcry_mac_algos = gcry_mac_algos(123);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2S_256: gcry_mac_algos = gcry_mac_algos(124);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2S_256: gcry_mac_algos = gcry_mac_algos(124);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2S_224: gcry_mac_algos = gcry_mac_algos(125);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2S_224: gcry_mac_algos = gcry_mac_algos(125);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2S_160: gcry_mac_algos = gcry_mac_algos(126);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2S_160: gcry_mac_algos = gcry_mac_algos(126);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_BLAKE2S_128: gcry_mac_algos = gcry_mac_algos(127);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_BLAKE2S_128: gcry_mac_algos = gcry_mac_algos(127);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SM3: gcry_mac_algos = gcry_mac_algos(128);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SM3: gcry_mac_algos = gcry_mac_algos(128);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA512_256: gcry_mac_algos = gcry_mac_algos(129);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA512_256: gcry_mac_algos = gcry_mac_algos(129);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_HMAC_SHA512_224: gcry_mac_algos = gcry_mac_algos(130);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_HMAC_SHA512_224: gcry_mac_algos = gcry_mac_algos(130);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_AES: gcry_mac_algos = gcry_mac_algos(201);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_AES: gcry_mac_algos = gcry_mac_algos(201);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_3DES: gcry_mac_algos = gcry_mac_algos(202);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_3DES: gcry_mac_algos = gcry_mac_algos(202);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_CAMELLIA: gcry_mac_algos = gcry_mac_algos(203);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_CAMELLIA: gcry_mac_algos = gcry_mac_algos(203);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_CAST5: gcry_mac_algos = gcry_mac_algos(204);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_CAST5: gcry_mac_algos = gcry_mac_algos(204);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_BLOWFISH: gcry_mac_algos = gcry_mac_algos(205);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_BLOWFISH: gcry_mac_algos = gcry_mac_algos(205);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_TWOFISH: gcry_mac_algos = gcry_mac_algos(206);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_TWOFISH: gcry_mac_algos = gcry_mac_algos(206);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_SERPENT: gcry_mac_algos = gcry_mac_algos(207);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_SERPENT: gcry_mac_algos = gcry_mac_algos(207);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_SEED: gcry_mac_algos = gcry_mac_algos(208);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_SEED: gcry_mac_algos = gcry_mac_algos(208);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_RFC2268: gcry_mac_algos = gcry_mac_algos(209);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_RFC2268: gcry_mac_algos = gcry_mac_algos(209);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_IDEA: gcry_mac_algos = gcry_mac_algos(210);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_IDEA: gcry_mac_algos = gcry_mac_algos(210);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_GOST28147: gcry_mac_algos = gcry_mac_algos(211);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_GOST28147: gcry_mac_algos = gcry_mac_algos(211);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_CMAC_SM4: gcry_mac_algos = gcry_mac_algos(212);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_CMAC_SM4: gcry_mac_algos = gcry_mac_algos(212);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_GMAC_AES: gcry_mac_algos = gcry_mac_algos(401);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_GMAC_AES: gcry_mac_algos = gcry_mac_algos(401);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_GMAC_CAMELLIA: gcry_mac_algos = gcry_mac_algos(402);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_GMAC_CAMELLIA: gcry_mac_algos = gcry_mac_algos(402);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_GMAC_TWOFISH: gcry_mac_algos = gcry_mac_algos(403);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_GMAC_TWOFISH: gcry_mac_algos = gcry_mac_algos(403);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_GMAC_SERPENT: gcry_mac_algos = gcry_mac_algos(404);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_GMAC_SERPENT: gcry_mac_algos = gcry_mac_algos(404);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_GMAC_SEED: gcry_mac_algos = gcry_mac_algos(405);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_GMAC_SEED: gcry_mac_algos = gcry_mac_algos(405);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_POLY1305: gcry_mac_algos = gcry_mac_algos(501);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_POLY1305: gcry_mac_algos = gcry_mac_algos(501);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_POLY1305_AES: gcry_mac_algos = gcry_mac_algos(502);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_POLY1305_AES: gcry_mac_algos = gcry_mac_algos(502);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_POLY1305_CAMELLIA: gcry_mac_algos = gcry_mac_algos(503);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_POLY1305_CAMELLIA: gcry_mac_algos = gcry_mac_algos(503);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_POLY1305_TWOFISH: gcry_mac_algos = gcry_mac_algos(504);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_POLY1305_TWOFISH: gcry_mac_algos = gcry_mac_algos(504);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_POLY1305_SERPENT: gcry_mac_algos = gcry_mac_algos(505);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_POLY1305_SERPENT: gcry_mac_algos = gcry_mac_algos(505);
 }
-impl gcry_mac_algos {
-    pub const GCRY_MAC_POLY1305_SEED: gcry_mac_algos = gcry_mac_algos(506);
+impl gcry_mac_algos
+{
+  pub const GCRY_MAC_POLY1305_SEED: gcry_mac_algos = gcry_mac_algos(506);
 }
-impl ::std::ops::BitOr<gcry_mac_algos> for gcry_mac_algos {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_mac_algos(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_mac_algos> for gcry_mac_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_mac_algos(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_mac_algos {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_mac_algos) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_mac_algos
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_mac_algos)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_mac_algos> for gcry_mac_algos {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_mac_algos(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_mac_algos> for gcry_mac_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_mac_algos(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_mac_algos {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_mac_algos) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_mac_algos
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_mac_algos)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_mac_algos(pub ::std::os::raw::c_uint);
-impl gcry_mac_flags {
-    pub const GCRY_MAC_FLAG_SECURE: gcry_mac_flags = gcry_mac_flags(1);
+impl gcry_mac_flags
+{
+  pub const GCRY_MAC_FLAG_SECURE: gcry_mac_flags = gcry_mac_flags(1);
 }
-impl ::std::ops::BitOr<gcry_mac_flags> for gcry_mac_flags {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_mac_flags(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_mac_flags> for gcry_mac_flags
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_mac_flags(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_mac_flags {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_mac_flags) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_mac_flags
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_mac_flags)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_mac_flags> for gcry_mac_flags {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_mac_flags(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_mac_flags> for gcry_mac_flags
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_mac_flags(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_mac_flags {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_mac_flags) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_mac_flags
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_mac_flags)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_mac_flags(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_mac_open(
-        handle: *mut gcry_mac_hd_t,
-        algo: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_uint,
-        ctx: gcry_ctx_t,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_open(
+    handle: *mut gcry_mac_hd_t,
+    algo: ::std::os::raw::c_int,
+    flags: ::std::os::raw::c_uint,
+    ctx: gcry_ctx_t,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_close(h: gcry_mac_hd_t);
+  pub fn gcry_mac_close(h: gcry_mac_hd_t);
 }
 extern "C" {
-    pub fn gcry_mac_ctl(
-        h: gcry_mac_hd_t,
-        cmd: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        buflen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_ctl(
+    h: gcry_mac_hd_t,
+    cmd: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    buflen: usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_algo_info(
-        algo: ::std::os::raw::c_int,
-        what: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_void,
-        nbytes: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_algo_info(
+    algo: ::std::os::raw::c_int,
+    what: ::std::os::raw::c_int,
+    buffer: *mut ::std::os::raw::c_void,
+    nbytes: *mut usize,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_setkey(
-        hd: gcry_mac_hd_t,
-        key: *const ::std::os::raw::c_void,
-        keylen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_setkey(hd: gcry_mac_hd_t, key: *const ::std::os::raw::c_void, keylen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_setiv(
-        hd: gcry_mac_hd_t,
-        iv: *const ::std::os::raw::c_void,
-        ivlen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_setiv(hd: gcry_mac_hd_t, iv: *const ::std::os::raw::c_void, ivlen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_write(
-        hd: gcry_mac_hd_t,
-        buffer: *const ::std::os::raw::c_void,
-        length: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_write(hd: gcry_mac_hd_t, buffer: *const ::std::os::raw::c_void, length: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_read(
-        hd: gcry_mac_hd_t,
-        buffer: *mut ::std::os::raw::c_void,
-        buflen: *mut usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_read(hd: gcry_mac_hd_t, buffer: *mut ::std::os::raw::c_void, buflen: *mut usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_verify(
-        hd: gcry_mac_hd_t,
-        buffer: *const ::std::os::raw::c_void,
-        buflen: usize,
-    ) -> gcry_error_t;
+  pub fn gcry_mac_verify(hd: gcry_mac_hd_t, buffer: *const ::std::os::raw::c_void, buflen: usize) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_mac_get_algo(hd: gcry_mac_hd_t) -> ::std::os::raw::c_int;
+  pub fn gcry_mac_get_algo(hd: gcry_mac_hd_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn gcry_mac_get_algo_maclen(algo: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+  pub fn gcry_mac_get_algo_maclen(algo: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
 }
 extern "C" {
-    pub fn gcry_mac_get_algo_keylen(algo: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+  pub fn gcry_mac_get_algo_keylen(algo: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
 }
 extern "C" {
-    pub fn gcry_mac_algo_name(algorithm: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
+  pub fn gcry_mac_algo_name(algorithm: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_mac_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+  pub fn gcry_mac_map_name(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_NONE: gcry_kdf_algos = gcry_kdf_algos(0);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_NONE: gcry_kdf_algos = gcry_kdf_algos(0);
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_SIMPLE_S2K: gcry_kdf_algos = gcry_kdf_algos(16);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_SIMPLE_S2K: gcry_kdf_algos = gcry_kdf_algos(16);
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_SALTED_S2K: gcry_kdf_algos = gcry_kdf_algos(17);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_SALTED_S2K: gcry_kdf_algos = gcry_kdf_algos(17);
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_ITERSALTED_S2K: gcry_kdf_algos = gcry_kdf_algos(19);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_ITERSALTED_S2K: gcry_kdf_algos = gcry_kdf_algos(19);
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_PBKDF1: gcry_kdf_algos = gcry_kdf_algos(33);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_PBKDF1: gcry_kdf_algos = gcry_kdf_algos(33);
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_PBKDF2: gcry_kdf_algos = gcry_kdf_algos(34);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_PBKDF2: gcry_kdf_algos = gcry_kdf_algos(34);
 }
-impl gcry_kdf_algos {
-    pub const GCRY_KDF_SCRYPT: gcry_kdf_algos = gcry_kdf_algos(48);
+impl gcry_kdf_algos
+{
+  pub const GCRY_KDF_SCRYPT: gcry_kdf_algos = gcry_kdf_algos(48);
 }
-impl ::std::ops::BitOr<gcry_kdf_algos> for gcry_kdf_algos {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_kdf_algos(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_kdf_algos> for gcry_kdf_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_kdf_algos(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_kdf_algos {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_kdf_algos) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_kdf_algos
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_kdf_algos)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_kdf_algos> for gcry_kdf_algos {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_kdf_algos(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_kdf_algos> for gcry_kdf_algos
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_kdf_algos(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_kdf_algos {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_kdf_algos) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_kdf_algos
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_kdf_algos)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_kdf_algos(pub ::std::os::raw::c_uint);
 extern "C" {
-    pub fn gcry_kdf_derive(
-        passphrase: *const ::std::os::raw::c_void,
-        passphraselen: usize,
-        algo: ::std::os::raw::c_int,
-        subalgo: ::std::os::raw::c_int,
-        salt: *const ::std::os::raw::c_void,
-        saltlen: usize,
-        iterations: ::std::os::raw::c_ulong,
-        keysize: usize,
-        keybuffer: *mut ::std::os::raw::c_void,
-    ) -> gpg_error_t;
+  pub fn gcry_kdf_derive(
+    passphrase: *const ::std::os::raw::c_void,
+    passphraselen: usize,
+    algo: ::std::os::raw::c_int,
+    subalgo: ::std::os::raw::c_int,
+    salt: *const ::std::os::raw::c_void,
+    saltlen: usize,
+    iterations: ::std::os::raw::c_ulong,
+    keysize: usize,
+    keybuffer: *mut ::std::os::raw::c_void,
+  ) -> gpg_error_t;
 }
-impl gcry_rng_types {
-    pub const GCRY_RNG_TYPE_STANDARD: gcry_rng_types = gcry_rng_types(1);
+impl gcry_rng_types
+{
+  pub const GCRY_RNG_TYPE_STANDARD: gcry_rng_types = gcry_rng_types(1);
 }
-impl gcry_rng_types {
-    pub const GCRY_RNG_TYPE_FIPS: gcry_rng_types = gcry_rng_types(2);
+impl gcry_rng_types
+{
+  pub const GCRY_RNG_TYPE_FIPS: gcry_rng_types = gcry_rng_types(2);
 }
-impl gcry_rng_types {
-    pub const GCRY_RNG_TYPE_SYSTEM: gcry_rng_types = gcry_rng_types(3);
+impl gcry_rng_types
+{
+  pub const GCRY_RNG_TYPE_SYSTEM: gcry_rng_types = gcry_rng_types(3);
 }
-impl ::std::ops::BitOr<gcry_rng_types> for gcry_rng_types {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_rng_types(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_rng_types> for gcry_rng_types
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_rng_types(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_rng_types {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_rng_types) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_rng_types
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_rng_types)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_rng_types> for gcry_rng_types {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_rng_types(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_rng_types> for gcry_rng_types
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_rng_types(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_rng_types {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_rng_types) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_rng_types
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_rng_types)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_rng_types(pub ::std::os::raw::c_uint);
-impl gcry_random_level {
-    pub const GCRY_WEAK_RANDOM: gcry_random_level = gcry_random_level(0);
+impl gcry_random_level
+{
+  pub const GCRY_WEAK_RANDOM: gcry_random_level = gcry_random_level(0);
 }
-impl gcry_random_level {
-    pub const GCRY_STRONG_RANDOM: gcry_random_level = gcry_random_level(1);
+impl gcry_random_level
+{
+  pub const GCRY_STRONG_RANDOM: gcry_random_level = gcry_random_level(1);
 }
-impl gcry_random_level {
-    pub const GCRY_VERY_STRONG_RANDOM: gcry_random_level = gcry_random_level(2);
+impl gcry_random_level
+{
+  pub const GCRY_VERY_STRONG_RANDOM: gcry_random_level = gcry_random_level(2);
 }
-impl ::std::ops::BitOr<gcry_random_level> for gcry_random_level {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_random_level(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_random_level> for gcry_random_level
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_random_level(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_random_level {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_random_level) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_random_level
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_random_level)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_random_level> for gcry_random_level {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_random_level(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_random_level> for gcry_random_level
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_random_level(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_random_level {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_random_level) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_random_level
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_random_level)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_random_level(pub ::std::os::raw::c_uint);
 pub use self::gcry_random_level as gcry_random_level_t;
 extern "C" {
-    pub fn gcry_randomize(
-        buffer: *mut ::std::os::raw::c_void,
-        length: usize,
-        level: gcry_random_level,
-    );
+  pub fn gcry_randomize(buffer: *mut ::std::os::raw::c_void, length: usize, level: gcry_random_level);
 }
 extern "C" {
-    pub fn gcry_random_add_bytes(
-        buffer: *const ::std::os::raw::c_void,
-        length: usize,
-        quality: ::std::os::raw::c_int,
-    ) -> gcry_error_t;
+  pub fn gcry_random_add_bytes(
+    buffer: *const ::std::os::raw::c_void,
+    length: usize,
+    quality: ::std::os::raw::c_int,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_random_bytes(
-        nbytes: usize,
-        level: gcry_random_level,
-    ) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_random_bytes(nbytes: usize, level: gcry_random_level) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_random_bytes_secure(
-        nbytes: usize,
-        level: gcry_random_level,
-    ) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_random_bytes_secure(nbytes: usize, level: gcry_random_level) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_mpi_randomize(
-        w: gcry_mpi_t,
-        nbits: ::std::os::raw::c_uint,
-        level: gcry_random_level,
-    );
+  pub fn gcry_mpi_randomize(w: gcry_mpi_t, nbits: ::std::os::raw::c_uint, level: gcry_random_level);
 }
 extern "C" {
-    pub fn gcry_create_nonce(buffer: *mut ::std::os::raw::c_void, length: usize);
+  pub fn gcry_create_nonce(buffer: *mut ::std::os::raw::c_void, length: usize);
 }
 pub type gcry_prime_check_func_t = ::std::option::Option<
-    unsafe extern "C" fn(
-        arg: *mut ::std::os::raw::c_void,
-        mode: ::std::os::raw::c_int,
-        candidate: gcry_mpi_t,
-    ) -> ::std::os::raw::c_int,
+  unsafe extern "C" fn(
+    arg: *mut ::std::os::raw::c_void,
+    mode: ::std::os::raw::c_int,
+    candidate: gcry_mpi_t,
+  ) -> ::std::os::raw::c_int,
 >;
 extern "C" {
-    pub fn gcry_prime_generate(
-        prime: *mut gcry_mpi_t,
-        prime_bits: ::std::os::raw::c_uint,
-        factor_bits: ::std::os::raw::c_uint,
-        factors: *mut *mut gcry_mpi_t,
-        cb_func: gcry_prime_check_func_t,
-        cb_arg: *mut ::std::os::raw::c_void,
-        random_level: gcry_random_level_t,
-        flags: ::std::os::raw::c_uint,
-    ) -> gcry_error_t;
+  pub fn gcry_prime_generate(
+    prime: *mut gcry_mpi_t,
+    prime_bits: ::std::os::raw::c_uint,
+    factor_bits: ::std::os::raw::c_uint,
+    factors: *mut *mut gcry_mpi_t,
+    cb_func: gcry_prime_check_func_t,
+    cb_arg: *mut ::std::os::raw::c_void,
+    random_level: gcry_random_level_t,
+    flags: ::std::os::raw::c_uint,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_prime_group_generator(
-        r_g: *mut gcry_mpi_t,
-        prime: gcry_mpi_t,
-        factors: *mut gcry_mpi_t,
-        start_g: gcry_mpi_t,
-    ) -> gcry_error_t;
+  pub fn gcry_prime_group_generator(
+    r_g: *mut gcry_mpi_t,
+    prime: gcry_mpi_t,
+    factors: *mut gcry_mpi_t,
+    start_g: gcry_mpi_t,
+  ) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_prime_release_factors(factors: *mut gcry_mpi_t);
+  pub fn gcry_prime_release_factors(factors: *mut gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_prime_check(x: gcry_mpi_t, flags: ::std::os::raw::c_uint) -> gcry_error_t;
+  pub fn gcry_prime_check(x: gcry_mpi_t, flags: ::std::os::raw::c_uint) -> gcry_error_t;
 }
 extern "C" {
-    pub fn gcry_ctx_release(ctx: gcry_ctx_t);
+  pub fn gcry_ctx_release(ctx: gcry_ctx_t);
 }
 extern "C" {
-    pub fn gcry_log_debug(fmt: *const ::std::os::raw::c_char, ...);
+  pub fn gcry_log_debug(fmt: *const ::std::os::raw::c_char, ...);
 }
 extern "C" {
-    pub fn gcry_log_debughex(
-        text: *const ::std::os::raw::c_char,
-        buffer: *const ::std::os::raw::c_void,
-        length: usize,
-    );
+  pub fn gcry_log_debughex(text: *const ::std::os::raw::c_char, buffer: *const ::std::os::raw::c_void, length: usize);
 }
 extern "C" {
-    pub fn gcry_log_debugmpi(text: *const ::std::os::raw::c_char, mpi: gcry_mpi_t);
+  pub fn gcry_log_debugmpi(text: *const ::std::os::raw::c_char, mpi: gcry_mpi_t);
 }
 extern "C" {
-    pub fn gcry_log_debugpnt(
-        text: *const ::std::os::raw::c_char,
-        point: gcry_mpi_point_t,
-        ctx: gcry_ctx_t,
-    );
+  pub fn gcry_log_debugpnt(text: *const ::std::os::raw::c_char, point: gcry_mpi_point_t, ctx: gcry_ctx_t);
 }
 extern "C" {
-    pub fn gcry_log_debugsxp(text: *const ::std::os::raw::c_char, sexp: gcry_sexp_t);
+  pub fn gcry_log_debugsxp(text: *const ::std::os::raw::c_char, sexp: gcry_sexp_t);
 }
 extern "C" {
-    pub fn gcry_get_config(
-        mode: ::std::os::raw::c_int,
-        what: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+  pub fn gcry_get_config(
+    mode: ::std::os::raw::c_int,
+    what: *const ::std::os::raw::c_char,
+  ) -> *mut ::std::os::raw::c_char;
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_CONT: gcry_log_levels = gcry_log_levels(0);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_CONT: gcry_log_levels = gcry_log_levels(0);
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_INFO: gcry_log_levels = gcry_log_levels(10);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_INFO: gcry_log_levels = gcry_log_levels(10);
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_WARN: gcry_log_levels = gcry_log_levels(20);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_WARN: gcry_log_levels = gcry_log_levels(20);
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_ERROR: gcry_log_levels = gcry_log_levels(30);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_ERROR: gcry_log_levels = gcry_log_levels(30);
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_FATAL: gcry_log_levels = gcry_log_levels(40);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_FATAL: gcry_log_levels = gcry_log_levels(40);
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_BUG: gcry_log_levels = gcry_log_levels(50);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_BUG: gcry_log_levels = gcry_log_levels(50);
 }
-impl gcry_log_levels {
-    pub const GCRY_LOG_DEBUG: gcry_log_levels = gcry_log_levels(100);
+impl gcry_log_levels
+{
+  pub const GCRY_LOG_DEBUG: gcry_log_levels = gcry_log_levels(100);
 }
-impl ::std::ops::BitOr<gcry_log_levels> for gcry_log_levels {
-    type Output = Self;
-    #[inline]
-    fn bitor(self, other: Self) -> Self {
-        gcry_log_levels(self.0 | other.0)
-    }
+impl ::std::ops::BitOr<gcry_log_levels> for gcry_log_levels
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitor(self, other: Self) -> Self
+  {
+    gcry_log_levels(self.0 | other.0)
+  }
 }
-impl ::std::ops::BitOrAssign for gcry_log_levels {
-    #[inline]
-    fn bitor_assign(&mut self, rhs: gcry_log_levels) {
-        self.0 |= rhs.0;
-    }
+impl ::std::ops::BitOrAssign for gcry_log_levels
+{
+  #[inline]
+  fn bitor_assign(&mut self, rhs: gcry_log_levels)
+  {
+    self.0 |= rhs.0;
+  }
 }
-impl ::std::ops::BitAnd<gcry_log_levels> for gcry_log_levels {
-    type Output = Self;
-    #[inline]
-    fn bitand(self, other: Self) -> Self {
-        gcry_log_levels(self.0 & other.0)
-    }
+impl ::std::ops::BitAnd<gcry_log_levels> for gcry_log_levels
+{
+  type Output = Self;
+
+  #[inline]
+  fn bitand(self, other: Self) -> Self
+  {
+    gcry_log_levels(self.0 & other.0)
+  }
 }
-impl ::std::ops::BitAndAssign for gcry_log_levels {
-    #[inline]
-    fn bitand_assign(&mut self, rhs: gcry_log_levels) {
-        self.0 &= rhs.0;
-    }
+impl ::std::ops::BitAndAssign for gcry_log_levels
+{
+  #[inline]
+  fn bitand_assign(&mut self, rhs: gcry_log_levels)
+  {
+    self.0 &= rhs.0;
+  }
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub struct gcry_log_levels(pub ::std::os::raw::c_uint);
 pub type gcry_handler_progress_t = ::std::option::Option<
-    unsafe extern "C" fn(
-        arg1: *mut ::std::os::raw::c_void,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: ::std::os::raw::c_int,
-        arg5: ::std::os::raw::c_int,
-    ),
+  unsafe extern "C" fn(
+    arg1: *mut ::std::os::raw::c_void,
+    arg2: *const ::std::os::raw::c_char,
+    arg3: ::std::os::raw::c_int,
+    arg4: ::std::os::raw::c_int,
+    arg5: ::std::os::raw::c_int,
+  ),
 >;
-pub type gcry_handler_alloc_t =
-    ::std::option::Option<unsafe extern "C" fn(n: usize) -> *mut ::std::os::raw::c_void>;
-pub type gcry_handler_secure_check_t = ::std::option::Option<
-    unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> ::std::os::raw::c_int,
->;
-pub type gcry_handler_realloc_t = ::std::option::Option<
-    unsafe extern "C" fn(p: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void,
->;
-pub type gcry_handler_free_t =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>;
+pub type gcry_handler_alloc_t = ::std::option::Option<unsafe extern "C" fn(n: usize) -> *mut ::std::os::raw::c_void>;
+pub type gcry_handler_secure_check_t =
+  ::std::option::Option<unsafe extern "C" fn(arg1: *const ::std::os::raw::c_void) -> ::std::os::raw::c_int>;
+pub type gcry_handler_realloc_t =
+  ::std::option::Option<unsafe extern "C" fn(p: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void>;
+pub type gcry_handler_free_t = ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>;
 pub type gcry_handler_no_mem_t = ::std::option::Option<
-    unsafe extern "C" fn(
-        arg1: *mut ::std::os::raw::c_void,
-        arg2: usize,
-        arg3: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int,
+  unsafe extern "C" fn(
+    arg1: *mut ::std::os::raw::c_void,
+    arg2: usize,
+    arg3: ::std::os::raw::c_uint,
+  ) -> ::std::os::raw::c_int,
 >;
 pub type gcry_handler_error_t = ::std::option::Option<
-    unsafe extern "C" fn(
-        arg1: *mut ::std::os::raw::c_void,
-        arg2: ::std::os::raw::c_int,
-        arg3: *const ::std::os::raw::c_char,
-    ),
+  unsafe extern "C" fn(
+    arg1: *mut ::std::os::raw::c_void,
+    arg2: ::std::os::raw::c_int,
+    arg3: *const ::std::os::raw::c_char,
+  ),
 >;
 pub type gcry_handler_log_t = ::std::option::Option<
-    unsafe extern "C" fn(
-        arg1: *mut ::std::os::raw::c_void,
-        arg2: ::std::os::raw::c_int,
-        arg3: *const ::std::os::raw::c_char,
-        arg4: *mut __va_list_tag,
-    ),
+  unsafe extern "C" fn(
+    arg1: *mut ::std::os::raw::c_void,
+    arg2: ::std::os::raw::c_int,
+    arg3: *const ::std::os::raw::c_char,
+    arg4: *mut __va_list_tag,
+  ),
 >;
 extern "C" {
-    pub fn gcry_set_progress_handler(
-        cb: gcry_handler_progress_t,
-        cb_data: *mut ::std::os::raw::c_void,
-    );
+  pub fn gcry_set_progress_handler(cb: gcry_handler_progress_t, cb_data: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn gcry_set_allocation_handler(
-        func_alloc: gcry_handler_alloc_t,
-        func_alloc_secure: gcry_handler_alloc_t,
-        func_secure_check: gcry_handler_secure_check_t,
-        func_realloc: gcry_handler_realloc_t,
-        func_free: gcry_handler_free_t,
-    );
+  pub fn gcry_set_allocation_handler(
+    func_alloc: gcry_handler_alloc_t,
+    func_alloc_secure: gcry_handler_alloc_t,
+    func_secure_check: gcry_handler_secure_check_t,
+    func_realloc: gcry_handler_realloc_t,
+    func_free: gcry_handler_free_t,
+  );
 }
 extern "C" {
-    pub fn gcry_set_outofcore_handler(
-        h: gcry_handler_no_mem_t,
-        opaque: *mut ::std::os::raw::c_void,
-    );
+  pub fn gcry_set_outofcore_handler(h: gcry_handler_no_mem_t, opaque: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn gcry_set_fatalerror_handler(
-        fnc: gcry_handler_error_t,
-        opaque: *mut ::std::os::raw::c_void,
-    );
+  pub fn gcry_set_fatalerror_handler(fnc: gcry_handler_error_t, opaque: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn gcry_set_log_handler(f: gcry_handler_log_t, opaque: *mut ::std::os::raw::c_void);
+  pub fn gcry_set_log_handler(f: gcry_handler_log_t, opaque: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn gcry_set_gettext_handler(
-        f: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *const ::std::os::raw::c_char,
-            ) -> *const ::std::os::raw::c_char,
-        >,
-    );
+  pub fn gcry_set_gettext_handler(
+    f: ::std::option::Option<
+      unsafe extern "C" fn(arg1: *const ::std::os::raw::c_char) -> *const ::std::os::raw::c_char,
+    >,
+  );
 }
 extern "C" {
-    pub fn gcry_malloc(n: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_malloc(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_calloc(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_calloc(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_malloc_secure(n: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_malloc_secure(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_calloc_secure(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_calloc_secure(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_realloc(a: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_realloc(a: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_strdup(string: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+  pub fn gcry_strdup(string: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_xmalloc(n: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_xmalloc(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xcalloc(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_xcalloc(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xmalloc_secure(n: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_xmalloc_secure(n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xcalloc_secure(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_xcalloc_secure(n: usize, m: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xrealloc(a: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void;
+  pub fn gcry_xrealloc(a: *mut ::std::os::raw::c_void, n: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn gcry_xstrdup(a: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+  pub fn gcry_xstrdup(a: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn gcry_free(a: *mut ::std::os::raw::c_void);
+  pub fn gcry_free(a: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn gcry_is_secure(a: *const ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+  pub fn gcry_is_secure(a: *const ::std::os::raw::c_void) -> ::std::os::raw::c_int;
 }
 pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __va_list_tag {
-    pub gp_offset: ::std::os::raw::c_uint,
-    pub fp_offset: ::std::os::raw::c_uint,
-    pub overflow_arg_area: *mut ::std::os::raw::c_void,
-    pub reg_save_area: *mut ::std::os::raw::c_void,
+pub struct __va_list_tag
+{
+  pub gp_offset: ::std::os::raw::c_uint,
+  pub fp_offset: ::std::os::raw::c_uint,
+  pub overflow_arg_area: *mut ::std::os::raw::c_void,
+  pub reg_save_area: *mut ::std::os::raw::c_void,
 }
 #[test]
-fn bindgen_test_layout___va_list_tag() {
-    assert_eq!(
-        ::std::mem::size_of::<__va_list_tag>(),
-        24usize,
-        concat!("Size of: ", stringify!(__va_list_tag))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__va_list_tag>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__va_list_tag))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(gp_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(fp_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(overflow_arg_area)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(reg_save_area)
-        )
-    );
+fn bindgen_test_layout___va_list_tag()
+{
+  assert_eq!(
+    ::std::mem::size_of::<__va_list_tag>(),
+    24usize,
+    concat!("Size of: ", stringify!(__va_list_tag))
+  );
+  assert_eq!(
+    ::std::mem::align_of::<__va_list_tag>(),
+    8usize,
+    concat!("Alignment of ", stringify!(__va_list_tag))
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
+    0usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(__va_list_tag),
+      "::",
+      stringify!(gp_offset)
+    )
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
+    4usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(__va_list_tag),
+      "::",
+      stringify!(fp_offset)
+    )
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize },
+    8usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(__va_list_tag),
+      "::",
+      stringify!(overflow_arg_area)
+    )
+  );
+  assert_eq!(
+    unsafe { &(*(::std::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
+    16usize,
+    concat!(
+      "Offset of field: ",
+      stringify!(__va_list_tag),
+      "::",
+      stringify!(reg_save_area)
+    )
+  );
 }
