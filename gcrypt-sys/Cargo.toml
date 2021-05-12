@@ -8,4 +8,7 @@ edition = "2021"
 [build-dependencies]
 bindgen = "0.58"
 gcrypt-src = { version = "19", path = "../gcrypt-src" }
-gpgrt-src = { version = "142", path = "../../gpgrt-rs/gpgrt-src" }
+gpgrt-src = { version = "142", git = "https://github.com/byhowe/gpgrt-rs.git" }
+
+[dependencies]
+gpgrt-sys = { version = "0.1", git = "https://github.com/byhowe/gpgrt-rs.git" }

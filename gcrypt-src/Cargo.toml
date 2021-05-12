@@ -6,5 +6,4 @@ version = "19.0.0+1.9.3"
 edition = "2021"
 
 [dependencies]
-gpgrt-src = { version = "142", path = "../../gpgrt-rs/gpgrt-src" }
-ffi-tools = { version = "0.1", path = "../../ffi-tools-rs" }
+ffi-tools = { version = "0.1", git = "https://github.com/byhowe/ffi-tools-rs.git" }
