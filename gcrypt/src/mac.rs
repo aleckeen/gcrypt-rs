@@ -300,7 +300,7 @@ impl Algorithm
   }
 
   #[inline]
-  pub fn digest_len(&self) -> usize
+  pub fn mac_len(&self) -> usize
   {
     unsafe { gcrypt_sys::gcry_mac_get_algo_maclen(*self as _) as usize }
   }
@@ -317,7 +317,7 @@ impl std::fmt::Debug for Algorithm
   fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result
   {
     f.debug_struct(&format!("{} ({})", self.name(), self.raw()))
-      .field("digest_len", &self.digest_len())
+      .field("mac_len", &self.mac_len())
       .field("key_len", &self.key_len())
       .finish()
   }
@@ -416,7 +416,7 @@ impl Mac
   #[inline]
   pub fn finish(&mut self) -> Result<Box<[u8]>>
   {
-    let mut len = self.algorithm().digest_len();
+    let mut len = self.algorithm().mac_len();
     let mut buffer: Box<[u8]> = unsafe { Box::new_uninit_slice(len).assume_init() };
     let err = Error::from_raw(unsafe {
       gcrypt_sys::gcry_mac_read(self.0, buffer.as_mut_ptr().cast(), &mut len)
