@@ -29,10 +29,9 @@ pub enum Algorithm
   /// severe weaknesses and should not be used.
   Md4 = gcrypt_sys::GCRY_MD_MD4,
 
-  /// This is an reserved identifier for MD-2; there is no implementation yet. This algorithm has
-  /// severe weaknesses and should not be used.
-  Md2 = gcrypt_sys::GCRY_MD_MD2,
-
+  // /// This is an reserved identifier for MD-2; there is no implementation yet. This algorithm
+  // has /// severe weaknesses and should not be used.
+  // Md2 = gcrypt_sys::GCRY_MD_MD2,
   /// This is the TIGER/192 algorithm which yields a message digest of 24 bytes. Actually this is a
   /// variant of TIGER with a different output print order as used by GnuPG up to version 1.3.2.
   Tiger = gcrypt_sys::GCRY_MD_TIGER,
@@ -44,10 +43,9 @@ pub enum Algorithm
   /// This is another variant of TIGER with a different padding scheme.
   Tiger2 = gcrypt_sys::GCRY_MD_TIGER2,
 
-  /// This is an reserved value for the HAVAL algorithm with 5 passes and 160 bit. It yields a
-  /// message digest of 20 bytes. Note that there is no implementation yet available.
-  Haval = gcrypt_sys::GCRY_MD_HAVAL,
-
+  // /// This is an reserved value for the HAVAL algorithm with 5 passes and 160 bit. It yields a
+  // /// message digest of 20 bytes. Note that there is no implementation yet available.
+  // Haval = gcrypt_sys::GCRY_MD_HAVAL,
   /// This is the SHA-224 algorithm which yields a message digest of 28 bytes. See Change Notice 1
   /// for FIPS 180-2 for the specification.
   Sha224 = gcrypt_sys::GCRY_MD_SHA224,
@@ -166,11 +164,11 @@ impl Algorithm
     Self::Rmd160,
     Self::Md5,
     Self::Md4,
-    Self::Md2,
+    // Self::Md2,
     Self::Tiger,
     Self::Tiger1,
     Self::Tiger2,
-    Self::Haval,
+    // Self::Haval,
     Self::Sha224,
     Self::Sha256,
     Self::Sha384,
@@ -209,11 +207,11 @@ impl Algorithm
       | gcrypt_sys::GCRY_MD_RMD160 => Some(Self::Rmd160),
       | gcrypt_sys::GCRY_MD_MD5 => Some(Self::Md5),
       | gcrypt_sys::GCRY_MD_MD4 => Some(Self::Md4),
-      | gcrypt_sys::GCRY_MD_MD2 => Some(Self::Md2),
+      // | gcrypt_sys::GCRY_MD_MD2 => Some(Self::Md2),
       | gcrypt_sys::GCRY_MD_TIGER => Some(Self::Tiger),
       | gcrypt_sys::GCRY_MD_TIGER1 => Some(Self::Tiger1),
       | gcrypt_sys::GCRY_MD_TIGER2 => Some(Self::Tiger2),
-      | gcrypt_sys::GCRY_MD_HAVAL => Some(Self::Haval),
+      // | gcrypt_sys::GCRY_MD_HAVAL => Some(Self::Haval),
       | gcrypt_sys::GCRY_MD_SHA224 => Some(Self::Sha224),
       | gcrypt_sys::GCRY_MD_SHA256 => Some(Self::Sha256),
       | gcrypt_sys::GCRY_MD_SHA384 => Some(Self::Sha384),
