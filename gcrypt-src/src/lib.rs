@@ -57,7 +57,10 @@ impl<'gpgrt> Build<'gpgrt>
     configure.prefix(&self.install_dir);
     configure.with_pkg_prefix("gpgrt", &self.gpgrt.install_dir);
     let old_path = env::var("PATH").unwrap();
-    env::set_var("PATH", &format!("{}:{}", self.gpgrt.bin_dir.display(), old_path));
+    env::set_var(
+      "PATH",
+      &format!("{}:{}", self.gpgrt.bin_dir.display(), old_path),
+    );
     configure.configure();
     env::set_var("PATH", &old_path);
     self.project.make();

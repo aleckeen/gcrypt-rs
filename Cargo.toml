@@ -3,4 +3,7 @@ members = [
   "gcrypt",
   "gcrypt-src",
   "gcrypt-sys",
+
+  # internal
+  "examples",
 ]

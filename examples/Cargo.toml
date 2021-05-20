@@ -1,0 +1,16 @@
+cargo-features = ["edition2021"]
+
+[package]
+name = "examples"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dev-dependencies]
+gcrypt = { version = "0.1", path = "../gcrypt" }
+gpgrt = { version = "0.1", git = "https://github.com/byhowe/gpgrt-rs.git" }
+hex = "0.4"
+
+[[example]]
+name = "firstexample"
+path = "firstexample.rs"
