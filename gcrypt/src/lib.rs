@@ -5,6 +5,7 @@ use std::ptr;
 
 use gpgrt::Error;
 
+pub mod cipher;
 pub mod mac;
 pub mod md;
 
